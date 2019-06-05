@@ -2,9 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://novaellias.github.io/friends/index.html</loc>
+    
+    <lastmod>2019-06-05T11:40:16.788Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://novaellias.github.io/about/index.html</loc>
+    
+    <lastmod>2019-06-05T11:38:58.863Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://novaellias.github.io/404.html</loc>
     
-    <lastmod>2019-06-05T11:20:39.612Z</lastmod>
+    <lastmod>2019-06-05T11:30:05.373Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://novaellias.github.io/tags/index.html</loc>
+    
+    <lastmod>2019-06-05T11:26:48.096Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://novaellias.github.io/categories/index.html</loc>
+    
+    <lastmod>2019-06-05T11:25:35.240Z</lastmod>
     
   </url>
   
