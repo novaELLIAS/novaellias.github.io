@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://novaellias.github.io/about/index.html</loc>
+    
+    <lastmod>2019-06-06T14:21:39.064Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://novaellias.github.io/2017/12/05/shortest-path/</loc>
     
     <lastmod>2019-06-06T14:18:32.709Z</lastmod>
@@ -26,13 +33,6 @@
     <loc>https://novaellias.github.io/2018/10/30/lg-P3369-STL/</loc>
     
     <lastmod>2019-06-06T13:45:22.457Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://novaellias.github.io/about/index.html</loc>
-    
-    <lastmod>2019-06-06T13:37:24.351Z</lastmod>
     
   </url>
   
