@@ -15,10 +15,14 @@
           
           <category> memory </category>
           
-          <category> RIDE </category>
-          
       </categories>
       
+      
+        <tags>
+            
+            <tag> RIDE </tag>
+            
+        </tags>
       
     </entry>
     
@@ -35,8 +39,6 @@
       <categories>
           
           <category> memory </category>
-          
-          <category> Olympiad in Informatics </category>
           
       </categories>
       
