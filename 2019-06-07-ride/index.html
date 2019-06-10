@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   
-  <title>Nescafé17 守卫者的挑战 | Next Dream...</title>
+  <title>2019-06-07 RIDE | Next Dream...</title>
   
   
 
@@ -200,14 +200,23 @@
 
   <section class="meta">
     
+      
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.css">
+  <div class="aplayer" data-theme data-mini="true" data-autoplay="true" data-mode="circulation" data-server="netease" data-type="song" data-id="22753344" data-volume="0.7">
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/meting@1.1.0/dist/Meting.min.js"></script>
+
+
+    
     
     <div class="meta" id="header-meta">
       
         
   
     <h1 class="title">
-      <a href="/2018/11/02/Nescafe17-Defenders'-Challenge/">
-        Nescafé17 守卫者的挑战
+      <a href="/2019-06-07-ride/">
+        2019-06-07 RIDE
       </a>
     </h1>
   
@@ -236,7 +245,7 @@
             <div class="new-meta-item date">
   <a class="notlink">
     <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-    <p>2018-11-02</p>
+    <p>2019-06-07</p>
   </a>
 </div>
 
@@ -246,9 +255,9 @@
             
   
   <div class="new-meta-item category">
-    <a href="/categories/Olympiad-in-Informatics/" rel="nofollow">
+    <a href="/categories/memory/RIDE/" rel="nofollow">
       <i class="fas fa-folder-open" aria-hidden="true"></i>
-      <p>Olympiad in Informatics</p>
+      <p>memory&nbsp;/&nbsp;RIDE</p>
     </a>
   </div>
 
@@ -289,27 +298,114 @@
       <section class="article typo">
         <div class="article-entry" itemprop="articleBody">
           <blockquote>
-<p>Nescafé17 守卫者的挑战</p>
+<p>2019.06.07 端午节&amp;高考2019 day1 外出骑行</p>
+<p>+SJS</p>
 </blockquote>
 <a id="more"></a>
 
-<h2 id="守卫者的挑战"><a href="#守卫者的挑战" class="headerlink" title="守卫者的挑战"></a>守卫者的挑战</h2><h3 id="Description"><a href="#Description" class="headerlink" title="[Description]"></a>[Description]</h3><p>打开了黑魔法师Vani的大门,队员们在迷宫般的路上漫无目的地搜寻着关押applepi的监狱的所在地.突然,眼前一道亮光闪过.“我,Nizem,是黑魔法圣殿的守卫者.如果你能通过我的挑战,那么你可以带走黑魔法圣殿的地图……”瞬间,队员们被传送到了一个擂台上,最初身边有一个容量为K的包包.</p>
-<p>擂台赛一共有项挑战,各项挑战依次进行.第项挑战有一个属性ai,如果ai≥0,表示这次挑战成功后可以再获得一个容量为ai的包包；如果ai = -1,则表示这次挑战成功后可以得到一个大小为 1 的地图残片.地图残片必须装在包包里才能带出擂台,包包没有必要全部装满,但是队员们必须把获得的所有的地图残片都带走（没有得到的不用考虑,只需要完成所有N项挑战后背包容量足够容纳地图残片即可）,才能拼出完整的地图.并且他们至少要挑战成功L次才能离开擂台.</p>
-<p>队员们一筹莫展之时,善良的守卫者Nizem帮忙预估出了每项挑战成功的概率,其中第i项挑战成功的概率为pi%.现在，请你帮忙预测一下，队员们能够带上他们获得的地图残片离开擂台的概率.</p>
-<h3 id="Data-Size"><a href="#Data-Size" class="headerlink" title="[Data Size]"></a>[Data Size]</h3><p>对于 100% 的数据,保证 $ 0≤K≤2000$ , $ 0≤N≤200$ , $-1≤ai≤1000$ , $0≤L≤N$ , $0≤pi≤100$ .</p>
-<h3 id="Solution"><a href="#Solution" class="headerlink" title="[Solution]"></a>[Solution]</h3><p>刚看到此题时,我被那个概率吓得半死.但看了数据范围,此题就是一道很简单的水题了.</p>
-<p>对于可以赢l把以上并且背包不会溢出的概率 $P_0$ ,通过枚举结束时的背包容量和赢的次数快速求出:</p>
-<p>$$ P_0=\sum_{i=l}^{n}\sum_{j=0}^{K}P_{i, j} $$</p>
-<p>而 $P_{i, j}$ 可以通过刷表法 $O(n^2K)≈8*10^7$ 地求出:</p>
-<p>定义状态 $dp[i][j][k]$ 代表达到第$i$场胜$j$场背包容量为$k$时的概率,转移方程很显然为本次成功的概率和本次失败的概率之和:</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">dp[i][j][k] += dp[i<span class="number">-1</span>][j][k] * (<span class="number">1</span> - dat[i].dat);</span><br><span class="line"><span class="keyword">if</span> ((tmp = min (K + dat[i].opt, n)) &lt; <span class="number">0</span>) <span class="keyword">continue</span>;</span><br><span class="line">dp[i][j+<span class="number">1</span>][tmp] += dp[i<span class="number">-1</span>][j][k] * dat[i].dat;</span><br></pre></td></tr></table></figure>
 
-<p>这个时间复杂度看起来很悬,未免会有稍作优化的想法.本题K的范围2000,但是真的需要2000吗?共有N项挑战,对于每一项挑战最多可以获得一块地图残片,所以背包实际的最大容量就是N次挑战中所有类型-1的数量,极限情况下是n,这样复杂度就会降到 $O(n^3)$, 较为稳妥.</p>
-<h3 id="Code"><a href="#Code" class="headerlink" title="[Code]"></a>[Code]</h3><p>考场代码,写得略丑,请谅解.</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> G++ optimize (3)</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> ELAS = <span class="number">1</span>&lt;&lt;<span class="number">14</span>;</span><br><span class="line"><span class="keyword">static</span> <span class="keyword">char</span> buf[ELAS],*p1=buf,*p2=buf;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">char</span> <span class="title">gc</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> (p1==p2)&amp;&amp;(p2=(p1=buf)+fread(buf,<span class="number">1</span>,ELAS,<span class="built_in">stdin</span>),p1==p2)?EOF:*p1++;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">read</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">register</span> <span class="keyword">int</span> x = <span class="number">0</span>; <span class="keyword">register</span> <span class="keyword">char</span> c = gc(); <span class="keyword">register</span> <span class="keyword">bool</span> m = <span class="literal">false</span>;</span><br><span class="line">	<span class="keyword">while</span> ((c &lt; <span class="string">'0'</span> || c &gt; <span class="string">'9'</span>) &amp;&amp; (c ^ <span class="string">'-'</span>)) c = gc();</span><br><span class="line">	<span class="keyword">if</span> (c == <span class="string">'-'</span>) m = <span class="literal">true</span>, c = gc ();</span><br><span class="line">	<span class="keyword">while</span> (c&gt;=<span class="string">'0'</span>&amp;&amp;c&lt;=<span class="string">'9'</span>) x = (x&lt;&lt;<span class="number">3</span>) + (x&lt;&lt;<span class="number">1</span>) + (c^<span class="string">'0'</span>), c = gc();</span><br><span class="line">	<span class="keyword">return</span> m? -x:x;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">double</span> <span class="title">getdou</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">register</span> <span class="keyword">double</span> x=<span class="number">0</span>; <span class="keyword">register</span> <span class="keyword">char</span> c = gc ();</span><br><span class="line">	<span class="keyword">while</span> (c &lt; <span class="string">'0'</span> || c &gt; <span class="string">'9'</span>) c = gc();</span><br><span class="line">	<span class="keyword">while</span> (c&gt;=<span class="string">'0'</span>&amp;&amp;c&lt;=<span class="string">'9'</span>) x = x * <span class="number">10</span> + (c^<span class="string">'0'</span>), c = gc();</span><br><span class="line">	<span class="keyword">if</span> (c == <span class="string">'.'</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">register</span> <span class="keyword">double</span> s = <span class="number">0.1</span>, c = gc ();</span><br><span class="line">		<span class="keyword">while</span> (c&gt;=<span class="string">'0'</span>&amp;&amp;c&lt;=<span class="string">'9'</span>) x = x + (c-<span class="string">'0'</span>)*s, s/=<span class="number">10</span>, c = gc ();</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> x;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">const</span> <span class="keyword">int</span>&amp; <span class="title">min</span> <span class="params">(<span class="keyword">const</span> <span class="keyword">int</span>&amp; a, <span class="keyword">const</span> <span class="keyword">int</span>&amp; b)</span></span>&#123;<span class="keyword">return</span> a&lt;b? a:b;&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> Re register</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span> &#123;</span></span><br><span class="line">	<span class="keyword">int</span> opt;</span><br><span class="line">	<span class="keyword">double</span> dat;</span><br><span class="line">&#125; dat[<span class="number">201</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">bool</span> <span class="title">cmp</span> <span class="params">(node a, node b)</span> </span>&#123;<span class="keyword">return</span> a.opt &gt; b.opt;&#125;</span><br><span class="line"><span class="keyword">double</span> dp[<span class="number">201</span>][<span class="number">201</span>][<span class="number">201</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">signed</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	freopen (<span class="string">"guard.in"</span>, <span class="string">"r"</span>, <span class="built_in">stdin</span>);</span><br><span class="line">	freopen (<span class="string">"guard.out"</span>,<span class="string">"w"</span>,<span class="built_in">stdout</span>);</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">register</span> <span class="keyword">int</span> n = read (), l = read (), k = read (), tmp;</span><br><span class="line">	<span class="keyword">for</span> (Re <span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++ i) dat[i].dat = getdou()/<span class="number">100</span>;</span><br><span class="line">	<span class="keyword">for</span> (Re <span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++ i) dat[i].opt = read ();</span><br><span class="line">	<span class="built_in">std</span>::sort (dat + <span class="number">1</span>, dat + n + <span class="number">1</span>, cmp);</span><br><span class="line">	</span><br><span class="line">	dp[<span class="number">0</span>][<span class="number">0</span>][min(n, k)] = <span class="number">1.0</span>;</span><br><span class="line">	<span class="keyword">for</span> (Re <span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++ i)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span> (Re <span class="keyword">int</span> j = <span class="number">0</span>; j &lt;= i; ++ j)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">for</span> (Re <span class="keyword">int</span> K = <span class="number">0</span>; K &lt;= n; ++ K)</span><br><span class="line">			&#123;</span><br><span class="line">				dp[i][j][K] += dp[i<span class="number">-1</span>][j][K] * (<span class="number">1</span> - dat[i].dat);</span><br><span class="line">				<span class="keyword">if</span> ((tmp = min (K + dat[i].opt, n)) &lt; <span class="number">0</span>) <span class="keyword">continue</span>;</span><br><span class="line">				dp[i][j+<span class="number">1</span>][tmp] += dp[i<span class="number">-1</span>][j][K] * dat[i].dat;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">register</span> <span class="keyword">double</span> ans = <span class="number">0.0</span>;</span><br><span class="line">	<span class="keyword">for</span> (Re <span class="keyword">int</span> i = l; i &lt;= n; ++ i)</span><br><span class="line">		<span class="keyword">for</span> (Re <span class="keyword">int</span> j = <span class="number">0</span>; j &lt;= n; ++ j)</span><br><span class="line">			ans += dp[n][i][j];</span><br><span class="line">	<span class="built_in">printf</span> (<span class="string">"%.6lf"</span>, ans);</span><br><span class="line">	</span><br><span class="line">	fclose (<span class="built_in">stdin</span>), fclose (<span class="built_in">stdout</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="START-翰林观海"><a href="#START-翰林观海" class="headerlink" title="START 翰林观海"></a>START 翰林观海</h3><fancybox>
 
-<p>Cena评测$0.03s$,效率还是可以的.<br><img src="https://novaellias.files.wordpress.com/2018/11/guard.png" alt="guard"></p>
+<p><img src="https://novaellias.files.wordpress.com/2019/06/20190607_135503.jpg" alt="START"></p>
+</fancybox>
 
+
+<h3 id="SPOT1-西山湖"><a href="#SPOT1-西山湖" class="headerlink" title="SPOT1 西山湖"></a>SPOT1 西山湖</h3><fancybox>
+
+<p><img src="https://novaellias.files.wordpress.com/2019/06/20190607_145716.jpg" alt></p>
+</fancybox>
+
+<fancybox>
+
+<p><img src="https://novaellias.files.wordpress.com/2019/06/20190607_145608.jpg" alt></p>
+</fancybox>
+
+<fancybox>
+
+<p><img src="https://novaellias.files.wordpress.com/2019/06/20190607_150426.jpg" alt></p>
+</fancybox>
+
+<fancybox>
+
+<p><img src="https://novaellias.files.wordpress.com/2019/06/20190607_152643.jpg" alt></p>
+</fancybox>
+
+<fancybox>
+
+<p><img src="https://novaellias.files.wordpress.com/2019/06/20190607_154945.jpg" alt></p>
+</fancybox>
+
+<fancybox>
+
+<p><img src="https://novaellias.files.wordpress.com/2019/06/20190607_160337.jpg" alt></p>
+</fancybox>
+
+<fancybox>
+
+<p><img src="https://novaellias.files.wordpress.com/2019/06/1560090767701.jpeg" alt></p>
+</fancybox>
+
+<h4 id="鹭发现"><a href="#鹭发现" class="headerlink" title="鹭发现"></a>鹭发现</h4><fancybox>
+
+<p><img src="https://novaellias.files.wordpress.com/2019/06/1560090771290.jpeg" alt></p>
+</fancybox>
+
+<h3 id="SPOT2-马栏河"><a href="#SPOT2-马栏河" class="headerlink" title="SPOT2 马栏河"></a>SPOT2 马栏河</h3><h4 id="健身步道"><a href="#健身步道" class="headerlink" title="健身步道"></a>健身步道</h4><fancybox>
+
+<p><img src="https://novaellias.files.wordpress.com/2019/06/20190607_165351.jpg" alt></p>
+</fancybox>
+
+<h4 id="水坝"><a href="#水坝" class="headerlink" title="水坝"></a>水坝</h4><fancybox>
+
+<p><img src="https://novaellias.files.wordpress.com/2019/06/20190607_171247.jpg" alt></p>
+</fancybox>
+
+<h3 id="SPOT3-星海"><a href="#SPOT3-星海" class="headerlink" title="SPOT3 星海"></a>SPOT3 星海</h3><h4 id="城堡酒店-原贝壳馆"><a href="#城堡酒店-原贝壳馆" class="headerlink" title="城堡酒店(原贝壳馆)"></a>城堡酒店(原贝壳馆)</h4><fancybox>
+
+<p><img src="https://novaellias.files.wordpress.com/2019/06/20190607_172347.jpg" alt></p>
+</fancybox>
+
+<fancybox>
+
+<p><img src="https://novaellias.files.wordpress.com/2019/06/20190607_172351.jpg" alt></p>
+</fancybox>
+
+<h4 id="海边"><a href="#海边" class="headerlink" title="海边"></a>海边</h4><fancybox>
+
+<p><img src="https://novaellias.files.wordpress.com/2019/06/20190607_175327.jpg" alt></p>
+</fancybox>
+
+<fancybox>
+
+<p><img src="https://novaellias.files.wordpress.com/2019/06/20190607_174358.jpg" alt></p>
+</fancybox>
+
+<fancybox>
+
+<p><img src="https://novaellias.files.wordpress.com/2019/06/20190607_175138.jpg" alt></p>
+</fancybox>
+
+<h4 id="星海湾大桥"><a href="#星海湾大桥" class="headerlink" title="星海湾大桥"></a>星海湾大桥</h4><fancybox>
+
+<p><img src="https://novaellias.files.wordpress.com/2019/06/1560090753431.jpeg" alt></p>
+</fancybox>
+
+<h4 id="群友集结地"><a href="#群友集结地" class="headerlink" title="群友集结地"></a>群友集结地</h4><fancebox>
+
+<p><img src="https://novaellias.files.wordpress.com/2019/06/20190607_174258.jpg" alt></p>
+</fancebox>
+
+<h3 id="BACK-HOME"><a href="#BACK-HOME" class="headerlink" title="BACK HOME"></a>BACK HOME</h3><fancebox>
+
+<p><img src="https://novaellias.files.wordpress.com/2019/06/20190607_181408-1.jpg" alt></p>
+</fancebox>
+
+<h3 id="GENERAL"><a href="#GENERAL" class="headerlink" title="GENERAL"></a>GENERAL</h3><fancebox>
+
+<p><img src="https://novaellias.files.wordpress.com/2019/06/1560090742232.jpeg" alt></p>
+
+
+<h3 id="次の旅を楽しみにしています"><a href="#次の旅を楽しみにしています" class="headerlink" title="次の旅を楽しみにしています!"></a>次の旅を楽しみにしています!</h3></fancebox>
         </div>
         
           
@@ -320,7 +416,7 @@
     <div class="new-meta-box">
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2019-06-10T19:32:24+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2019-06-10T21:07:58+08:00">
   <a class="notlink">
     <i class="fas fa-clock" aria-hidden="true"></i>
     <p>last updated at Jun 10, 2019</p>
@@ -331,9 +427,6 @@
       
         
           
-  
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/contest/" rel="nofollow"><i class="fas fa-hashtag" aria-hidden="true"></i>&nbsp;<p>contest</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/DP/" rel="nofollow"><i class="fas fa-hashtag" aria-hidden="true"></i>&nbsp;<p>DP</p></a></div>
-
 
         
       
@@ -343,8 +436,9 @@
   <div class="-mob-share-list share-body">
     
       
-        <a class="-mob-share-qq" title="QQ好友" rel="external nofollow noopener noreferrer" href="http://connect.qq.com/widget/shareqq/index.html?url=https://novaellias.github.io/2018/11/02/Nescafe17-Defenders'-Challenge/&title=Nescafé17 守卫者的挑战 | Next Dream...&pics=/images/avater_sayaka_1.jpg&summary=
-Nescafé17 守卫者的挑战
+        <a class="-mob-share-qq" title="QQ好友" rel="external nofollow noopener noreferrer" href="http://connect.qq.com/widget/shareqq/index.html?url=https://novaellias.github.io/2019-06-07-ride/&title=2019-06-07 RIDE | Next Dream...&pics=/images/avater_sayaka_1.jpg&summary=
+2019.06.07 端午节&amp;高考2019 day1 外出骑行
++SJS
 ">
           
             <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qq.png">
@@ -353,8 +447,9 @@ Nescafé17 守卫者的挑战
       
     
       
-        <a class="-mob-share-qzone" title="QQ空间" rel="external nofollow noopener noreferrer" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://novaellias.github.io/2018/11/02/Nescafe17-Defenders'-Challenge/&title=Nescafé17 守卫者的挑战 | Next Dream...&pics=/images/avater_sayaka_1.jpg&summary=
-Nescafé17 守卫者的挑战
+        <a class="-mob-share-qzone" title="QQ空间" rel="external nofollow noopener noreferrer" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://novaellias.github.io/2019-06-07-ride/&title=2019-06-07 RIDE | Next Dream...&pics=/images/avater_sayaka_1.jpg&summary=
+2019.06.07 端午节&amp;高考2019 day1 外出骑行
++SJS
 ">
           
             <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qzone.png">
@@ -363,8 +458,9 @@ Nescafé17 守卫者的挑战
       
     
       
-        <a class="-mob-share-weibo" title="微博" rel="external nofollow noopener noreferrer" href="http://service.weibo.com/share/share.php?url=https://novaellias.github.io/2018/11/02/Nescafe17-Defenders'-Challenge/&title=Nescafé17 守卫者的挑战 | Next Dream...&pics=/images/avater_sayaka_1.jpg&summary=
-Nescafé17 守卫者的挑战
+        <a class="-mob-share-weibo" title="微博" rel="external nofollow noopener noreferrer" href="http://service.weibo.com/share/share.php?url=https://novaellias.github.io/2019-06-07-ride/&title=2019-06-07 RIDE | Next Dream...&pics=/images/avater_sayaka_1.jpg&summary=
+2019.06.07 端午节&amp;高考2019 day1 外出骑行
++SJS
 ">
           
             <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/weibo.png">
@@ -387,41 +483,17 @@ Nescafé17 守卫者的挑战
         
             <div class="prev-next">
                 
-                    <section class="prev">
-                        <span class="art-item-left">
-                            <h6><i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;Previous</h6>
-                            <h4>
-                                <a href="/2018/11/02/GSS5/" rel="prev" title="SP2916 GSS5 - Can you answer these queries V">
-                                  
-                                      SP2916 GSS5 - Can you answer these queries V
-                                  
-                                </a>
-                            </h4>
-                            
-                                
-                                <h6 class="tags">
-                                    <a class="tag" href="/tags/GSS/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>GSS</a> <a class="tag" href="/tags/segment-tree/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>segment tree</a>
-                                </h6>
-                            
-                        </span>
-                    </section>
-                
                 
                     <section class="next">
                         <span class="art-item-right" aria-hidden="true">
                             <h6>Next&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
                             <h4>
-                                <a href="/2018/11/02/GSS1/" rel="prev" title="GSS1 - Can you answer these queries I">
+                                <a href="/oi_history/" rel="prev" title="ELLIAS的OI之路">
                                     
-                                        GSS1 - Can you answer these queries I
+                                        ELLIAS的OI之路
                                     
                                 </a>
                             </h4>
-                            
-                                
-                                <h6 class="tags">
-                                    <a class="tag" href="/tags/GSS/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>GSS</a> <a class="tag" href="/tags/segment-tree/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>segment tree</a>
-                                </h6>
                             
                         </span>
                     </section>
@@ -461,48 +533,11 @@ Nescafé17 守卫者的挑战
 
 <!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
 
-  <!-- MathJax配置，可通过单美元符号书写行内公式等 -->
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    "HTML-CSS": {
-      preferredFont: "TeX",
-      availableFonts: ["STIX","TeX"],
-      linebreaks: { automatic:true },
-      EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
-    },
-    tex2jax: {
-      inlineMath: [ ["$", "$"], ["\\(","\\)"] ],
-      processEscapes: true,
-      ignoreClass: "tex2jax_ignore|dno",
-      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-    },
-    TeX: {
-      equationNumbers: { autoNumber: "AMS" },
-      noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
-      Macros: { href: "{}" }
-    },
-    messageStyle: "none"
-  });
-</script>
-<!-- 给MathJax元素添加has-jax class -->
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i=0; i < all.length; i += 1) {
-      all[i].SourceElement().parentNode.className += (all[i].SourceElement().parentNode.className ? ' ' : '') + 'has-jax';
-    }
-  });
-</script>
-<!-- 通过连接CDN加载MathJax的js代码 -->
-<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
-
-
 
 
   <script>
     window.subData = {
-      title: 'Nescafé17 守卫者的挑战',
+      title: '2019-06-07 RIDE',
       tools: true
     }
   </script>
@@ -570,7 +605,7 @@ Nescafé17 守卫者的挑战
 </header>
 
     <div class="content pure">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#守卫者的挑战"><span class="toc-text">守卫者的挑战</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Description"><span class="toc-text">[Description]</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Data-Size"><span class="toc-text">[Data Size]</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Solution"><span class="toc-text">[Solution]</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Code"><span class="toc-text">[Code]</span></a></li></ol></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#START-翰林观海"><span class="toc-text">START 翰林观海</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SPOT1-西山湖"><span class="toc-text">SPOT1 西山湖</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#鹭发现"><span class="toc-text">鹭发现</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SPOT2-马栏河"><span class="toc-text">SPOT2 马栏河</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#健身步道"><span class="toc-text">健身步道</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#水坝"><span class="toc-text">水坝</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SPOT3-星海"><span class="toc-text">SPOT3 星海</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#城堡酒店-原贝壳馆"><span class="toc-text">城堡酒店(原贝壳馆)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#海边"><span class="toc-text">海边</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#星海湾大桥"><span class="toc-text">星海湾大桥</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#群友集结地"><span class="toc-text">群友集结地</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#BACK-HOME"><span class="toc-text">BACK HOME</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#GENERAL"><span class="toc-text">GENERAL</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#次の旅を楽しみにしています"><span class="toc-text">次の旅を楽しみにしています!</span></a></li></ol>
     </div>
   </section>
 
@@ -647,7 +682,11 @@ Nescafé17 守卫者的挑战
         
           <li><a class="flat-box" title="/categories/Olympiad-in-Informatics/" href="/categories/Olympiad-in-Informatics/"><div class="name">Olympiad in Informatics</div><div class="badge">(10)</div></a></li>
         
-          <li><a class="flat-box" title="/categories/memory/" href="/categories/memory/"><div class="name">memory</div><div class="badge">(1)</div></a></li>
+          <li><a class="flat-box" title="/categories/memory/" href="/categories/memory/"><div class="name">memory</div><div class="badge">(2)</div></a></li>
+        
+          <li><a class="flat-box child" title="/categories/memory/Olympiad-in-Informatics/" href="/categories/memory/Olympiad-in-Informatics/"><div class="name">Olympiad in Informatics</div><div class="badge">(1)</div></a></li>
+        
+          <li><a class="flat-box child" title="/categories/memory/RIDE/" href="/categories/memory/RIDE/"><div class="name">RIDE</div><div class="badge">(1)</div></a></li>
         
       </ul>
     </div>
@@ -685,28 +724,6 @@ Nescafé17 守卫者的挑战
           
             
 
-
-  <section class="widget music">
-    
-<header class="pure">
-  <div><i class="fas fa-compact-disc fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;MUSIC</div>
-  
-    <a class="rightBtn" rel="external nofollow noopener noreferrer" target="_blank" href="https://music.163.com/#/user/home?id=30801151" title="https://music.163.com/#/user/home?id=30801151">
-    <i class="far fa-heart fa-fw"></i></a>
-  
-</header>
-
-    <div class="content pure">
-      
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.css">
-  <div class="aplayer" data-theme="#1BCDFC" data-mode="circulation" data-server="netease" data-type="playlist" data-id="2073931039" data-volume="0.7">
-  </div>
-  <script src="https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/meting@1.1.0/dist/Meting.min.js"></script>
-
-
-    </div>
-  </section>
 
 
           
