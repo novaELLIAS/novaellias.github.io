@@ -1,37 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://novaellias.github.io/2017/11/13/hexo-buildup/</loc>
-    <lastmod>2019-06-09</lastmod>
+    <loc>https://novaellias.github.io/2019/02/02/oi_history/</loc>
+    <lastmod>2019-06-10</lastmod>
   </url>  <url>
     <loc>https://novaellias.github.io/2017/12/05/shortest-path/</loc>
-    <lastmod>2019-06-06</lastmod>
-  </url>  <url>
-    <loc>https://novaellias.github.io/2018/11/09/luogu-P1967-noip2018-day-1/</loc>
-    <lastmod>2019-06-06</lastmod>
-  </url>  <url>
-    <loc>https://novaellias.github.io/2018/10/30/lg-P3369-STL/</loc>
-    <lastmod>2019-06-06</lastmod>
-  </url>  <url>
-    <loc>https://novaellias.github.io/2018/06/08/luogu-segment-tree/</loc>
-    <lastmod>2019-06-05</lastmod>
+    <lastmod>2019-06-10</lastmod>
   </url>  <url>
     <loc>https://novaellias.github.io/2018/11/07/OPTIMIZE/</loc>
-    <lastmod>2019-06-05</lastmod>
+    <lastmod>2019-06-10</lastmod>
   </url>  <url>
     <loc>https://novaellias.github.io/2018/11/02/Nescafe17-Defenders'-Challenge/</loc>
-    <lastmod>2019-06-03</lastmod>
+    <lastmod>2019-06-10</lastmod>
+  </url>  <url>
+    <loc>https://novaellias.github.io/2018/06/08/luogu-segment-tree/</loc>
+    <lastmod>2019-06-10</lastmod>
+  </url>  <url>
+    <loc>https://novaellias.github.io/2018/11/09/luogu-P1967-noip2018-day-1/</loc>
+    <lastmod>2019-06-10</lastmod>
+  </url>  <url>
+    <loc>https://novaellias.github.io/2018/10/30/lg-P3369-STL/</loc>
+    <lastmod>2019-06-10</lastmod>
   </url>  <url>
     <loc>https://novaellias.github.io/2018/11/02/GSS5/</loc>
-    <lastmod>2019-06-03</lastmod>
+    <lastmod>2019-06-10</lastmod>
   </url>  <url>
     <loc>https://novaellias.github.io/2018/11/02/GSS4/</loc>
-    <lastmod>2019-06-03</lastmod>
+    <lastmod>2019-06-10</lastmod>
   </url>  <url>
     <loc>https://novaellias.github.io/2018/11/02/GSS1/</loc>
-    <lastmod>2019-06-03</lastmod>
+    <lastmod>2019-06-10</lastmod>
   </url>  <url>
     <loc>https://novaellias.github.io/2018/11/02/GSS3/</loc>
-    <lastmod>2019-05-31</lastmod>
+    <lastmod>2019-06-10</lastmod>
+  </url>  <url>
+    <loc>https://novaellias.github.io/2017/11/13/hexo-buildup/</loc>
+    <lastmod>2019-06-10</lastmod>
   </url>
 </urlset>
