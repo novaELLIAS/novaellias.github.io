@@ -54,11 +54,29 @@
   
   
 
+  <div class="overlay">
   <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
   <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
-  
 
-</head>
+    <div id="tp-weather-widget"></div>
+    <script>
+      (function(a,h,g,f,e,d,c,b){b=function(){d=h.createElement(g);c=h.getElementsByTagName(g)[0];d.src=e;d.charset="utf-8";d.async=1;c.parentNode.insertBefore(d,c)};a["SeniverseWeatherWidgetObject"]=f;a[f]||(a[f]=function(){(a[f].q=a[f].q||[]).push(arguments)});a[f].l=+new Date();if(a.attachEvent){a.attachEvent("onload",b)}else{a.addEventListener("load",b,false)}}(window,document,"script","SeniverseWeatherWidget","//cdn.sencdn.com/widget2/static/js/bundle.js?t="+parseInt((new Date().getTime() / 100000000).toString(),10)));
+      window.SeniverseWeatherWidget('show', {
+        flavor: "bubble",
+        location: "WX4FBXXFKE4F",
+        geolocation: true,
+        language: "en",
+        unit: "c",
+        theme: "auto",
+        token: "65acefcc-991e-48c7-8ef3-af0853f39aca",
+        hover: "enabled",
+        container: "tp-weather-widget"
+      })
+    </script>
+    </div>
+    <div class="intrude-less">
+
+</div></head>
 
 <body>
   <!-- Ellias K Stuart All Rights Reserved. -->
@@ -193,6 +211,9 @@
 		</nav>
     </header>
 	</aside>
+
+
+	
 <script>setLoadingBarProgress(40);</script>
 
 
@@ -692,10 +713,15 @@ ELLIAS的OI之路
           
         
       
+      
     
 
+     <script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script> 
   
+
+
 </aside>
+
 
 <footer id="footer" class="clearfix">
   
@@ -750,6 +776,8 @@ ELLIAS的OI之路
 
     <!--. -->
   </div>
+  
+
   
 
   <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
