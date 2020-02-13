@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://testellias.github.io/GSS5/</loc>
+    
+    <lastmod>2020-02-13T14:46:22.452Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://testellias.github.io/about/index.html</loc>
     
     <lastmod>2020-02-10T09:06:47.482Z</lastmod>
@@ -68,13 +75,6 @@
     <loc>https://testellias.github.io/lg-P3369-STL/</loc>
     
     <lastmod>2019-06-10T11:32:01.705Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://testellias.github.io/GSS5/</loc>
-    
-    <lastmod>2019-06-10T11:31:53.774Z</lastmod>
     
   </url>
   

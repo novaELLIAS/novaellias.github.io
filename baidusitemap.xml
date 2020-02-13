@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://testellias.github.io/GSS5/</loc>
+    <lastmod>2020-02-13</lastmod>
+  </url>  <url>
     <loc>https://testellias.github.io/buzzer-define/</loc>
     <lastmod>2019-07-07</lastmod>
   </url>  <url>
@@ -23,9 +26,6 @@
     <lastmod>2019-06-10</lastmod>
   </url>  <url>
     <loc>https://testellias.github.io/lg-P3369-STL/</loc>
-    <lastmod>2019-06-10</lastmod>
-  </url>  <url>
-    <loc>https://testellias.github.io/GSS5/</loc>
     <lastmod>2019-06-10</lastmod>
   </url>  <url>
     <loc>https://testellias.github.io/GSS4/</loc>
