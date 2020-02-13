@@ -304,8 +304,77 @@
 
       </div>
       
-        <br>
-        <center>Donate!<br><fancybox>![DONATE](https://novaellias.files.wordpress.com/2018/11/wepay-2-e1541232487203.png)</fancybox></center>
+        <div id="reward">
+  
+  <div>DONATE</div>
+  
+  <div class="reward">
+    
+    <a href="https://github.com" target="_blank" class=" tr3" title="Github"><span id="github"></span></a>
+    <ul id="RewardBox" class="list pos-f tr3">
+      
+      <li id="PayPal" title="PayPal"><a href="https://www.paypal.me/" target="_blank">PayPal</a></li>
+      
+      
+      <li id="AliPayOR" title="支付宝">AliPay</li>
+      
+      
+      <li id="WeChatPayOR" title="WeChat">WeChatPay</li>
+      
+      
+      <li id="QQPayOR" title="QQ">QQPay</li>
+      
+    </ul>
+    <div id="RewardText" class="tr3">Donate</div>
+    <div id="QRBox" class="pos-f left-100">
+      <div id="MainBox"></div>
+    </div>
+  </div>
+</div>
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
+<script>
+  jQuery(document).ready(function () {
+    var QRBox = $('#QRBox');
+    var MainBox = $('#MainBox');
+    var AliPayOR = 'https://novaellias.files.wordpress.com/2020/02/qq_pic_merged_1581578634684.jpg';
+    var WeChatPayOR = 'https://novaellias.files.wordpress.com/2018/11/wepay-2-e1541232487203.png';
+    var QQPayOR = 'https://novaellias.files.wordpress.com/2020/02/qq_pic_merged_1581578554413.jpg';
+
+    function showQR(QR) {
+      if (QR) {
+        MainBox.css('background-image', 'url(' + QR + ')');
+      }
+      $('#RewardText,#RewardBox,#github').addClass('blur');
+      QRBox.fadeIn(300, function (argument) {
+        MainBox.addClass('showQR');
+      });
+    }
+
+    $('#RewardBox>li').click(function (event) {
+      var thisID = $(this).attr('id');
+      if (thisID === 'AliPayOR') {
+        showQR(AliPayOR);
+      } else if (thisID === 'WeChatPayOR') {
+        showQR(WeChatPayOR);
+      } else if (thisID === 'QQPayOR') {
+        showQR(QQPayOR);
+      }
+    });
+
+    MainBox.click(function (event) {
+      MainBox.removeClass('showQR').addClass('hideQR');
+      setTimeout(function (a) {
+        QRBox.fadeOut(300, function (argument) {
+          MainBox.removeClass('hideQR');
+        });
+        $('#RewardText,#RewardBox,#github').removeClass('blur');
+      }, 600);
+
+    });
+  });
+</script>
+
+      
       
       
         <br>

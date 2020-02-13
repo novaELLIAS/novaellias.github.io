@@ -303,8 +303,77 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br></pre></td><td class="code"><pre><span class="line">#pragma GCC optimize (2)</span><br><span class="line">#pragma G++ optimize (2)</span><br><span class="line">#pragma GCC optimize (3)</span><br><span class="line">#pragma G++ optimize (3)</span><br><span class="line">#pragma GCC optimize (&quot;Ofast&quot;)</span><br><span class="line">#pragma GCC target (&quot;sse3&quot;,&quot;sse2&quot;,&quot;sse&quot;)</span><br><span class="line">#pragma GCC target (&quot;avx&quot;,&quot;sse4&quot;,&quot;sse4.1&quot;,&quot;sse4.2&quot;,&quot;ssse3&quot;)</span><br><span class="line">#pragma GCC target (&quot;f16c&quot;)</span><br><span class="line">#pragma G++ target (&quot;sse3&quot;,&quot;sse2&quot;,&quot;sse&quot;)</span><br><span class="line">#pragma G++ target (&quot;avx&quot;,&quot;sse4&quot;,&quot;sse4.1&quot;,&quot;sse4.2&quot;,&quot;ssse3&quot;)</span><br><span class="line">#pragma G++ target (&quot;f16c&quot;)</span><br><span class="line"></span><br><span class="line">#include &lt;cstdio&gt;</span><br><span class="line"></span><br><span class="line">const int ELAS = 1&lt;&lt;14;</span><br><span class="line">static char buf[ELAS], *p1 = buf, *p2 = buf;</span><br><span class="line">inline char gc()</span><br><span class="line">&#123;</span><br><span class="line">    return (p1==p2)&amp;&amp;(p2=(p1=buf)+fread(buf,1,ELAS,stdin),p1==p2)?EOF:*p1++;</span><br><span class="line">&#125;</span><br><span class="line">inline long long read ()</span><br><span class="line">&#123;</span><br><span class="line">    register long long x = 0; register char c = gc(); register bool m = 0;</span><br><span class="line">    while (c &lt; &apos;0&apos; || c &gt; &apos;9&apos;) &#123;if (c == &apos;-&apos;) m = true; c = gc();&#125;</span><br><span class="line">    while (c&gt;=&apos;0&apos;&amp;&amp;c&lt;=&apos;9&apos;) x = (x &lt;&lt; 3) + (x &lt;&lt; 1) + (c ^ &apos;0&apos;), c = gc();</span><br><span class="line">    return m? -x:x;</span><br><span class="line">&#125;</span><br><span class="line">static void write (long long x)</span><br><span class="line">&#123;</span><br><span class="line">    if (x &gt; 9) write (x / 10);</span><br><span class="line">    putchar (x % 10 + 48);</span><br><span class="line">&#125;</span><br><span class="line">static void writelen (long long x)</span><br><span class="line">&#123;</span><br><span class="line">    if (x &lt; 0ll) putchar(&apos;-&apos;), x = -x;</span><br><span class="line">    write (x), putchar (&apos;\n&apos;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">#define Re register</span><br><span class="line">#define maxn 10001</span><br><span class="line">#define dmax 40001</span><br><span class="line">#define swap(x,y) ((y)^=(x)^=(y)^=(x)) </span><br><span class="line"></span><br><span class="line">struct node &#123;</span><br><span class="line">    int l, r;</span><br><span class="line">    long long sum, lmax, rmax, dat;</span><br><span class="line">&#125; tr[dmax], null;</span><br><span class="line"></span><br><span class="line">inline const long long&amp; max (const long long&amp; x,const long long&amp; y) &#123;return x&gt;y? x:y;&#125;</span><br><span class="line"></span><br><span class="line">inline void update (int rt)</span><br><span class="line">&#123;</span><br><span class="line">    register int lson = rt&lt;&lt;1, rson = rt&lt;&lt;1|1;</span><br><span class="line">    tr[rt].sum = tr[lson].sum + tr[rson].sum;</span><br><span class="line">    tr[rt].lmax= max (tr[lson].lmax, tr[lson].sum + tr[rson].lmax);</span><br><span class="line">    tr[rt].rmax= max (tr[rson].rmax, tr[rson].sum + tr[lson].rmax);</span><br><span class="line">    tr[rt].dat = max (max(tr[lson].dat, tr[rson].dat), tr[lson].rmax + tr[rson].lmax);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">static void build (int rt, int l, int r) &#123;</span><br><span class="line">    tr[rt].l = l, tr[rt].r = r;</span><br><span class="line">    if (l == r) &#123;tr[rt].dat = tr[rt].sum = tr[rt].lmax = tr[rt].rmax = read (); return;&#125;</span><br><span class="line">    register int mid = (l + r) &gt;&gt; 1;</span><br><span class="line">    build (rt&lt;&lt;1, l, mid), build (rt&lt;&lt;1|1, mid + 1, r);</span><br><span class="line">    update (rt);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">static node query (int rt, int ql, int qr) &#123;</span><br><span class="line">    register int l = tr[rt].l, r = tr[rt].r;</span><br><span class="line">    if (ql &gt; qr) return null;</span><br><span class="line">    if (ql &lt;= l &amp;&amp; qr &gt;= r) return tr[rt];</span><br><span class="line">    register int mid = (l + r) &gt;&gt; 1;</span><br><span class="line">    if (ql &gt;  mid) return query (rt&lt;&lt;1|1,ql,qr);</span><br><span class="line">    if (qr &lt;= mid) return query (rt&lt;&lt;1, ql, qr);</span><br><span class="line">    else</span><br><span class="line">    &#123;</span><br><span class="line">        register node ret, a, b;</span><br><span class="line">        a = query (rt&lt;&lt;1, ql, qr), b = query (rt&lt;&lt;1|1, ql, qr);</span><br><span class="line">        ret.sum = a.sum + b.sum;</span><br><span class="line">        ret.dat = max (a.dat, a.rmax + b.lmax), ret.dat = max (ret.dat, b.dat);</span><br><span class="line">        ret.lmax= max (a.lmax, a.sum + b.lmax), ret.rmax= max (b.rmax, b.sum + a.rmax);</span><br><span class="line">        return ret;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">static void modify (int rt, int to, long long val)</span><br><span class="line">&#123;</span><br><span class="line">    if (tr[rt].l == tr[rt].r) &#123;tr[rt].sum = tr[rt].lmax = tr[rt].rmax = tr[rt].dat = val; return;&#125;</span><br><span class="line">    register int mid = (tr[rt].l + tr[rt].r) &gt;&gt; 1;</span><br><span class="line">    if (to &lt;= mid) modify (rt&lt;&lt;1, to, val);</span><br><span class="line">    else modify (rt&lt;&lt;1|1, to, val);</span><br><span class="line">    update(rt);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main() &#123;</span><br><span class="line">    register int _ = read ();</span><br><span class="line">    register int x1, y1, x2, y2;</span><br><span class="line">    register int n, m;</span><br><span class="line">    register node a, b, c;</span><br><span class="line">    register long long tmp;</span><br><span class="line">    register char opt;</span><br><span class="line">    while (_ --)</span><br><span class="line">    &#123;</span><br><span class="line">        n = read ();//, m = read ();</span><br><span class="line">        build (1, 1, n);</span><br><span class="line">        m = read ();</span><br><span class="line">        while (m --)</span><br><span class="line">        &#123;</span><br><span class="line">            //opt = &apos;z&apos;;</span><br><span class="line">            //while ((opt ^ &apos;C&apos;) &amp;&amp; (opt ^ &apos;Q&apos;)) opt = gc();</span><br><span class="line">            //if (opt ^ &apos;C&apos;)</span><br><span class="line">            &#123;</span><br><span class="line">                x1 = read (), y1 = read (), x2 = read (), y2 = read ();</span><br><span class="line">                if (y1&lt;x1) swap(x1,y1); if (y2&lt;x2) swap(x2,y2);</span><br><span class="line">                if (x1&gt;y2) swap(x1,x2), swap(y1,y2);</span><br><span class="line">                if (y1 &lt; x2) &#123;</span><br><span class="line">                    writelen (max(query(1,x1,y1-1).rmax, 0) + query(1,y1,x2).sum + max(query(1,x2+1,y2).lmax, 0));</span><br><span class="line">                &#125; else &#123;</span><br><span class="line">                    a = query (1, x2, y1), b = query(1,x1,x2-1), c = query(1,y1+1,y2);</span><br><span class="line">                    tmp = a.dat;</span><br><span class="line">                    tmp = max (tmp, a.lmax + b.rmax);</span><br><span class="line">                    tmp = max (tmp, c.lmax + a.rmax);</span><br><span class="line">                    tmp = max (tmp, a.sum + max(0, b.rmax) + max(0, c.lmax));</span><br><span class="line">                    writelen (tmp);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125; //else &#123;x1 = read (), tmp = read (); modify (1, x1, tmp);&#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       </div>
       
-        <br>
-        <center>Donate!<br><fancybox>![DONATE](https://novaellias.files.wordpress.com/2018/11/wepay-2-e1541232487203.png)</fancybox></center>
+        <div id="reward">
+  
+  <div>DONATE</div>
+  
+  <div class="reward">
+    
+    <a href="https://github.com" target="_blank" class=" tr3" title="Github"><span id="github"></span></a>
+    <ul id="RewardBox" class="list pos-f tr3">
+      
+      <li id="PayPal" title="PayPal"><a href="https://www.paypal.me/" target="_blank">PayPal</a></li>
+      
+      
+      <li id="AliPayOR" title="支付宝">AliPay</li>
+      
+      
+      <li id="WeChatPayOR" title="WeChat">WeChatPay</li>
+      
+      
+      <li id="QQPayOR" title="QQ">QQPay</li>
+      
+    </ul>
+    <div id="RewardText" class="tr3">Donate</div>
+    <div id="QRBox" class="pos-f left-100">
+      <div id="MainBox"></div>
+    </div>
+  </div>
+</div>
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
+<script>
+  jQuery(document).ready(function () {
+    var QRBox = $('#QRBox');
+    var MainBox = $('#MainBox');
+    var AliPayOR = 'https://novaellias.files.wordpress.com/2020/02/qq_pic_merged_1581578634684.jpg';
+    var WeChatPayOR = 'https://novaellias.files.wordpress.com/2018/11/wepay-2-e1541232487203.png';
+    var QQPayOR = 'https://novaellias.files.wordpress.com/2020/02/qq_pic_merged_1581578554413.jpg';
+
+    function showQR(QR) {
+      if (QR) {
+        MainBox.css('background-image', 'url(' + QR + ')');
+      }
+      $('#RewardText,#RewardBox,#github').addClass('blur');
+      QRBox.fadeIn(300, function (argument) {
+        MainBox.addClass('showQR');
+      });
+    }
+
+    $('#RewardBox>li').click(function (event) {
+      var thisID = $(this).attr('id');
+      if (thisID === 'AliPayOR') {
+        showQR(AliPayOR);
+      } else if (thisID === 'WeChatPayOR') {
+        showQR(WeChatPayOR);
+      } else if (thisID === 'QQPayOR') {
+        showQR(QQPayOR);
+      }
+    });
+
+    MainBox.click(function (event) {
+      MainBox.removeClass('showQR').addClass('hideQR');
+      setTimeout(function (a) {
+        QRBox.fadeOut(300, function (argument) {
+          MainBox.removeClass('hideQR');
+        });
+        $('#RewardText,#RewardBox,#github').removeClass('blur');
+      }, 600);
+
+    });
+  });
+</script>
+
+      
       
       
         <br>
@@ -402,16 +471,16 @@ GSS4 - Can you answer these queries V
                       <span class="art-item-left">
                           <h6><i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;Previous</h6>
                           <h4>
-                              <a href="/GSS4/" rel="prev" title="SP2713 GSS4 - Can you answer these queries IV">
+                              <a href="/Nescafe17-Defenders&#39;-Challenge/" rel="prev" title="Nescafé17 守卫者的挑战">
                                 
-                                    SP2713 GSS4 - Can you answer these queries IV
+                                    Nescafé17 守卫者的挑战
                                 
                               </a>
                           </h4>
                           
                               
                               <h6 class="tags">
-                                  <a class="tag" href="/tags/GSS/"><i class="fas fa-tag fa-fw" aria-hidden="true"></i> GSS</a> <a class="tag" href="/tags/segment-tree/"><i class="fas fa-tag fa-fw" aria-hidden="true"></i> segment tree</a>
+                                  <a class="tag" href="/tags/contest/"><i class="fas fa-tag fa-fw" aria-hidden="true"></i> contest</a> <a class="tag" href="/tags/DP/"><i class="fas fa-tag fa-fw" aria-hidden="true"></i> DP</a>
                               </h6>
                           
                       </span>

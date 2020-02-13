@@ -308,8 +308,77 @@
 <h4 id="NEW-2018-11-5"><a href="#NEW-2018-11-5" class="headerlink" title="NEW(2018/11/5)"></a>NEW(2018/11/5)</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> G++ optimize (3)</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="built_in">std</span>::priority_queue;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> ELAS = <span class="number">1</span>&lt;&lt;<span class="number">14</span>;</span><br><span class="line"><span class="keyword">static</span> <span class="keyword">char</span> buf[ELAS],*p1=buf,*p2=buf;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">char</span> <span class="title">gc</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> (p1==p2)&amp;&amp;(p2=(p1=buf)+fread(buf,<span class="number">1</span>,ELAS,<span class="built_in">stdin</span>),p1==p2)?EOF:*p1++;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">read</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">register</span> <span class="keyword">int</span> x = <span class="number">0</span>; <span class="keyword">register</span> <span class="keyword">char</span> c = gc(); <span class="keyword">register</span> <span class="keyword">bool</span> m = <span class="literal">false</span>;</span><br><span class="line">	<span class="keyword">while</span> ((c &lt; <span class="string">'0'</span> || c &gt; <span class="string">'9'</span>) &amp;&amp; (c ^ <span class="string">'-'</span>)) c = gc();</span><br><span class="line">	<span class="keyword">if</span> (c == <span class="string">'-'</span>) m = <span class="literal">true</span>, c = gc ();</span><br><span class="line">	<span class="keyword">while</span> (c&gt;=<span class="string">'0'</span>&amp;&amp;c&lt;=<span class="string">'9'</span>) x = (x&lt;&lt;<span class="number">3</span>) + (x&lt;&lt;<span class="number">1</span>) + (c^<span class="string">'0'</span>), c = gc();</span><br><span class="line">	<span class="keyword">return</span> m? -x:x;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">write</span> <span class="params">(<span class="keyword">int</span> x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (x &gt; <span class="number">9</span>) write (x / <span class="number">10</span>);</span><br><span class="line">	<span class="built_in">putchar</span> (x % <span class="number">10</span> + <span class="number">48</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">nwrite</span> <span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;write (x); <span class="built_in">putchar</span> (<span class="string">' '</span>);&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> maxn 100001</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> maxm 200001</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> Re register</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span> &#123;</span></span><br><span class="line">	<span class="keyword">int</span> id, val;</span><br><span class="line">	<span class="keyword">friend</span> <span class="keyword">bool</span> <span class="keyword">operator</span> &lt; (node a, node b) &#123;</span><br><span class="line">		<span class="keyword">return</span> a.val &gt; b.val;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">priority_queue &lt;node&gt; que;</span><br><span class="line"><span class="keyword">int</span> head[maxn], wei[maxm], too[maxm], nxt[maxm], ecnt;</span><br><span class="line"><span class="keyword">bool</span> vis[maxn];</span><br><span class="line"><span class="keyword">int</span> dis[maxn];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">signed</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">register</span> <span class="keyword">int</span> n = read (), m = read (), sta = read ();</span><br><span class="line">	<span class="keyword">register</span> <span class="keyword">int</span> fr, to, va;</span><br><span class="line">	<span class="keyword">while</span> (m --)</span><br><span class="line">	&#123;</span><br><span class="line">		fr = read (), nxt[++ ecnt] = head[fr],\</span><br><span class="line">		head[fr] = ecnt, too[ecnt] = read (), wei[ecnt] = read ();</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="built_in">memset</span> (dis, <span class="number">0x3f3f3f3f</span>, <span class="keyword">sizeof</span> dis); dis[sta] = <span class="number">0</span>;</span><br><span class="line">	que.push (&#123;sta, <span class="number">0</span>&#125;);</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">while</span> (!que.empty ())</span><br><span class="line">	&#123;</span><br><span class="line">		fr = que.top ().id, que.pop ();</span><br><span class="line">		<span class="keyword">if</span> (!vis[fr])</span><br><span class="line">		&#123;</span><br><span class="line">			vis[fr] = <span class="literal">true</span>;</span><br><span class="line">			<span class="keyword">for</span> (Re <span class="keyword">int</span> i = head[fr]; i; i = nxt[i])</span><br><span class="line">			&#123;</span><br><span class="line">				to = too[i], va = wei[i];</span><br><span class="line">				<span class="keyword">if</span> (dis[fr] + va &lt; dis[to])</span><br><span class="line">				&#123;</span><br><span class="line">					dis[to] = dis[fr] + va;</span><br><span class="line">					que.push (&#123;to, dis[to]&#125;); </span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">for</span> (Re <span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++ i) nwrite (dis[i]);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       </div>
       
-        <br>
-        <center>Donate!<br><fancybox>![DONATE](https://novaellias.files.wordpress.com/2018/11/wepay-2-e1541232487203.png)</fancybox></center>
+        <div id="reward">
+  
+  <div>DONATE</div>
+  
+  <div class="reward">
+    
+    <a href="https://github.com" target="_blank" class=" tr3" title="Github"><span id="github"></span></a>
+    <ul id="RewardBox" class="list pos-f tr3">
+      
+      <li id="PayPal" title="PayPal"><a href="https://www.paypal.me/" target="_blank">PayPal</a></li>
+      
+      
+      <li id="AliPayOR" title="支付宝">AliPay</li>
+      
+      
+      <li id="WeChatPayOR" title="WeChat">WeChatPay</li>
+      
+      
+      <li id="QQPayOR" title="QQ">QQPay</li>
+      
+    </ul>
+    <div id="RewardText" class="tr3">Donate</div>
+    <div id="QRBox" class="pos-f left-100">
+      <div id="MainBox"></div>
+    </div>
+  </div>
+</div>
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
+<script>
+  jQuery(document).ready(function () {
+    var QRBox = $('#QRBox');
+    var MainBox = $('#MainBox');
+    var AliPayOR = 'https://novaellias.files.wordpress.com/2020/02/qq_pic_merged_1581578634684.jpg';
+    var WeChatPayOR = 'https://novaellias.files.wordpress.com/2018/11/wepay-2-e1541232487203.png';
+    var QQPayOR = 'https://novaellias.files.wordpress.com/2020/02/qq_pic_merged_1581578554413.jpg';
+
+    function showQR(QR) {
+      if (QR) {
+        MainBox.css('background-image', 'url(' + QR + ')');
+      }
+      $('#RewardText,#RewardBox,#github').addClass('blur');
+      QRBox.fadeIn(300, function (argument) {
+        MainBox.addClass('showQR');
+      });
+    }
+
+    $('#RewardBox>li').click(function (event) {
+      var thisID = $(this).attr('id');
+      if (thisID === 'AliPayOR') {
+        showQR(AliPayOR);
+      } else if (thisID === 'WeChatPayOR') {
+        showQR(WeChatPayOR);
+      } else if (thisID === 'QQPayOR') {
+        showQR(QQPayOR);
+      }
+    });
+
+    MainBox.click(function (event) {
+      MainBox.removeClass('showQR').addClass('hideQR');
+      setTimeout(function (a) {
+        QRBox.fadeOut(300, function (argument) {
+          MainBox.removeClass('hideQR');
+        });
+        $('#RewardText,#RewardBox,#github').removeClass('blur');
+      }, 600);
+
+    });
+  });
+</script>
+
+      
       
       
         <br>
