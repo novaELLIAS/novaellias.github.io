@@ -1,0 +1,124 @@
+<footer id="footer" class="clearfix">
+  <% if (theme.footer) { %>
+    <div class="footer">
+      <%- markdown(theme.footer) %>
+    </div>
+    <br>
+  <%}%>
+  <% if (theme.social) { %>
+    <div class="social-wrapper">
+      <% (theme.social||[]).forEach(function(value){ %>
+        <% if (value.url && value.icon) { %>
+          <a href="<%= url_for(value.url) %>"
+            class="social <%- value.icon %> flat-btn"
+            target="_blank"
+            rel="external nofollow noopener noreferrer">
+          </a>
+        <%}%>
+      <%})%>
+    </div>
+  <%}%>
+  <br>
+  <div><%- markdown(__('footer.license')) %></div>
+  <div>
+    <!--
+    <%- __('footer.use') %>
+    <a href="<%- theme.info.docs %>" target="_blank" class="codename"><%- theme.info.name %></a>
+    <%- __('footer.theme') %>
+    -->
+    <% if (theme.busuanzi == true) { %>
+      <%- __('symbol.comma') %>
+      <%- __('footer.total_views') %>
+      <span id="busuanzi_value_site_pv"><i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span>
+      <%- __('footer.times') %>
+    <% } %>
+    <%- __('symbol.period') %>
+  </div>
+
+  <span id="timeDate">Loading...</span><span id="times">Loading...</span>
+<script>
+    var now = new Date(); 
+    function createtime() { 
+        var grt= new Date("10/13/2017 21:12:13");//在此处修改你的建站时间
+        now.setTime(now.getTime()+250); 
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+        document.getElementById("timeDate").innerHTML = "This site has been operated safely for "+dnum+" d "; 
+        document.getElementById("times").innerHTML = hnum + " h " + mnum + " m " + snum + " s"; 
+    } 
+setInterval("createtime()",250);
+</script>
+
+<br>
+<!--
+<div class="github-badge">
+  <span class="badge-subject">Powered</span><span class="badge-value bg-blue">Hexo</span>
+</div>
+-->
+<!--
+<div class="github-badge">
+  <span class="badge-subject">Hosted</span><span class="badge-value bg-brightgreen">GitHub</span>
+</div>
+-->
+
+<!--
+  https://img.shields.io/badge/dynamic/json?url=<URL>&label=<LABEL>&query=<$.DATA.SUBDATA>&color=<COLOR>&prefix=<PREFIX>&suffix=<SUFFIX>
+-->
+
+<img alt="GitHub release (latest by date including pre-releases)" src="https://img.shields.io/github/v/release/novaELLIAS/novaELLIAS.github.io?include_prereleases">
+
+<img alt="PictureBed" src="https://img.shields.io/badge/PictureBed-WordPress-orange">
+
+<img alt="GitHub commits since tagged version" src="https://img.shields.io/github/commits-since/novaELLIAS/novaellias.github.io/v1.0.0?label=commits">
+
+<img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/novaELLIAS/novaellias.github.io">
+
+<img alt="GitHub language count" src="https://img.shields.io/github/languages/count/novaELLIAS/ND_backup">
+
+<img alt="GitHub top language" src="https://img.shields.io/github/languages/top/novaELLIAS/ND_backup">
+
+<img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/novaELLIAS/ND_backup">
+
+<!--
+<div class="github-badge">
+  <span class="badge-subject">DNR</span><span class="badge-value bg-firebrick">Aliyun</span>
+</div>
+-->
+<!--
+<div class="github-badge">
+  <span class="badge-subject">CDN</span><span class="badge-value bg-orange">jsDelivr</span>
+</div>
+-->
+
+<!--
+<div class="github-badge">
+  <span class="badge-subject">Version</span><span class="badge-value bg-blue">v2.0.0</span>
+</div>
+-->
+
+<!--
+<div class="github-badge">
+  <span class="badge-subject">PictureBed</span><span class="badge-value bg-blueviolet">WordPress</span>
+</div>
+-->
+<!--
+<div class="github-badge">
+  <span class="badge-subject">Theme</span><span class="badge-value bg-blue">Material X</span>
+</div>
+-->
+<!--
+<div class="github-badge">
+  <span class="badge-subject"><i class="fa fa-copyright"></i></span><span class="badge-value bg-lightgrey">BY-NC-SA 4.0</span>
+</div>
+-->
+<img alt="copyright" src="https://img.shields.io/static/v1?label=license&message=BY-NC-SA 4.0&color=lightgrey">
+
+
+
+
+</footer>
+<script>setLoadingBarProgress(80);</script>

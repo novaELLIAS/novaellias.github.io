@@ -1,0 +1,38 @@
+<% page.comments = false; %>
+<div class='l_main<%- page.sidebar == false ? ' no_sidebar' : '' %>'>
+  <% if (site.posts && site.posts.length > 0) { %>
+    <% if (page.layout == 'tag') { %>
+      <section class="post-list">
+        <div class='post-wrapper'>
+          <article id="archive-page" class="post article white-box">
+            <section class="archive">
+              <div class="archive-item archive-year mark">
+                <h2><%- page.title %></h2>
+              </div>
+              <div class="archive-item all-tags">
+                <% theme.sidebar.forEach(function(item){ %>
+                  <% let widget_name = item.widget ? item.widget : 'plain'; %>
+                  <% if (item.enable != false && widget_name == 'tagcloud'){ %>
+                    <%- tagcloud(site.tags, {
+                        min_font: 16,
+                        max_font: 32,
+                        color: false,
+                        start_color: item.start_color ? item.start_color : '#999',
+                        end_color: item.end_color ? item.end_color : '#666',
+                    }) %>
+                  <% } %>
+                <% }) %>
+              </div>
+              <br>
+              <%- page.content %>
+            </section>
+          </article>
+        </div>
+      </section>
+    <% } else { %>
+      <%- partial('_partial/archive') %>
+    <% } %>
+  <% } %>
+</div>
+<%- partial('_partial/side') %>
+<%- partial('_partial/footer', null, {cache: !config.relative_link}) %>

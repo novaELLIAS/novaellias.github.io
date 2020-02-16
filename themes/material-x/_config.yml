@@ -1,0 +1,349 @@
+############################### 基本信息 ###############################
+info:
+  name: material-x
+  docs: https://xaoxuu.com/wiki/material-x/
+  cdn: # 要使用CDN，请在根目录的config文件中写上 use_cdn: true
+    css:
+      style: https://cdn.jsdelivr.net/gh/xaoxuu/cdn-material-x@20.2.11/css/style.css
+    js:
+      app: https://cdn.jsdelivr.net/gh/xaoxuu/cdn-material-x@20.2/js/app.js
+      search: https://cdn.jsdelivr.net/gh/xaoxuu/cdn-material-x@20.2/js/search.js
+      volantis: https://cdn.jsdelivr.net/gh/xaoxuu/volantis@1.0.6/js/volantis.min.js
+      commentTyping: https://cdn.jsdelivr.net/gh/xaoxuu/cdn-material-x@20.2/js/commentTyping.js
+
+
+# Progress bar in the top during page loading.
+# Dependencies: https://github.com/theme-next/theme-next-pace
+pace: false #是否开启进度条
+# Themes list:
+# pace-theme-big-counter | pace-theme-bounce | pace-theme-barber-shop | pace-theme-center-atom
+# pace-theme-center-circle | pace-theme-center-radar | pace-theme-center-simple | pace-theme-corner-indicator
+# pace-theme-fill-left | pace-theme-flash | pace-theme-loading-bar | pace-theme-mac-osx | pace-theme-minimal
+# For example
+pace_theme: pace-theme-center-atom #选择进度条样式
+
+############################### 主题风格 ###############################
+# style: material    # material: 导航栏和标题栏背景是主题色
+style: pure        # pure: 导航栏和标题栏背景是白色
+
+
+############################### 服务开关 ###############################
+commentTyping: false # 文本框打字机特效
+scrollreveal: true  # 页面滚动显示动画
+nodewaves: true     # 按钮点击效果
+busuanzi: true      # 访问量统计
+# fastclick: true
+fancybox: true
+rss: /atom.xml
+
+
+############################### 默认值 ###############################
+# 音乐控件的默认配置，如果sidebar或者page里没有提供，就取这里的参数
+music:
+  enable: true      # 是否启用
+  color: '#1BCDFC'  # 主题色
+  mode: circulation # random （随机） single （单曲） circulation （列表循环） order （列表）
+  server: netease   # netease（网易云音乐）tencent（QQ音乐） xiami（虾米） kugou（酷狗）
+  type: playlist    # song （单曲） album （专辑） playlist （歌单） search （搜索）
+  id: 30801151    # 歌曲/专辑/歌单 ID
+  volume: 0.7       # 音量, 0~1
+  autoplay: false   # 自动播放
+
+# 友链页头像占位图
+avatar_placeholder: https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/avatar/avatar.png
+
+# 日期格式 http://momentjs.com/docs/
+date_format: 'YYYY-MM-DD' # 文章发布日期的格式
+updated_date_format: 'll' # 文章更新日期的格式
+
+# 文章字数统计、阅读时长，默认关闭，开启需要安装插件: npm i --save hexo-wordcount
+word_count: false
+
+# 幻灯片
+backstretch:
+  position: full  # cover: 封面背景   full: 整个网页背景
+  duration: 600000 # 持续时间（毫秒）
+  fade: 4000     # 渐变（毫秒）
+  images:
+  #  - /img/background_Hangonchiyou.jpg
+  #  - https://img.vim-cn.com/6d/a0c9e6f9efad8b731cb7376504bd10d79d2053.jpg
+  
+  #  - /img/bg1.jpg
+  #  - /img/sj_1.png
+  #  - /img/bg_bt1.1.png
+    - https://novaellias.files.wordpress.com/2019/07/48507999.jpg
+    - https://novaellias.files.wordpress.com/2019/07/66686322.png
+    - https://novaellias.files.wordpress.com/2019/07/7c1f907cafd730ec.jpg
+    - https://novaellias.files.wordpress.com/2019/07/backgrond_sayaka.jpg
+  #  - /img/bg_ym.jpg
+  #  - /img/bg_gtg1.jpg
+
+
+
+############################### 自定义 ###############################
+# page的封面
+cover:
+  scheme: search    # 后期将会提供多种封面方案
+  height: full      # full（默认值）: 首页封面占据整个第一屏幕，其他页面占半个屏幕高度， half: 所有页面都封面都只占半个屏幕高度
+  title: Next Dream...
+  # logo: assets/logo.png    # logo和title只显示一个，若同时设置，则只显示logo
+  # search_placeholder: '搜索'
+  # 主页封面菜单
+  features:
+    - name: Article
+      icon: fas fa-rss
+      url: /
+    - name: Branch
+      icon: fas fa-code-branch
+      url: projects/
+    - name: Friend
+      icon: fas fa-link
+      url: friends/
+      rel: nofollow
+    - name: About
+      icon: fas fa-info-circle
+      url: about/
+      rel: nofollow
+
+
+# 桌面端导航栏菜单
+menu_desktop:
+  - name: Latest
+    icon: fas fa-grin
+    url: /
+  - name: Category
+    icon: fas fa-folder-open
+    url: blog/categories/
+    rel: nofollow
+  - name: Label
+    icon: fas fa-hashtag
+    url: blog/tags/
+    rel: nofollow
+  - name: File
+    icon: fas fa-archive
+    url: blog/archives/
+    rel: nofollow
+
+# 手机端导航菜单（从右上角的按钮点击展开）
+menu_mobile:
+  - name: Latest
+    icon: fas fa-clock
+    url: /
+  - name: File
+    icon: fas fa-archive
+    url: blog/archives/
+    rel: nofollow
+  - name: Branch
+    icon: fas fa-code-branch
+    url: projects/
+  - name: Friend
+    icon: fas fa-link
+    url: friends/
+    rel: nofollow
+  #- name: 主题文档
+  #  icon: fas fa-book
+  #  url: https://xaoxuu.com/wiki/material-x/
+  #  rel: nofollow
+  - name: About
+    icon: fas fa-info-circle
+    url: about/
+    rel: nofollow
+
+layout:
+  # 文章列表（主页、自定义的列表）布局
+  posts:
+    # 列表中每一篇文章的meta信息
+    meta: [title, author, date, categories, wordcount, top]
+    # 列表类页面的侧边栏
+    sidebar: [author, plain, list, grid, category, tagcloud, music]
+  # 文章页面布局
+  article:
+    # 文章页面主体元素，你也可以在页面的Front-matter中设置
+    body: [article, comments]
+    # 默认的meta信息，文章中没有配置则按照这里的配置来显示，设置为false则不显示
+    # 其中，title只在header中有效，music和thumbnail无需在这里设置，文章中有则显示
+    # 如果tags放置在meta.header中，那么在post列表中不显示（因为卡片下方已经有了）
+    header: [title, author, date, categories, counter, wordcount, top]
+    footer: [updated, tags, share]
+    # 文章页面的侧边栏
+    sidebar: [author, plain, toc, grid, category, tagcloud, list, related_posts]
+  # 其他的页面布局暂时等于文章列表
+
+
+# 侧边栏小部件配置
+sidebar:
+  - widget: author
+    avatar: /img/fracture_ray.jpg
+    jinrishici: false
+    social: true
+  #- widget: plain
+  #  icon: fas fa-file
+  #  title: 文本部件
+  #  body: '这是一段支持markdown的文本<br>![]()'
+  - widget: toc
+  - widget: grid
+    icon: fas fa-map-signs
+    title: NAVIGATOR
+    rows:
+      - name: Latest
+        icon: fas fa-clock
+        url: /
+      #- name: File
+      #  icon: fas fa-archive
+      #  url: blog/archives/
+      #  rel: nofollow
+      - name: Branch
+        icon: fas fa-code-branch
+        url: projects/
+      - name: Friend
+        icon: fas fa-link
+        url: friends/
+        rel: nofollow
+      #- name: 主题文档
+      #  icon: fas fa-book
+      #  url: https://xaoxuu.com/wiki/material-x/
+      #  rel: nofollow
+      - name: About
+        icon: fas fa-info-circle
+        url: about/
+        rel: nofollow
+  - widget: category
+    more:
+      icon: fas fa-expand-arrows-alt
+      url: blog/categories/
+      rel: nofollow
+  - widget: tagcloud
+    icon: fas fa-tags
+    more:
+      icon: fas fa-expand-arrows-alt
+      url: blog/tags/
+      rel: nofollow
+  # - widget: related_posts # 需要安装插件  npm i -S hexo-related-popular-posts
+  - widget: music
+    icon: fas fa-compact-disc
+    title: "MUSIC"
+    more:
+      icon: far fa-heart
+      url: https://music.163.com/#/user/home?id=30801151
+      rel: external nofollow noopener noreferrer
+      target: _blank
+    server: netease   # netease（网易云音乐）tencent（QQ音乐） xiami（虾米） kugou（酷狗）
+    type: playlist    # song （单曲） album （专辑） playlist （歌单） search （搜索）
+    id: 2073931039     # 歌曲/专辑/歌单 ID
+  #- widget: list
+  #  icon: fas fa-thumbs-up
+  #  title: 强烈推荐
+  #  rows:
+  #    - name: Hexo脚本（Mac）
+  #      url: https://xaoxuu.com/wiki/hexo.sh/
+  #    - name: 图床脚本（Mac）
+  #      url: https://xaoxuu.com/wiki/vim-cn.sh/
+  #    - name: 图片在线压缩
+  #      url: https://yasuotu.com
+  #    - name: 生成Favicon
+  #      url: https://realfavicongenerator.net
+  #    - name: 简历主题
+  #      url: https://mxclub.github.io/resume/
+
+# Reward
+reward:
+  enable: true
+  reward_comment: DONATE
+  PayPalLink: https://www.paypal.me/
+  AliPayOR: https://novaellias.files.wordpress.com/2020/02/qq_pic_merged_1581578634684.jpg
+  WeChatPayOR: https://novaellias.files.wordpress.com/2018/11/wepay-2-e1541232487203.png
+  QQPayOR: https://novaellias.files.wordpress.com/2020/02/qq_pic_merged_1581578554413.jpg
+
+# 社交信息
+social:
+  - icon: fas fa-rss
+    url: atom.xml
+  - icon: fas fa-envelope
+    url: mailto:eternalkiri@outlook.com
+  - icon: fab fa-github
+    url: https://github.com/novaellias
+  - icon: fab fa-qq
+    url: https://wpa.qq.com/msgrd?v=3&uin=3218673140&site=qq&menu=yes
+  #- icon: fas fa-headphones-alt
+  #  url: https://music.163.com/#/playlist?id=2073931039
+
+
+# 分享按钮
+# 当id为qrcode时需要安装插件  npm i -S hexo-helper-qrcode
+share:
+  - id: qrcode
+    name: QRcode
+    img: https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qrcode.png
+  - id: qq
+    name: QQ Friends
+    img: https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qq.png
+  - id: qzone
+    name: QZONE
+    img: https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qzone.png
+  - id: wechat
+    name: WeChat
+    img: https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/wechat.png
+  - id: weibo
+    name: WeiBo
+    img: https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/weibo.png
+  
+
+#footer_post: '<center>Donate!<br><fancybox>![DONATE](https://novaellias.files.wordpress.com/2018/11/wepay-2-e1541232487203.png)</fancybox></center>'
+#footer_post: '<iframe src="https://github.com/novaELLIAS/sponsor-page/" style="overflow-x:hidden;overflow-y:hidden; border:310xp none #fff; min-height:240px; width:100%;"  frameborder="0" scrolling="no"></iframe>'
+# footer: '网页页脚文字，支持[markdown](/)'
+
+
+############################### 评论系统 ###############################
+# disqus_shortname: 要使用哪个请复制到根目录配置文件！
+# livere_uid: 要使用哪个请复制到根目录配置文件！
+# gitalk: 要使用哪个请复制到根目录配置文件！
+#   clientID: 你的clientID
+#   clientSecret: 你的clientSecret
+#   repo: 你的repo名
+#   owner: 你的GitHub名
+#   admin: [] 至少填写你的GitHub名
+# leancloud: 要使用哪个请复制到根目录配置文件！
+#   app_id: 你的appId
+#   app_key: 你的appKey
+
+
+############################### 杂项，请勿删除 ###############################
+#valine配置
+valine:
+  enable: true # 如果你想用Valine评论系统，请设置enable为true
+  volantis: true # 是否启用volantis版本（禁止匿名，增加若干贴吧、QQ表情）
+  # 还需要在根目录配置文件中添加下面这三行内容
+  # leancloud:
+  #   app_id: 你的appId
+  #   app_key: 你的appKey
+  guest_info: nick,mail,link #valine comment header info
+  placeholder: Please! # valine comment input placeholder(like: Please leave your footprints )
+  avatar: mp # gravatar style https://valine.js.org/avatar
+  pageSize: 10 # comment list page size
+  verify: true # valine verify code (true/false)
+  notify: true # valine mail notify (true/false)
+  lang: en
+  highlight: true
+
+# 搜索配置
+search:
+  enable: true
+  service: hexo    # 类型：google, algolia, azure, baidu 默认 hexo
+# 选择你选取的搜索服务后，复制相应的配置到根目录配置文件中
+# google:
+#   apiKey:
+#   engineId:
+# algolia:
+#   applicationID:
+#   apiKey:
+#   indexName:
+# azure:
+#   serviceName:
+#   indexName:
+#   queryKey:
+# baidu:
+#   apiId:
+
+# Less渲染
+less:
+  compress: true
