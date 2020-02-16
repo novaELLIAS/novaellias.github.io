@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://novaellias.github.io/game/element/index.html</loc>
+    
+    <lastmod>2020-02-16T15:01:29.009Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://novaellias.github.io/hiddenlist/index.html</loc>
+    
+    <lastmod>2020-02-16T14:13:07.529Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://novaellias.github.io/about/index.html</loc>
     
     <lastmod>2020-02-13T14:47:14.343Z</lastmod>
@@ -12,6 +26,41 @@
     <loc>https://novaellias.github.io/GSS5/</loc>
     
     <lastmod>2020-02-13T14:46:22.452Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://novaellias.github.io/game/2048/index.html</loc>
+    
+    <lastmod>2020-01-15T03:31:43.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://novaellias.github.io/game/gobang/index.html</loc>
+    
+    <lastmod>2020-01-15T03:31:43.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://novaellias.github.io/game/cat/index.html</loc>
+    
+    <lastmod>2020-01-15T03:31:43.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://novaellias.github.io/game/piano/index.html</loc>
+    
+    <lastmod>2020-01-15T03:31:43.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://novaellias.github.io/game/PacMan/index.html</loc>
+    
+    <lastmod>2020-01-15T03:31:43.000Z</lastmod>
     
   </url>
   
