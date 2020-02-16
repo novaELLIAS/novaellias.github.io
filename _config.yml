@@ -133,7 +133,7 @@ backup:
   type: git     
   message: hexo blog source
   repository:  
-    github: git@github.com:novaELLIAS/novaELLIAS.github.io.git,backup
+    github: git@github.com:novaELLIAS/GitHubPageBackup.git
 
 
 google_analytics_key: UA-141886684-1
