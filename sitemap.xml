@@ -51,20 +51,6 @@
   </url>
   
   <url>
-    <loc>https://novaellias.github.io/game/PacMan/index.html</loc>
-    
-    <lastmod>2020-01-15T03:31:43.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://novaellias.github.io/game/piano/index.html</loc>
-    
-    <lastmod>2020-01-15T03:31:43.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://novaellias.github.io/game/gobang/index.html</loc>
     
     <lastmod>2020-01-15T03:31:43.000Z</lastmod>
@@ -72,7 +58,21 @@
   </url>
   
   <url>
+    <loc>https://novaellias.github.io/game/PacMan/index.html</loc>
+    
+    <lastmod>2020-01-15T03:31:43.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://novaellias.github.io/game/cat/index.html</loc>
+    
+    <lastmod>2020-01-15T03:31:43.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://novaellias.github.io/game/piano/index.html</loc>
     
     <lastmod>2020-01-15T03:31:43.000Z</lastmod>
     
