@@ -1,4 +1,7 @@
-
+---
+layout: false
+---
+{% raw %}
 <!DOCTYPE html>
 <html>
 
@@ -17,7 +20,6 @@
         src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/js/game/2048/showanimation.js"></script>
     <script type="text/javascript"
         src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/js/game/2048/main.js"></script>
-<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Next Dream..." type="application/atom+xml">
 </head>
 
 <body ondragstart="window.event.returnValue=false" oncontextmenu="window.event.returnValue=false"
@@ -64,3 +66,4 @@
 </script>
 
 </html>
+{% endraw %}

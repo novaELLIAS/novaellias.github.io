@@ -1,4 +1,7 @@
-
+---
+layout: false
+---
+{% raw %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -106,7 +109,6 @@
             background-color: rgba(0, 255, 255, 0.75);
         }
     </style>
-<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Next Dream..." type="application/atom+xml">
 </head>
 
 <body>
@@ -496,3 +498,4 @@
 </script>
 
 </html>
+{% endraw %}
