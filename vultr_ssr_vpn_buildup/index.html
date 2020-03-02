@@ -1,0 +1,1548 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  <title>珂学上网 基于VultrVPS的SSR服务器的基本搭建 | Next Dream...</title>
+  
+  
+
+  
+  <link rel="alternate" href="/atom.xml" title="Next Dream...">
+  
+
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <!-- meta -->
+  
+
+  <!-- link -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.css">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.10.1/css/all.min.css">
+  
+
+  
+  <link rel="shortcut icon" type='image/x-icon' href="/images/favicon_KK.ico">
+  
+
+  
+    
+<link rel="stylesheet" href="/style.css">
+
+  
+
+  <script>
+    function setLoadingBarProgress(num) {
+      document.getElementById('loading-bar').style.width=num+"%";
+    }
+  </script>
+
+  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141886684-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-141886684-1');
+    </script>
+  
+  
+<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Next Dream..." type="application/atom+xml">
+</head>
+
+<body>
+  <script src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/js/instant.page.js" type="module"></script>
+  
+  
+  <header class="l_header pure">
+  <div id="loading-bar-wrapper">
+    <div id="loading-bar" class="pure"></div>
+  </div>
+
+	<div class='wrapper'>
+		<div class="nav-main container container--flex">
+      <a class="logo flat-box" target="_self" href='/' >
+        
+          Next Dream...
+        
+      </a>
+			<div class='menu navgation'>
+				<ul class='h-list'>
+          
+  					
+  						<li>
+								<a class="nav flat-box" href="/"
+                  
+                  
+                  id="home">
+									<i class='fas fa-grin fa-fw'></i>&nbsp;Latest
+								</a>
+							</li>
+      			
+  						<li>
+								<a class="nav flat-box" href="/blog/categories/"
+                  
+                    rel="nofollow"
+                  
+                  
+                  id="blogcategories">
+									<i class='fas fa-folder-open fa-fw'></i>&nbsp;Category
+								</a>
+							</li>
+      			
+  						<li>
+								<a class="nav flat-box" href="/blog/tags/"
+                  
+                    rel="nofollow"
+                  
+                  
+                  id="blogtags">
+									<i class='fas fa-hashtag fa-fw'></i>&nbsp;Label
+								</a>
+							</li>
+      			
+  						<li>
+								<a class="nav flat-box" href="/blog/archives/"
+                  
+                    rel="nofollow"
+                  
+                  
+                  id="blogarchives">
+									<i class='fas fa-archive fa-fw'></i>&nbsp;File
+								</a>
+							</li>
+      			
+      		
+				</ul>
+			</div>
+
+			
+				<div class="m_search">
+					<form name="searchform" class="form u-search-form">
+						<input type="text" class="input u-search-input" placeholder="Search" />
+						<i class="icon fas fa-search fa-fw"></i>
+					</form>
+				</div>
+			
+			<ul class='switcher h-list'>
+				
+					<li class='s-search'><a class="fas fa-search fa-fw" target="_self" href='javascript:void(0)'></a></li>
+				
+				<li class='s-menu'><a class="fas fa-bars fa-fw" target="_self" href='javascript:void(0)'></a></li>
+			</ul>
+		</div>
+
+		<div class='nav-sub container container--flex'>
+			<a class="logo flat-box"></a>
+			<ul class='switcher h-list'>
+				<li class='s-comment'><a class="flat-btn fas fa-comments fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+          <li class='s-toc'><a class="flat-btn fas fa-list fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+			</ul>
+		</div>
+	</div>
+</header>
+	<aside class="menu-phone">
+    <header>
+		<nav class="menu navgation">
+      <ul>
+        
+          
+            <li>
+							<a class="nav flat-box" href="/"
+                
+                
+                id="home">
+								<i class='fas fa-clock fa-fw'></i>&nbsp;Latest
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="/blog/archives/"
+                
+                  rel="nofollow"
+                
+                
+                id="blogarchives">
+								<i class='fas fa-archive fa-fw'></i>&nbsp;File
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="/projects/"
+                
+                
+                id="projects">
+								<i class='fas fa-code-branch fa-fw'></i>&nbsp;Branch
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="/friends/"
+                
+                  rel="nofollow"
+                
+                
+                id="friends">
+								<i class='fas fa-link fa-fw'></i>&nbsp;Friend
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="/about/"
+                
+                  rel="nofollow"
+                
+                
+                id="about">
+								<i class='fas fa-info-circle fa-fw'></i>&nbsp;About
+							</a>
+            </li>
+          
+       
+      </ul>
+		</nav>
+    </header>
+	</aside>
+<script>setLoadingBarProgress(40);</script>
+
+
+
+  <div class="l_body nocover">
+    <div class='body-wrapper'>
+      <div class='l_main'>
+  
+
+  <article id="post" class="post white-box article-type-post" itemscope itemprop="blogPost">
+    
+
+
+  <section class='meta'>
+    
+    
+    <div class="meta" id="header-meta">
+      
+        
+  
+    <h1 class="title">
+      <a href="/vultr_ssr_vpn_buildup/">
+        珂学上网 基于VultrVPS的SSR服务器的基本搭建
+      </a>
+    </h1>
+  
+
+
+      
+      <div class='new-meta-box'>
+        
+          
+        
+          
+            
+  <div class='new-meta-item author'>
+    
+      <a href="https://novaellias.github.io" rel="nofollow">
+        
+          <img src="/images/avater_sayaka_1.jpg">
+        
+        <p>ELLIAS</p>
+      </a>
+    
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+    <p>2020-03-02</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  
+  <div class='new-meta-item category'>
+    <a href='/categories/VPS/' rel="nofollow">
+      <i class="fas fa-folder-open" aria-hidden="true"></i>
+      <p>VPS</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+  
+    <div class="new-meta-item browse busuanzi">
+      <a class='notlink'>
+        <i class="fas fa-eye" aria-hidden="true"></i>
+        <p>
+          <span id="busuanzi_value_page_pv">
+            <i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i>
+          </span>
+        </p>
+      </a>
+    </div>
+  
+
+
+          
+        
+          
+            
+  
+
+          
+        
+          
+            
+
+          
+        
+      </div>
+      
+        <hr>
+      
+    </div>
+  </section>
+
+
+    <section class="article typo">
+      <div class="article-entry" itemprop="articleBody">
+        <blockquote>
+<p>Vultr SSR VPS 锐速 CentOS VPN GoogleBBR 防火墙</p>
+</blockquote>
+<a id="more"></a>
+
+<h3 id="购买VPS服务器"><a href="#购买VPS服务器" class="headerlink" title="购买VPS服务器"></a>购买VPS服务器</h3><p>我们应该选择国外的VPS(Virtual Private Server)提供商,这里推荐<a href="https://www.vultr.com/" target="_blank" rel="noopener">Vultr</a>,性价比较高,最低有$2.5/m的,但其只支持IPv6,所以个人搭建推荐$3.5/m.</p>
+<p>目前新账号充值$10可赠送$50,是相当划算的.如果想要通过注册多个账号来减少资费,请务必注意IP地址及GPS定位.</p>
+<h3 id="VPS服务器的搭建和连接"><a href="#VPS服务器的搭建和连接" class="headerlink" title="VPS服务器的搭建和连接"></a>VPS服务器的搭建和连接</h3><h4 id="服务器搭建"><a href="#服务器搭建" class="headerlink" title="服务器搭建"></a>服务器搭建</h4><p>在Product页点击加号新建服务器.</p>
+<p><img src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/ssr_basic_setup/1.png" alt=""></p>
+<p>选择Cloud Compute.</p>
+<p><img src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/ssr_basic_setup/2.png" alt=""></p>
+<p>选择自己熟悉的OS.这里以CentOS为例.CentOS版本建议选6以上,否则也许会出现未知的问题.</p>
+<p>Vultr提供多个地区的服务器,建议一次性搭建多台之后逐个测试速度,速度较慢的删除即可.服务器按照小时计费,不需要担心资费浪费问题.</p>
+<p><img src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/ssr_basic_setup/3.png" alt=""></p>
+<p>扩展功能按需要选择.这里建议勾选Enable IPv6.</p>
+<p><img src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/ssr_basic_setup/4.png" alt=""></p>
+<p>服务器搭建完成后可以在Products页面看到.</p>
+<p><img src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/ssr_basic_setup/5.png" alt=""></p>
+<h4 id="服务器连接"><a href="#服务器连接" class="headerlink" title="服务器连接"></a>服务器连接</h4><p>在服务器页面,我们需要记下服务器的IP 用户名 密码.</p>
+<p><img src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/ssr_basic_setup/6.png" alt=""></p>
+<p>我们需要终端用SSH来连接VPS.在Windows操作系统上推荐Xshell.Vultr网站上也提供了命令行,但不推荐使用.</p>
+<h5 id="在Xshell上连接"><a href="#在Xshell上连接" class="headerlink" title="在Xshell上连接"></a>在Xshell上连接</h5><p>文件-&gt;新建</p>
+<p><img src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/ssr_basic_setup/7.png" alt=""></p>
+<p>在连接中填写相关内容.</p>
+<p><img src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/ssr_basic_setup/8.png" alt=""></p>
+<p>在用户身份验证中填写用户名和密码.</p>
+<p><img src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/ssr_basic_setup/9.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/ssr_basic_setup/15.png" alt=""></p>
+<p>连接即可.</p>
+<h5 id="在终端连接"><a href="#在终端连接" class="headerlink" title="在终端连接"></a>在终端连接</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh your_username@server_IP -p 22 (22是你VPS的SSH端口)</span><br></pre></td></tr></table></figure>
+
+<p>端口可以省略.</p>
+<p><img src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/ssr_basic_setup/11.png" alt=""></p>
+<h3 id="相关内容安装"><a href="#相关内容安装" class="headerlink" title="相关内容安装"></a>相关内容安装</h3><h4 id="安装SSR"><a href="#安装SSR" class="headerlink" title="安装SSR"></a>安装SSR</h4><p>安装wegt</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install wget</span><br></pre></td></tr></table></figure>
+
+<p>安装SSR</p>
+<blockquote>
+<p>该脚本由 <a href="http://www.qcgzxw.cn" target="_blank" rel="noopener">www.qcgzxw.cn</a> 提供.</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget --no-check-certificate https://freed.ga/github/shadowsocksR.sh; bash shadowsocksR.sh</span><br></pre></td></tr></table></figure>
+
+<p>SSR相关配置依需要而定.</p>
+<p>搭建成功后会显示IP,端口,密码,协议等,用于填写ShadowsocksR配置信息.</p>
+<p><img src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/ssr_basic_setup/12.png" alt=""></p>
+<h4 id="使用锐速为SSR加速"><a href="#使用锐速为SSR加速" class="headerlink" title="使用锐速为SSR加速"></a>使用锐速为SSR加速</h4><p>锐速模块依赖于内核,基本原理是对丢包情况进行评估,并重发可能丢的数据包,即锐速多倍发包,在一定程度上能够提高VPN速度.</p>
+<p>首先查询系统内核版本</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uname -r</span><br></pre></td></tr></table></figure>
+
+<p>如返回值以2开头,说明服务器为CentOS6,可直接安装锐速.</p>
+<p>如返回值以3开头,需要对内核降级.</p>
+<p>另: 如果已经安装过Google BBR拥塞控制算法,那么无法安装锐速.</p>
+<p>CentOS6安装锐速:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget --no-check-certificate -O appex.sh https://raw.githubusercontent.com/0oVicero0/serverSpeeder_Install/master/appex.sh &amp;&amp; bash appex.sh install <span class="string">'2.6.32-642.el6.x86_64'</span></span><br></pre></td></tr></table></figure>
+
+<p>更高版本使用以下命令对内核降级:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget --no-check-certificate -O rskernel.sh https://raw.githubusercontent.com/uxh/shadowsocks_bash/master/rskernel.sh &amp;&amp; bash rskernel.sh</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/ssr_basic_setup/13.png" alt=""></p>
+<p>如图所示,系统为CentOS7,更换内核后系统重启.</p>
+<p><img src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/ssr_basic_setup/14.png" alt=""></p>
+<p>重新连接后使用如下指令安装锐速:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install net-tools -y &amp;&amp; wget --no-check-certificate -O appex.sh https://raw.githubusercontent.com/0oVicero0/serverSpeeder_Install/master/appex.sh &amp;&amp; bash appex.sh install</span><br></pre></td></tr></table></figure>
+
+<p>在过程中图示的三个选项默认即可.</p>
+<p><img src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/ssr_basic_setup/16.png" alt=""></p>
+<p>下图为安装运行成功.与锐速相关的指令会在文末给出.</p>
+<p><img src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/ssr_basic_setup/17.png" alt=""></p>
+<h4 id="使用Google-BBR为SSR加速"><a href="#使用Google-BBR为SSR加速" class="headerlink" title="使用Google BBR为SSR加速"></a>使用Google BBR为SSR加速</h4><p>这是一个TCP拥塞控制算法.Google BBR的github页面: <a href="https://github.com/google/bbr" target="_blank" rel="noopener">https://github.com/google/bbr</a></p>
+<blockquote>
+<p>警告: Google BBR需要升级内核,锐速需要降级内核,二者不可兼得.</p>
+</blockquote>
+<p>卸载原版内核headers.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum remove kernel-headers</span><br></pre></td></tr></table></figure>
+
+<p>安装高版本内核headers.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum --enablerepo=elrepo-kernel -y install kernel-ml-headers</span><br></pre></td></tr></table></figure>
+
+<p>升级CentOS系统内核.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install kernel-ml kernel-ml-devel</span><br></pre></td></tr></table></figure>
+
+<p>升级headers.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install kernel-ml-headers</span><br></pre></td></tr></table></figure>
+
+<p>对于CentOS6</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sed -i <span class="string">'s/^default=.*/default=0/g'</span> /boot/grub/grub.conf</span><br></pre></td></tr></table></figure>
+
+<p>对于更高版本</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grub2-set-default 0</span><br></pre></td></tr></table></figure>
+
+<p>使用安装脚本安装Google BBR.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh &amp;&amp; chmod +x bbr.sh &amp;&amp; ./bbr.sh</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>这个脚本由 <a href="https://teddysun.com/" target="_blank" rel="noopener">秋水逸冰</a> 提供.</p>
+</blockquote>
+<p>安装后重启服务器,检查BBR是否启动.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lsmod | grep bbr</span><br></pre></td></tr></table></figure>
+
+<p>返回值有tcp_bbr模块即说明BBR已启动.并不是所有的VPS都会有此返回值,若没有也属正常.</p>
+<h3 id="SSR多端口配置"><a href="#SSR多端口配置" class="headerlink" title="SSR多端口配置"></a>SSR多端口配置</h3><p>使用Vim打开配置文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/shadowsocks.json</span><br></pre></td></tr></table></figure>
+
+<p>原有内容大致如下:</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"server"</span>: <span class="string">"0.0.0.0"</span>,</span><br><span class="line">    <span class="attr">"server_ipv6"</span>: <span class="string">"::"</span>,</span><br><span class="line">    <span class="attr">"server_port"</span>: <span class="number">25565</span>,</span><br><span class="line">    <span class="attr">"local_address"</span>: <span class="string">"127.0.0.1"</span>,</span><br><span class="line">    <span class="attr">"local_port"</span>: <span class="number">1081</span>,</span><br><span class="line">    <span class="attr">"password"</span>: <span class="string">"www.qcgzxw.cn"</span>,</span><br><span class="line">    <span class="attr">"timeout"</span>: <span class="number">120</span>,</span><br><span class="line">    <span class="attr">"udp_timeout"</span>: <span class="number">60</span>,</span><br><span class="line">    <span class="attr">"method"</span>: <span class="string">"aes-256-cfb"</span>,</span><br><span class="line">    <span class="attr">"protocol"</span>: <span class="string">"auth_sha1_v4_compatible"</span>,</span><br><span class="line">    <span class="attr">"protocol_param"</span>: <span class="string">""</span>,</span><br><span class="line">    <span class="attr">"obfs"</span>: <span class="string">"http_simple_compatible"</span>,</span><br><span class="line">    <span class="attr">"obfs_param"</span>: <span class="string">""</span>,</span><br><span class="line">    <span class="attr">"dns_ipv6"</span>: <span class="literal">false</span>,</span><br><span class="line">    <span class="attr">"connect_verbose_info"</span>: <span class="number">1</span>,</span><br><span class="line">    <span class="attr">"redirect"</span>: <span class="string">""</span>,</span><br><span class="line">    <span class="attr">"fast_open"</span>: <span class="literal">false</span>,</span><br><span class="line">    <span class="attr">"workers"</span>: <span class="number">1</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>删除原有的 <code>server_port</code> 及 <code>password</code> ,新增 <code>port_password</code> ,前面是端口,后面是密码,需要注意格式问题.</p>
+<p>示例更改后如下:</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"server"</span>: <span class="string">"0.0.0.0"</span>,</span><br><span class="line">    <span class="attr">"server_ipv6"</span>: <span class="string">"::"</span>,</span><br><span class="line">    <span class="attr">"local_address"</span>: <span class="string">"127.0.0.1"</span>,</span><br><span class="line">    <span class="attr">"local_port"</span>: <span class="number">1081</span>,</span><br><span class="line">    <span class="attr">"port_password"</span>:</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="attr">"1096"</span>:<span class="string">"hanyuu"</span>,</span><br><span class="line">        <span class="attr">"1919"</span>:<span class="string">"senpai"</span>,</span><br><span class="line">        <span class="attr">"2020"</span>:<span class="string">"evolution"</span>,</span><br><span class="line">        <span class="attr">"417"</span>:<span class="string">"morsunhy"</span>,</span><br><span class="line">        <span class="attr">"2333"</span>:<span class="string">"morsun"</span>,</span><br><span class="line">        <span class="attr">"11451"</span>:<span class="string">"niconiconi"</span>,</span><br><span class="line">        <span class="attr">"10960"</span>:<span class="string">"hanyuu"</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">"timeout"</span>: <span class="number">120</span>,</span><br><span class="line">    <span class="attr">"udp_timeout"</span>: <span class="number">60</span>,</span><br><span class="line">    <span class="attr">"method"</span>: <span class="string">"aes-256-cfb"</span>,</span><br><span class="line">    <span class="attr">"protocol"</span>: <span class="string">"auth_sha1_v4_compatible"</span>,</span><br><span class="line">    <span class="attr">"protocol_param"</span>: <span class="string">""</span>,</span><br><span class="line">    <span class="attr">"obfs"</span>: <span class="string">"http_simple_compatible"</span>,</span><br><span class="line">    <span class="attr">"obfs_param"</span>: <span class="string">""</span>,</span><br><span class="line">    <span class="attr">"dns_ipv6"</span>: <span class="literal">false</span>,</span><br><span class="line">    <span class="attr">"connect_verbose_info"</span>: <span class="number">1</span>,</span><br><span class="line">    <span class="attr">"redirect"</span>: <span class="string">""</span>,</span><br><span class="line">    <span class="attr">"fast_open"</span>: <span class="literal">false</span>,</span><br><span class="line">    <span class="attr">"workers"</span>: <span class="number">1</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>保存后修改防火墙配置:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/firewalld/zones/public.xml</span><br></pre></td></tr></table></figure>
+
+<p>原有内容大致如下:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span><br><span class="line">&lt;zone&gt;</span><br><span class="line">  &lt;short&gt;Public&lt;/short&gt;</span><br><span class="line">  &lt;description&gt;For use in public areas. You do not trust the other computers on networks to not harm your computer. Only selected incoming connections are accepted.&lt;/description&gt;</span><br><span class="line">  &lt;service name="dhcpv6-client"/&gt;</span><br><span class="line">  &lt;service name="ssh"/&gt;</span><br><span class="line">  &lt;port protocol="tcp" port="25565"/&gt;</span><br><span class="line">  &lt;port protocol="udp" port="25565"/&gt;</span><br><span class="line">&lt;/zone&gt;</span><br></pre></td></tr></table></figure>
+
+<p>加入新加入的端口,一行tcp,一行udp.</p>
+<p>修改后内容大致如下:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span><br><span class="line">&lt;zone&gt;</span><br><span class="line">  &lt;short&gt;Public&lt;/short&gt;</span><br><span class="line">  &lt;service name="dhcpv6-client"/&gt;</span><br><span class="line">  &lt;service name="ssh"/&gt;</span><br><span class="line">  &lt;port protocol="tcp" port="1096"/&gt;</span><br><span class="line">  &lt;port protocol="udp" port="1096"/&gt;</span><br><span class="line">  &lt;port protocol="tcp" port="1919"/&gt;</span><br><span class="line">  &lt;port protocol="udp" port="1919"/&gt;</span><br><span class="line">  &lt;port protocol="tcp" port="2020"/&gt;</span><br><span class="line">  &lt;port protocol="udp" port="2020"/&gt;</span><br><span class="line">  &lt;port protocol="tcp" port="2333"/&gt;</span><br><span class="line">  &lt;port protocol="udp" port="2333"/&gt;</span><br><span class="line">  &lt;port protocol="tcp" port="11451"/&gt;</span><br><span class="line">  &lt;port protocol="udp" port="11451"/&gt;</span><br><span class="line">  &lt;port protocol="tcp" port="417"/&gt;</span><br><span class="line">  &lt;port protocol="udp" port="417"/&gt;</span><br><span class="line">  &lt;port protocol="tcp" port="10960"/&gt;</span><br><span class="line">  &lt;port protocol="udp" port="10960"/&gt;</span><br><span class="line">&lt;/zone&gt;</span><br></pre></td></tr></table></figure>
+
+<p>重启SSR.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/etc/init.d/shadowsocks restart</span><br></pre></td></tr></table></figure>
+
+<p>重启防火墙.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --reload</span><br></pre></td></tr></table></figure>
+
+<p>也可以参考下文的指令按照类似流程安装.</p>
+<h3 id="相关指令扩展"><a href="#相关指令扩展" class="headerlink" title="相关指令扩展"></a>相关指令扩展</h3><h4 id="SSR"><a href="#SSR" class="headerlink" title="SSR"></a>SSR</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#启动</span></span><br><span class="line">/etc/init.d/shadowsocks start</span><br><span class="line"></span><br><span class="line"><span class="comment">#停止</span></span><br><span class="line">/etc/init.d/shadowsocks stop</span><br><span class="line"></span><br><span class="line"><span class="comment">#重启</span></span><br><span class="line">/etc/init.d/shadowsocks restart</span><br><span class="line"></span><br><span class="line"><span class="comment">#状态</span></span><br><span class="line">/etc/init.d/shadowsocks status</span><br><span class="line"></span><br><span class="line"><span class="comment">#卸载</span></span><br><span class="line">./shadowsocks-all.sh uninstall</span><br><span class="line"></span><br><span class="line"><span class="comment">#更改配置参数</span></span><br><span class="line">vim /etc/shadowsocks-r/config.json</span><br></pre></td></tr></table></figure>
+
+<h4 id="锐速"><a href="#锐速" class="headerlink" title="锐速"></a>锐速</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#查看运行状态</span></span><br><span class="line">/appex/bin/serverSpeeder.sh status</span><br><span class="line">  </span><br><span class="line"><span class="comment">#启动锐速</span></span><br><span class="line">/appex/bin/serverSpeeder.sh start</span><br><span class="line">  </span><br><span class="line"><span class="comment">#停止锐速</span></span><br><span class="line">/appex/bin/serverSpeeder.sh stop</span><br><span class="line">  </span><br><span class="line"><span class="comment">#重启锐速</span></span><br><span class="line">/appex/bin/serverSpeeder.sh restart</span><br><span class="line">  </span><br><span class="line"><span class="comment">#卸载锐速</span></span><br><span class="line">/appex/bin/serverSpeeder.sh uninstall</span><br></pre></td></tr></table></figure>
+
+<h4 id="防火墙"><a href="#防火墙" class="headerlink" title="防火墙"></a>防火墙</h4><h5 id="CentOS7之前版本-iptables-命令"><a href="#CentOS7之前版本-iptables-命令" class="headerlink" title="CentOS7之前版本 iptables 命令"></a>CentOS7之前版本 iptables 命令</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#查看已经开放的端口:</span></span><br><span class="line">/etc/init.d/iptables status</span><br><span class="line"></span><br><span class="line"><span class="comment">#开启端口</span></span><br><span class="line">/sbin/iptables -I INPUT -p tcp --dport 端口 -j ACCEPT</span><br><span class="line"></span><br><span class="line"><span class="comment">#保存</span></span><br><span class="line">/etc/rc.d/init.d/iptables save</span><br><span class="line"></span><br><span class="line"><span class="comment">#启动防火墙(永久)</span></span><br><span class="line">chkconfig iptables on</span><br><span class="line"></span><br><span class="line"><span class="comment">#停止防火墙(永久)</span></span><br><span class="line">chkconfig iptables off</span><br><span class="line"></span><br><span class="line"><span class="comment">#启动防火墙(暂时,重启失效)</span></span><br><span class="line">service iptables start</span><br><span class="line"></span><br><span class="line"><span class="comment">#关闭防火墙(暂时,重启失效)</span></span><br><span class="line">service iptables stop</span><br></pre></td></tr></table></figure>
+<h5 id="CentOS7-firewall-命令"><a href="#CentOS7-firewall-命令" class="headerlink" title="CentOS7 firewall 命令"></a>CentOS7 firewall 命令</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#查看已经开放的端口</span></span><br><span class="line">firewall-cmd --list-ports</span><br><span class="line"></span><br><span class="line"><span class="comment">#开启端口(永久)</span></span><br><span class="line">firewall-cmd --zone=public --add-port=端口/tcp --permanent</span><br><span class="line"></span><br><span class="line"><span class="comment">#重启</span></span><br><span class="line">firewall-cmd --reload</span><br><span class="line"></span><br><span class="line"><span class="comment">#停止</span></span><br><span class="line">systemctl stop firewalld.service </span><br><span class="line"></span><br><span class="line"><span class="comment">#禁止开机启动</span></span><br><span class="line">systemctl <span class="built_in">disable</span> firewalld.service</span><br></pre></td></tr></table></figure>
+<h5 id="CentOS7-之后版本"><a href="#CentOS7-之后版本" class="headerlink" title="CentOS7 之后版本"></a>CentOS7 之后版本</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#启动防火墙</span></span><br><span class="line">systemctl start firewalld</span><br><span class="line"></span><br><span class="line"><span class="comment">#查看防火墙状态</span></span><br><span class="line">systemctl status firewalld</span><br><span class="line"></span><br><span class="line"><span class="comment">#添加端口</span></span><br><span class="line">firewall-cmd --permanent --zone=public --add-port=端口/tcp</span><br><span class="line"></span><br><span class="line"><span class="comment">#开启端口(永久)</span></span><br><span class="line">firewall-cmd --zone=public --add-port=80/tcp --permanent</span><br><span class="line"></span><br><span class="line"><span class="comment">#重启防火墙</span></span><br><span class="line">firewall-cmd --reload</span><br><span class="line"></span><br><span class="line"><span class="comment">#停止防火墙</span></span><br><span class="line">systemctl stop firewalld.service</span><br><span class="line"></span><br><span class="line"><span class="comment">#禁止开机启动</span></span><br><span class="line">systemctl <span class="built_in">disable</span> firewalld.service</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>博客内容遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed" target="_blank" rel="noopener">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)</a> 协议.</p>
+<p>本文永久链接: <a href="https://novaellias.github.io/vultr_ssr_vpn_buildup">https://novaellias.github.io/vultr_ssr_vpn_buildup</a></p>
+</blockquote>
+
+      </div>
+      
+        <div id="reward">
+  
+  <div>DONATE</div>
+  
+  <div class="reward">
+    
+    <a href="https://github.com" target="_blank" class=" tr3" title="Github"><span
+        id="github"></span></a>
+    <ul id="RewardBox" class="list pos-f tr3">
+      
+      <li id="PayPal" title="PayPal"><a href="https://www.paypal.me/" target="_blank">PayPal</a></li>
+      
+      
+      <li id="AliPayOR" title="支付宝">AliPay</li>
+      
+      
+      <li id="WeChatPayOR" title="WeChat">WeChatPay</li>
+      
+      
+      <li id="QQPayOR" title="QQ">QQPay</li>
+      
+    </ul>
+    <div id="RewardText" class="tr3">Donate</div>
+    <div id="QRBox" class="pos-f left-100">
+      <div id="MainBox"></div>
+    </div>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/js/reward/jquery-2.0.3.min.js"></script>
+<script>
+  jQuery(document).ready(function () {
+    var QRBox = $('#QRBox');
+    var MainBox = $('#MainBox');
+    var AliPayOR = 'https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/reward/qq_pic_merged_1581578634684.jpg';
+    var WeChatPayOR = 'https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/reward/wepay-2-e1541232487203.png';
+    var QQPayOR = 'https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/reward/qq_pic_merged_1581578554413.jpg';
+
+    function showQR(QR) {
+      if (QR) {
+        MainBox.css('background-image', 'url(' + QR + ')');
+      }
+      $('#RewardText,#RewardBox,#github').addClass('blur');
+      QRBox.fadeIn(300, function (argument) {
+        MainBox.addClass('showQR');
+      });
+    }
+
+    $('#RewardBox>li').click(function (event) {
+      var thisID = $(this).attr('id');
+      if (thisID === 'AliPayOR') {
+        showQR(AliPayOR);
+      } else if (thisID === 'WeChatPayOR') {
+        showQR(WeChatPayOR);
+      } else if (thisID === 'QQPayOR') {
+        showQR(QQPayOR);
+      }
+    });
+
+    MainBox.click(function (event) {
+      MainBox.removeClass('showQR').addClass('hideQR');
+      setTimeout(function (a) {
+        QRBox.fadeOut(300, function (argument) {
+          MainBox.removeClass('hideQR');
+        });
+        $('#RewardText,#RewardBox,#github').removeClass('blur');
+      }, 600);
+
+    });
+  });
+</script>
+
+      
+      
+      
+        <br>
+        
+
+
+  <section class='meta' id="footer-meta">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-03-02T14:33:20+08:00">
+  <a class='notlink'>
+    <i class="fas fa-clock" aria-hidden="true"></i>
+    <p>updated at Mar 2, 2020</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Vultr/" rel="nofollow"><i class="fas fa-tag" aria-hidden="true"></i><p>Vultr</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/SSR/" rel="nofollow"><i class="fas fa-tag" aria-hidden="true"></i><p>SSR</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/VPS/" rel="nofollow"><i class="fas fa-tag" aria-hidden="true"></i><p>VPS</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E9%94%90%E9%80%9F/" rel="nofollow"><i class="fas fa-tag" aria-hidden="true"></i><p>锐速</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/BBR/" rel="nofollow"><i class="fas fa-tag" aria-hidden="true"></i><p>BBR</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/firewall/" rel="nofollow"><i class="fas fa-tag" aria-hidden="true"></i><p>firewall</p></a></div>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class='qrcode' rel="external nofollow noopener noreferrer" href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACLElEQVR42u3aQW4DIRAEwPz/046UW+QEd8Pa0kJxslY2S3EYzzB8fcXj8TOenzw/H39//M3xnBcMDAyM2zIewzFexHiG8UJb2IvfYmBgHMBoQ+F/0yWLbtlJQMfAwMDIA2gbdhMwBgYGxkqKlsyTb8RH/zcwMDBuyEjC5frz9fdeUItjYGDckNE2Bj75+Y39DQwMjJswHuUYtzDHS2mDabEqDAyMrRlzFyPm2pwtJtmspfsdGBgYN2HMHda3l8aSTcnbolHeioGBsRFjrk5sD/rzkN22KzAwME5gJKEtD6YraV/eHP3jMwYGxpGMNjZfRco3CwMD4xzGejK3UqzmhSsGBgZG8uO2Gs4XmiPzUhkDA2MnRpuiJUG2Pdaf2zgMDIxzGPmkK0F27hJGMicGBsYJjPbIPi96k/I1P8h7AcbAwNia0R5s1TVxHO8veIKBgbE146rDtfbKV9tsqHNbDAyMLRh56taWl3OHd/mqMDAwzmHk5WKeqK1cEZtjY2Bg7M1YefHcnuWBtQ6yGBgYWzPaRmabzLWhvA7rGBgYWzPyRG3u4sXkjY+yqYmBgbE341GO9nAtSRNX0tBf/xsYGBibMubCXHtwlpe+c+/CwMA4gbGSGrZLeWOJi4GBcQAjCbJzVyLeXoVjYGBglCEyYbQpY7QRGBgYGOVRWn5hYuWKxmRqiIGBcVtG2wworm2VZ37JltWNTAwMjJszVgrItpE513JoAz0GBsZGjG9Injf1pkJ0qgAAAABJRU5ErkJggg=='>
+        
+          <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qrcode.png">
+        
+        </a>
+      
+    
+      
+        <a class="-mob-share-qq" title="QQ Friends" rel="external nofollow noopener noreferrer"
+          
+          href="http://connect.qq.com/widget/shareqq/index.html?url=https://novaellias.github.io/vultr_ssr_vpn_buildup/&title=珂学上网 基于VultrVPS的SSR服务器的基本搭建 | Next Dream...&pics=/images/avater_sayaka_1.jpg&summary=
+Vultr SSR VPS 锐速 CentOS VPN GoogleBBR 防火墙
+"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qq.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="QZONE" rel="external nofollow noopener noreferrer"
+          
+          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://novaellias.github.io/vultr_ssr_vpn_buildup/&title=珂学上网 基于VultrVPS的SSR服务器的基本搭建 | Next Dream...&pics=/images/avater_sayaka_1.jpg&summary=
+Vultr SSR VPS 锐速 CentOS VPN GoogleBBR 防火墙
+"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qzone.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-wechat" title="WeChat" rel="external nofollow noopener noreferrer"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/wechat.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="WeiBo" rel="external nofollow noopener noreferrer"
+          
+          href="http://service.weibo.com/share/share.php?url=https://novaellias.github.io/vultr_ssr_vpn_buildup/&title=珂学上网 基于VultrVPS的SSR服务器的基本搭建 | Next Dream...&pics=/images/avater_sayaka_1.jpg&summary=
+Vultr SSR VPS 锐速 CentOS VPN GoogleBBR 防火墙
+"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/weibo.png">
+          
+        </a>
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </section>
+
+
+      
+      
+          <div class="prev-next">
+              
+              
+                  <section class="next">
+                      <span class="art-item-right" aria-hidden="true">
+                          <h6>Next&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
+                          <h4>
+                              <a href="/obs_internet_class_fishing/" rel="prev" title="扫盲向 利用OBS虚拟摄像头在网课上摸鱼">
+                                  
+                                      扫盲向 利用OBS虚拟摄像头在网课上摸鱼
+                                  
+                              </a>
+                          </h4>
+                          
+                              
+                              <h6 class="tags">
+                                  <a class="tag" href="/tags/OBS/"><i class="fas fa-tag fa-fw" aria-hidden="true"></i> OBS</a>
+                              </h6>
+                          
+                      </span>
+                  </section>
+              
+          </div>
+      
+    </section>
+  </article>
+
+
+
+  <!-- 显示推荐文章和评论 -->
+
+
+
+  <article class="post white-box comments">
+    <section class="article typo">
+      <h4><i class="fas fa-comments fa-fw" aria-hidden="true"></i>&nbsp;Comments</h4>
+      
+      
+      
+      
+        <section id="comments">
+          <div id="valine_container" class="valine_thread">
+            <i class="fas fa-spinner fa-spin fa-fw"></i>
+          </div>
+        </section>
+      
+    </section>
+  </article>
+
+
+
+
+
+
+<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
+
+
+
+  <script>
+    window.subData = {
+      title: '珂学上网 基于VultrVPS的SSR服务器的基本搭建',
+      tools: true
+    }
+  </script>
+
+
+</div>
+<aside class='l_side'>
+  
+    
+    
+      
+      
+        
+          
+          
+            
+              <section class='widget author'>
+  <div class='content pure'>
+    
+      <div class='avatar'>
+        <img class='avatar' src='/img/fracture_ray.jpg'/>
+      </div>
+    
+    
+    
+      <div class="social-wrapper">
+        
+          
+            <a href="/atom.xml"
+              class="social fas fa-rss flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+          
+            <a href="mailto:eternalkiri@outlook.com"
+              class="social fas fa-envelope flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+          
+            <a href="https://github.com/novaellias"
+              class="social fab fa-github flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+          
+            <a href="https://wpa.qq.com/msgrd?v=3&uin=3218673140&site=qq&menu=yes"
+              class="social fab fa-qq flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+      </div>
+    
+  </div>
+</section>
+
+            
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+      
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+            
+              <section class='widget plain'>
+  
+<header class='pure'>
+  <div><i class="fas fa-handshake fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;Welcome!</div>
+  
+</header>
+
+  <div class='content pure'>
+    <script src="https://pv.sohu.com/cityjson?ie=utf-8"></script><script>var getOSAndBrowser=function(){var os=navigator.platform;var userAgent=navigator.userAgent;var info="";var tempArray="";if(os.indexOf("Win")>-1){if(userAgent.indexOf("Windows NT 5.0")>-1){info+="Win2000"}else if(userAgent.indexOf("Windows NT 5.1")>-1){info+="WinXP"}else if(userAgent.indexOf("Windows NT 5.2")>-1){info+="Win2003"}else if(userAgent.indexOf("Windows NT 6.0")>-1){info+="WindowsVista"}else if(userAgent.indexOf("Windows NT 6.1")>-1||userAgent.indexOf("Windows 7")>-1){info+="Win7"}else if(userAgent.indexOf("Windows NT 6.2")>-1||userAgent.indexOf("Windows 8")>-1){info+="Win8"}else if(userAgent.indexOf("Windows NT 6.3")>-1||userAgent.indexOf("Windows 8.1")>-1){info+="Win8.1"}else if(userAgent.indexOf("Windows NT 10.0")>-1||userAgent.indexOf("Windows 10")>-1){info+="Win10"}else{info+="Other"}}else if(os.indexOf("Mac")>-1){info+="Mac"}else if(os.indexOf("X11")>-1){info+="Unix"}else if(os.indexOf("Linux")>-1){info+="Linux"}else{info+="Other"}info+="/";var isOpera=userAgent.indexOf("Opera")>-1;var isIE=userAgent.indexOf("compatible")>-1&&userAgent.indexOf("MSIE")>-1&&!isOpera;var isEdge=userAgent.toLowerCase().indexOf("edge")>-1&&!isIE;var isIE11=(userAgent.toLowerCase().indexOf("trident")>-1&&userAgent.indexOf("rv")>-1);if(/[Ff]irefox(\/\d+\.\d+)/.test(userAgent)){tempArray=/([Ff]irefox)\/(\d+\.\d+)/.exec(userAgent);info+=tempArray[1]+tempArray[2]}else if(isIE){var version="";var reIE=new RegExp("MSIE (\\d+\\.\\d+);");reIE.test(userAgent);var fIEVersion=parseFloat(RegExp["$1"]);if(fIEVersion==7){version="IE7"}else if(fIEVersion==8){version="IE8"}else if(fIEVersion==9){version="IE9"}else if(fIEVersion==10){version="IE10"}else{version="0"}info+=version}else if(isEdge){info+="Edge"}else if(isIE11){info+="IE11"}else if(/[Cc]hrome\/\d+/.test(userAgent)){tempArray=/([Cc]hrome)\/(\d+)/.exec(userAgent);info+=tempArray[1]+tempArray[2]}else if(/[Vv]ersion\/\d+\.\d+\.\d+(\.\d)* *[Ss]afari/.test(userAgent)){tempArray=/[Vv]ersion\/(\d+\.\d+\.\d+)(\.\d)* *([Ss]afari)/.exec(userAgent);info+=tempArray[3]+tempArray[1]}else if(/[Oo]pera.+[Vv]ersion\/\d+\.\d+/.test(userAgent)){tempArray=/([Oo]pera).+[Vv]ersion\/(\d+)\.\d+/.exec(userAgent);info+=tempArray[1]+tempArray[2]}else{info+="unknown"}return info};document.write("Location : "+returnCitySN["cname"]);document.write("<br>IP : "+returnCitySN["cip"]);document.write("<br>Environment : "+getOSAndBrowser());</script>
+  </div>
+</section>
+            
+          
+        
+          
+          
+            
+              <section class='widget plain'>
+  
+<header class='pure'>
+  <div><i class="fas fa-map-marked-alt fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;map</div>
+  
+</header>
+
+  <div class='content pure'>
+    <script type="text/javascript" src="//rf.revolvermaps.com/0/0/6.js?i=57u8duk5pjw&amp;m=7&amp;c=e63100&amp;cr1=ffffff&amp;f=arial&amp;l=0&amp;bv=90&amp;lx=-420&amp;ly=420&amp;hi=20&amp;he=7&amp;hc=a8ddff&amp;rs=80" async="async"></script>
+  </div>
+</section>
+            
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+      
+        
+          
+          
+        
+          
+          
+            
+              
+  <section class='widget toc-wrapper'>
+    
+<header class='pure'>
+  <div><i class="fas fa-list fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;TOC</div>
+  
+    <!-- <div class='wrapper'><a class="s-toc rightBtn" rel="external nofollow noopener noreferrer" href="javascript:void(0)"><i class="fas fa-thumbtack fa-fw"></i></a></div> -->
+  
+</header>
+
+    <div class='content pure'>
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#购买VPS服务器"><span class="toc-text">购买VPS服务器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#VPS服务器的搭建和连接"><span class="toc-text">VPS服务器的搭建和连接</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#服务器搭建"><span class="toc-text">服务器搭建</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#服务器连接"><span class="toc-text">服务器连接</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#在Xshell上连接"><span class="toc-text">在Xshell上连接</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#在终端连接"><span class="toc-text">在终端连接</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#相关内容安装"><span class="toc-text">相关内容安装</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#安装SSR"><span class="toc-text">安装SSR</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#使用锐速为SSR加速"><span class="toc-text">使用锐速为SSR加速</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#使用Google-BBR为SSR加速"><span class="toc-text">使用Google BBR为SSR加速</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SSR多端口配置"><span class="toc-text">SSR多端口配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#相关指令扩展"><span class="toc-text">相关指令扩展</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#SSR"><span class="toc-text">SSR</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#锐速"><span class="toc-text">锐速</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#防火墙"><span class="toc-text">防火墙</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#CentOS7之前版本-iptables-命令"><span class="toc-text">CentOS7之前版本 iptables 命令</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#CentOS7-firewall-命令"><span class="toc-text">CentOS7 firewall 命令</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#CentOS7-之后版本"><span class="toc-text">CentOS7 之后版本</span></a></li></ol></li></ol></li></ol>
+    </div>
+  </section>
+
+
+            
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+      
+        
+          
+          
+        
+          
+          
+        
+          
+          
+            
+              <section class='widget grid'>
+  
+<header class='pure'>
+  <div><i class="fas fa-map-signs fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;NAVIGATOR</div>
+  
+</header>
+
+  <div class='content pure'>
+    <ul class="grid navgation">
+      
+        <li><a class="flat-box" title="/" href="/"
+          
+          
+          id="home">
+          
+            <i class="fas fa-clock fa-fw" aria-hidden="true"></i>
+          
+          Latest
+        </a></li>
+      
+        <li><a class="flat-box" title="/projects/" href="/projects/"
+          
+          
+          id="projects">
+          
+            <i class="fas fa-code-branch fa-fw" aria-hidden="true"></i>
+          
+          Branch
+        </a></li>
+      
+        <li><a class="flat-box" title="/friends/" href="/friends/"
+          
+            rel="nofollow"
+          
+          
+          id="friends">
+          
+            <i class="fas fa-link fa-fw" aria-hidden="true"></i>
+          
+          Friend
+        </a></li>
+      
+        <li><a class="flat-box" title="/about/" href="/about/"
+          
+            rel="nofollow"
+          
+          
+          id="about">
+          
+            <i class="fas fa-info-circle fa-fw" aria-hidden="true"></i>
+          
+          About
+        </a></li>
+      
+    </ul>
+  </div>
+</section>
+
+            
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+      
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+            
+              
+  <section class='widget category'>
+    
+<header class='pure'>
+  <div><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;Categories</div>
+  
+    <a class="rightBtn"
+    
+      rel="nofollow"
+    
+    
+    href="/blog/categories/"
+    title="blog/categories/">
+    <i class="fas fa-expand-arrows-alt fa-fw"></i></a>
+  
+</header>
+
+    <div class='content pure'>
+      <ul class="entry">
+        
+          <li><a class="flat-box" title="/categories/HEXO/" href="/categories/HEXO/"><div class='name'>HEXO</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/Olympiad-in-Informatics/" href="/categories/Olympiad-in-Informatics/"><div class='name'>Olympiad in Informatics</div><div class='badge'>(10)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/Trick/" href="/categories/Trick/"><div class='name'>Trick</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/VPS/" href="/categories/VPS/"><div class='name'>VPS</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/buzzer/" href="/categories/buzzer/"><div class='name'>buzzer</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/memory/" href="/categories/memory/"><div class='name'>memory</div><div class='badge'>(1)</div></a></li>
+        
+      </ul>
+    </div>
+  </section>
+
+
+            
+          
+        
+          
+          
+        
+          
+          
+        
+      
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+            
+              
+  <section class='widget tagcloud'>
+    
+<header class='pure'>
+  <div><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;Hot Tags</div>
+  
+    <a class="rightBtn"
+    
+      rel="nofollow"
+    
+    
+    href="/blog/tags/"
+    title="blog/tags/">
+    <i class="fas fa-expand-arrows-alt fa-fw"></i></a>
+  
+</header>
+
+    <div class='content pure'>
+      <a href="/tags/BBR/" style="font-size: 14px; color: #999">BBR</a> <a href="/tags/DP/" style="font-size: 14px; color: #999">DP</a> <a href="/tags/GSS/" style="font-size: 17.33px; color: #828282">GSS</a> <a href="/tags/HEXO/" style="font-size: 14px; color: #999">HEXO</a> <a href="/tags/OBS/" style="font-size: 14px; color: #999">OBS</a> <a href="/tags/SSR/" style="font-size: 14px; color: #999">SSR</a> <a href="/tags/STL/" style="font-size: 14px; color: #999">STL</a> <a href="/tags/Template/" style="font-size: 24px; color: #555">Template</a> <a href="/tags/VPS/" style="font-size: 14px; color: #999">VPS</a> <a href="/tags/Vultr/" style="font-size: 14px; color: #999">Vultr</a> <a href="/tags/buzzer/" style="font-size: 14px; color: #999">buzzer</a> <a href="/tags/contest/" style="font-size: 14px; color: #999">contest</a> <a href="/tags/firewall/" style="font-size: 14px; color: #999">firewall</a> <a href="/tags/segment-tree/" style="font-size: 20.67px; color: #6c6c6c">segment tree</a> <a href="/tags/%E5%80%8D%E5%A2%9E/" style="font-size: 14px; color: #999">倍增</a> <a href="/tags/%E5%B9%B6%E6%9F%A5%E9%9B%86/" style="font-size: 14px; color: #999">并查集</a> <a href="/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF/" style="font-size: 14px; color: #999">最短路</a> <a href="/tags/%E7%94%9F%E6%88%90%E6%A0%91/" style="font-size: 14px; color: #999">生成树</a> <a href="/tags/%E9%94%90%E9%80%9F/" style="font-size: 14px; color: #999">锐速</a>
+    </div>
+  </section>
+
+
+            
+          
+        
+          
+          
+        
+      
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+      
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+      
+    
+
+  
+</aside>
+
+<footer id="footer" class="clearfix">
+  
+  
+    <div class="social-wrapper">
+      
+        
+          <a href="/atom.xml"
+            class="social fas fa-rss flat-btn"
+            target="_blank"
+            rel="external nofollow noopener noreferrer">
+          </a>
+        
+      
+        
+          <a href="mailto:eternalkiri@outlook.com"
+            class="social fas fa-envelope flat-btn"
+            target="_blank"
+            rel="external nofollow noopener noreferrer">
+          </a>
+        
+      
+        
+          <a href="https://github.com/novaellias"
+            class="social fab fa-github flat-btn"
+            target="_blank"
+            rel="external nofollow noopener noreferrer">
+          </a>
+        
+      
+        
+          <a href="https://wpa.qq.com/msgrd?v=3&amp;uin=3218673140&amp;site=qq&amp;menu=yes"
+            class="social fab fa-qq flat-btn"
+            target="_blank"
+            rel="external nofollow noopener noreferrer">
+          </a>
+        
+      
+    </div>
+  
+  <!--
+  <div><p>Blog content follows the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) License</a></p>
+</div>
+  <div>
+    
+    Use
+    <a href="https://xaoxuu.com/wiki/material-x/" target="_blank" class="codename">material-x</a>
+    as theme
+    
+  -->
+
+  Copyright <i class="far fa-copyright"></i> 2018-2020
+  <a href="https://novaellias.github.io/" target="_blank"> ELLIAS </a>丨
+  <!--
+    
+      , 
+      total visits
+      <span id="busuanzi_value_site_pv"><i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span>
+      times
+    
+    . 
+  </div>
+  -->
+  UV <span id="busuanzi_value_site_pv"><i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span>丨
+
+  <span id="timeDate">Loading...</span><span id="times">Loading...</span>
+<script>
+    var now = new Date(); 
+    function createtime() { 
+        var grt= new Date("10/13/2017 21:12:13");
+        now.setTime(now.getTime()+250); 
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+        document.getElementById("timeDate").innerHTML = "Run Time "+dnum+" d "; 
+        document.getElementById("times").innerHTML = hnum + " h " + mnum + " m " + snum + " s"; 
+    } 
+setInterval("createtime()",250);
+</script>丨
+<img src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/moeicp.png" style="width:18px;height:18px;margin-bottom:-3px" alt="MOE ICP">
+<a href="https://icp.gov.moe" target="_blank">MOE ICP </a><a href="https://icp.gov.moe/?keyword=20201096" target="_blank"> 20201096号</a>
+<br>
+<!--
+<div class="github-badge">
+  <span class="badge-subject">Powered</span><span class="badge-value bg-blue">Hexo</span>
+</div>
+-->
+<!--
+<div class="github-badge">
+  <span class="badge-subject">Hosted</span><span class="badge-value bg-brightgreen">GitHub</span>
+</div>
+-->
+
+<!--
+  https://img.shields.io/badge/dynamic/json?url=<URL>&label=<LABEL>&query=<$.DATA.SUBDATA>&color=<COLOR>&prefix=<PREFIX>&suffix=<SUFFIX>
+-->
+
+<img alt="GitHub release (latest by date including pre-releases)" src="https://img.shields.io/github/v/release/novaELLIAS/novaellias.github.io?include_prereleases&label=blog%20version">
+
+<img alt="GitHub release (latest by date including pre-releases)" src="https://img.shields.io/github/v/release/novaELLIAS/CDN_for_ND?include_prereleases&label=CDN%20version">
+
+<img alt="GitHub commits since tagged version (branch)" src="https://img.shields.io/github/commits-since/novaELLIAS/novaellias.github.io/v1.0.0/master?label=commits">
+
+<img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/novaELLIAS/novaellias.github.io">
+
+<img alt="GitHub language count" src="https://img.shields.io/github/languages/count/novaELLIAS/novaellias.github.io">
+
+<img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/novaELLIAS/novaellias.github.io?label=blog%20size">
+
+<img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/novaELLIAS/CDN_for_ND?label=CDN%20size">
+
+<!--
+<div class="github-badge">
+  <span class="badge-subject">DNR</span><span class="badge-value bg-firebrick">Aliyun</span>
+</div>
+-->
+<!--
+<div class="github-badge">
+  <span class="badge-subject">CDN</span><span class="badge-value bg-orange">jsDelivr</span>
+</div>
+-->
+
+<!--
+<div class="github-badge">
+  <span class="badge-subject">Version</span><span class="badge-value bg-blue">v2.0.0</span>
+</div>
+-->
+
+<!--
+<div class="github-badge">
+  <span class="badge-subject">PictureBed</span><span class="badge-value bg-blueviolet">WordPress</span>
+</div>
+-->
+<!--
+<div class="github-badge">
+  <span class="badge-subject">Theme</span><span class="badge-value bg-blue">Material X</span>
+</div>
+-->
+<!--
+<div class="github-badge">
+  <span class="badge-subject"><i class="fa fa-copyright"></i></span><span class="badge-value bg-lightgrey">BY-NC-SA 4.0</span>
+</div>
+-->
+
+
+<img alt="PictureBed" src="https://img.shields.io/badge/PictureBed-WordPress-orange">
+
+<img alt="PictureBed" src="https://img.shields.io/badge/CDN-jsDelivr-orange">
+
+</footer>
+<script>setLoadingBarProgress(80);</script>
+
+
+      <script>setLoadingBarProgress(60);</script>
+    </div>
+    <a class="s-top fas fa-arrow-up fa-fw" href='javascript:void(0)'></a>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+
+  <script>
+    
+    var SEARCH_SERVICE = "hexo" || "hexo";
+    var ROOT = "/" || "/";
+    if (!ROOT.endsWith('/')) ROOT += '/';
+  </script>
+
+<script src="//instant.page/1.2.2" type="module" integrity="sha384-2xV8M5griQmzyiY3CDqh1dn4z3llDVqZDqzjzcY+jCBCk/a5fXJmuZ/40JJAPeoU"></script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/scrollreveal@4.0.5/dist/scrollreveal.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      const $reveal = $('.reveal');
+      if ($reveal.length === 0) return;
+      const sr = ScrollReveal({ distance: 0 });
+      sr.reveal('.reveal');
+    });
+  </script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      Waves.attach('.flat-btn', ['waves-button']);
+      Waves.attach('.float-btn', ['waves-button', 'waves-float']);
+      Waves.attach('.float-btn-light', ['waves-button', 'waves-float', 'waves-light']);
+      Waves.attach('.flat-box', ['waves-block']);
+      Waves.attach('.float-box', ['waves-block', 'waves-float']);
+      Waves.attach('.waves-image');
+      Waves.init();
+    });
+  </script>
+
+
+  <script async src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+  
+  
+    <script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-material-x@20.2/js/backstretch.min.js"></script>
+    <script type="text/javascript">
+      $(function(){
+        if ('') {
+          $('').backstretch(
+          ["https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/bg_mls_hzc.jpg", "https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/bg_liliw.png", "https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/bg_sagume1.jpg", "https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/backgrond_sayaka.jpg"],
+          {
+            duration: "600000",
+            fade: "4000"
+          });
+        } else {
+          $.backstretch(
+          ["https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/bg_mls_hzc.jpg", "https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/bg_liliw.png", "https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/bg_sagume1.jpg", "https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/backgrond_sayaka.jpg"],
+          {
+            duration: "600000",
+            fade: "4000"
+          });
+        }
+      });
+    </script>
+  
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  
+    
+      
+<script src="/js/volantis.js"></script>
+
+    
+  
+  <script>
+  var GUEST_INFO = ['nick','mail','link'];
+  var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+    return GUEST_INFO.indexOf(item) > -1
+  });
+  var notify = 'true' == true;
+  var verify = 'true' == true;
+  var valine = new Valine();
+  valine.init({
+    el: '#valine_container',
+    notify: notify,
+    verify: verify,
+    guest_info: guest_info,
+    
+    appId: "21B1peOzTLV0I7A5xmnyUmRx-gzGzoHsz",
+    appKey: "DM4Dg5a8rjqR98t4sKPjFiHC",
+    placeholder: "Please!",
+    pageSize:'10',
+    avatar:'mp',
+    lang:'en',
+    highlight:'true'
+  })
+  </script>
+
+
+
+  
+<script src="/js/app.js"></script>
+
+
+
+  
+<script src="/js/search.js"></script>
+
+
+
+
+
+
+
+<!-- 复制 -->
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+  let COPY_SUCCESS = "Copied";
+  let COPY_FAILURE = "Copy failed";
+  /*页面载入完成后，创建复制按钮*/
+  !function (e, t, a) {
+    /* code */
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '  <i class="fa fa-copy"></i><span>Copy</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+
+      clipboard.on('success', function(e) {
+        //您可以加入成功提示
+        console.info('Action:', e.action);
+        console.info('Text:', e.text);
+        console.info('Trigger:', e.trigger);
+        success_prompt(COPY_SUCCESS);
+        e.clearSelection();
+      });
+      clipboard.on('error', function(e) {
+        //您可以加入失败提示
+        console.error('Action:', e.action);
+        console.error('Trigger:', e.trigger);
+        fail_prompt(COPY_FAILURE);
+      });
+    }
+    initCopyCode();
+
+  }(window, document);
+
+  /**
+   * 弹出式提示框，默认1.5秒自动消失
+   * @param message 提示信息
+   * @param style 提示样式，有alert-success、alert-danger、alert-warning、alert-info
+   * @param time 消失时间
+   */
+  var prompt = function (message, style, time)
+  {
+      style = (style === undefined) ? 'alert-success' : style;
+      time = (time === undefined) ? 1500 : time*1000;
+      $('<div>')
+          .appendTo('body')
+          .addClass('alert ' + style)
+          .html(message)
+          .show()
+          .delay(time)
+          .fadeOut();
+  };
+
+  // 成功提示
+  var success_prompt = function(message, time)
+  {
+      prompt(message, 'alert-success', time);
+  };
+
+  // 失败提示
+  var fail_prompt = function(message, time)
+  {
+      prompt(message, 'alert-danger', time);
+  };
+
+  // 提醒
+  var warning_prompt = function(message, time)
+  {
+      prompt(message, 'alert-warning', time);
+  };
+
+  // 信息提示
+  var info_prompt = function(message, time)
+  {
+      prompt(message, 'alert-info', time);
+  };
+
+</script>
+
+
+<!-- fancybox -->
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script>
+  let LAZY_LOAD_IMAGE = "";
+  $(".article-entry").find("fancybox").find("img").each(function () {
+      var element = document.createElement("a");
+      $(element).attr("data-fancybox", "gallery");
+      $(element).attr("href", $(this).attr("src"));
+      /* 图片采用懒加载处理时,
+       * 一般图片标签内会有个属性名来存放图片的真实地址，比如 data-original,
+       * 那么此处将原本的属性名src替换为对应属性名data-original,
+       * 修改如下
+       */
+       if (LAZY_LOAD_IMAGE) {
+         $(element).attr("href", $(this).attr("data-original"));
+       }
+      $(this).wrap(element);
+  });
+</script>
+
+
+
+
+
+  <script>setLoadingBarProgress(100);</script>
+</body>
+</html>
