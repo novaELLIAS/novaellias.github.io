@@ -11,6 +11,9 @@ Disallow: /css/
 Disallow: /fonts/
 Disallow: /vendors/
 Disallow: /fancybox/
+Disallow: /images/
+Disallow: /img/
+Disallow: /oi_history/
 
 Sitemap: http://www.brynhild.online/sitemap.xml
 Sitemap: http://www.brynhild.online/baidusitemap.xml
