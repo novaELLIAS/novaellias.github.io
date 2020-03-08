@@ -330,31 +330,75 @@
 <h3 id="购买VPS服务器"><a href="#购买VPS服务器" class="headerlink" title="购买VPS服务器"></a>购买VPS服务器</h3><p>我们应该选择国外的VPS(Virtual Private Server)提供商,这里推荐<a href="https://www.vultr.com/" target="_blank" rel="noopener">Vultr</a>,性价比较高,最低有$2.5/m的,但其只支持IPv6,所以个人搭建推荐$3.5/m.</p>
 <p>目前新账号充值$10可赠送$50,是相当划算的.如果想要通过注册多个账号来减少资费,请务必注意IP地址及GPS定位.</p>
 <h3 id="VPS服务器的搭建和连接"><a href="#VPS服务器的搭建和连接" class="headerlink" title="VPS服务器的搭建和连接"></a>VPS服务器的搭建和连接</h3><h4 id="服务器搭建"><a href="#服务器搭建" class="headerlink" title="服务器搭建"></a>服务器搭建</h4><p>在Product页点击加号新建服务器.</p>
+<fancybox>
+
 <p><img src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/ssr_basic_setup/1.png" alt=""></p>
+</fancybox>
+
 <p>选择Cloud Compute.</p>
+<fancybox>
+
 <p><img src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/ssr_basic_setup/2.png" alt=""></p>
+</fancybox>
+
 <p>选择自己熟悉的OS.这里以CentOS为例.CentOS版本建议选6以上,否则也许会出现未知的问题.</p>
 <p>Vultr提供多个地区的服务器,建议一次性搭建多台之后逐个测试速度,速度较慢的删除即可.服务器按照小时计费,不需要担心资费浪费问题.</p>
+<fancybox>
+
 <p><img src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/ssr_basic_setup/3.png" alt=""></p>
+</fancybox>
+
 <p>扩展功能按需要选择.这里建议勾选Enable IPv6.</p>
+<fancybox>
+
 <p><img src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/ssr_basic_setup/4.png" alt=""></p>
+</fancybox>
+
 <p>服务器搭建完成后可以在Products页面看到.</p>
+<fancybox>
+
 <p><img src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/ssr_basic_setup/5.png" alt=""></p>
+</fancybox>
+
 <h4 id="服务器连接"><a href="#服务器连接" class="headerlink" title="服务器连接"></a>服务器连接</h4><p>在服务器页面,我们需要记下服务器的IP 用户名 密码.</p>
+<fancybox>
+
 <p><img src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/ssr_basic_setup/6.png" alt=""></p>
+</fancybox>
+
 <p>我们需要终端用SSH来连接VPS.在Windows操作系统上推荐Xshell.Vultr网站上也提供了命令行,但不推荐使用.</p>
 <h5 id="在Xshell上连接"><a href="#在Xshell上连接" class="headerlink" title="在Xshell上连接"></a>在Xshell上连接</h5><p>文件-&gt;新建</p>
+<fancybox>
+
 <p><img src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/ssr_basic_setup/7.png" alt=""></p>
+</fancybox>
+
 <p>在连接中填写相关内容.</p>
+<fancybox>
+
 <p><img src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/ssr_basic_setup/8.png" alt=""></p>
+</fancybox>
+
 <p>在用户身份验证中填写用户名和密码.</p>
+<fancybox>
+
 <p><img src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/ssr_basic_setup/9.png" alt=""></p>
+</fancybox>
+
+<fancybox>
+
 <p><img src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/ssr_basic_setup/15.png" alt=""></p>
+</fancybox>
+
 <p>连接即可.</p>
 <h5 id="在终端连接"><a href="#在终端连接" class="headerlink" title="在终端连接"></a>在终端连接</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh your_username@server_IP -p 22 (22是你VPS的SSH端口)</span><br></pre></td></tr></table></figure>
 
 <p>端口可以省略.</p>
+<fancybox>
+
 <p><img src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/ssr_basic_setup/22.jpg" alt=""></p>
+</fancybox>
+
 <h3 id="相关内容安装"><a href="#相关内容安装" class="headerlink" title="相关内容安装"></a>相关内容安装</h3><h4 id="安装SSR"><a href="#安装SSR" class="headerlink" title="安装SSR"></a>安装SSR</h4><p>安装wegt</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install wget</span><br></pre></td></tr></table></figure>
 
@@ -366,7 +410,11 @@
 
 <p>SSR相关配置依需要而定.</p>
 <p>搭建成功后会显示IP,端口,密码,协议等,用于填写ShadowsocksR配置信息.</p>
+<fancybox>
+
 <p><img src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/ssr_basic_setup/12.png" alt=""></p>
+</fancybox>
+
 <h4 id="使用锐速为SSR加速"><a href="#使用锐速为SSR加速" class="headerlink" title="使用锐速为SSR加速"></a>使用锐速为SSR加速</h4><p>锐速模块依赖于内核,基本原理是对丢包情况进行评估,并重发可能丢的数据包,即锐速多倍发包,在一定程度上能够提高VPN速度.</p>
 <p>首先查询系统内核版本</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uname -r</span><br></pre></td></tr></table></figure>
@@ -380,16 +428,32 @@
 <p>更高版本使用以下命令对内核降级:</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget --no-check-certificate -O rskernel.sh https://raw.githubusercontent.com/uxh/shadowsocks_bash/master/rskernel.sh &amp;&amp; bash rskernel.sh</span><br></pre></td></tr></table></figure>
 
+<fancybox>
+
 <p><img src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/ssr_basic_setup/13.png" alt=""></p>
+</fancybox>
+
 <p>如图所示,系统为CentOS7,更换内核后系统重启.</p>
+<fancybox>
+
 <p><img src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/ssr_basic_setup/14.png" alt=""></p>
+</fancybox>
+
 <p>重新连接后使用如下指令安装锐速:</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install net-tools -y &amp;&amp; wget --no-check-certificate -O appex.sh https://raw.githubusercontent.com/0oVicero0/serverSpeeder_Install/master/appex.sh &amp;&amp; bash appex.sh install</span><br></pre></td></tr></table></figure>
 
 <p>在过程中图示的三个选项默认即可.</p>
+<fancybox>
+
 <p><img src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/ssr_basic_setup/16.png" alt=""></p>
+</fancybox>
+
 <p>下图为安装运行成功.与锐速相关的指令会在文末给出.</p>
+<fancybox>
+
 <p><img src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/ssr_basic_setup/17.png" alt=""></p>
+</fancybox>
+
 <h4 id="使用Google-BBR为SSR加速"><a href="#使用Google-BBR为SSR加速" class="headerlink" title="使用Google BBR为SSR加速"></a>使用Google BBR为SSR加速</h4><p>这是一个TCP拥塞控制算法.Google BBR的github页面: <a href="https://github.com/google/bbr" target="_blank" rel="noopener">https://github.com/google/bbr</a></p>
 <blockquote>
 <p>警告: Google BBR需要升级内核,锐速需要降级内核,二者不可兼得.</p>
@@ -461,7 +525,7 @@
 
 <blockquote>
 <p>博客内容遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed" target="_blank" rel="noopener">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)</a> 协议.</p>
-<p>本文永久链接: <a href="https://brynhild.online/vultr_ssr_vpn_buildup/" target="_blank" rel="noopener">https://brynhild.online/vultr_ssr_vpn_buildup/</a></p>
+<p>本文永久链接: <a href="https://brynhild.online/vultr_ssr_vpn_buildup/">https://brynhild.online/vultr_ssr_vpn_buildup/</a></p>
 </blockquote>
 
       </div>
@@ -548,7 +612,7 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-03-08T17:35:23+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-03-08T23:23:10+08:00">
   <a class='notlink'>
     <i class="fas fa-clock" aria-hidden="true"></i>
     <p>updated at Mar 8, 2020</p>
