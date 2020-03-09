@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://brynhild.online/hiddenlist/index.html</loc>
+    
+    <lastmod>2020-03-09T08:32:25.310Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://brynhild.online/about/index.html</loc>
+    
+    <lastmod>2020-03-09T08:15:27.346Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://brynhild.online/ncm_unlock/</loc>
     
     <lastmod>2020-03-08T15:30:26.120Z</lastmod>
@@ -44,44 +58,30 @@
   </url>
   
   <url>
-    <loc>https://brynhild.online/artical/A5/index.html</loc>
+    <loc>https://brynhild.online/composition/A5/index.html</loc>
     
     <lastmod>2020-02-20T04:55:47.213Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://brynhild.online/artical/A1/index.html</loc>
+    <loc>https://brynhild.online/composition/A1/index.html</loc>
     
     <lastmod>2020-02-20T04:55:42.208Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://brynhild.online/game/element/index.html</loc>
+    <loc>https://brynhild.online/tools/element/index.html</loc>
     
     <lastmod>2020-02-17T08:15:02.160Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://brynhild.online/hiddenlist/index.html</loc>
-    
-    <lastmod>2020-02-17T04:48:04.260Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://brynhild.online/game/2048/index.html</loc>
+    <loc>https://brynhild.online/tools/2048/index.html</loc>
     
     <lastmod>2020-02-17T04:44:21.197Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://brynhild.online/about/index.html</loc>
-    
-    <lastmod>2020-02-13T14:47:14.343Z</lastmod>
     
   </url>
   
