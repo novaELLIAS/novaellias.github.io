@@ -14,9 +14,8 @@ Disallow: /fancybox/
 Disallow: /images/
 Disallow: /about/
 Disallow: /oi_history/
-Disallow: /oi_history/
-Disallow: /oi_history/
-Disallow: /oi_history/
+Disallow: /composition/
+Disallow: /friends/
 
 Sitemap: https://brynhild.online/sitemap.xml
 Sitemap: https://brynhild.online/baidusitemap.xml
