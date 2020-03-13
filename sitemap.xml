@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://brynhild.online/tools/calc/calc-adv1/index.html</loc>
+    <loc>https://brynhild.online/hiddenlist/index.html</loc>
     
-    <lastmod>2020-03-13T11:39:26.258Z</lastmod>
+    <lastmod>2020-03-13T15:28:21.548Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://brynhild.online/hiddenlist/index.html</loc>
+    <loc>https://brynhild.online/tools/tetris/tetris3d/index.html</loc>
     
-    <lastmod>2020-03-13T11:38:54.264Z</lastmod>
+    <lastmod>2020-03-13T15:26:56.309Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://brynhild.online/tools/calc/calc-adv1/index.html</loc>
+    
+    <lastmod>2020-03-13T11:39:26.258Z</lastmod>
     
   </url>
   
@@ -23,7 +30,21 @@
   </url>
   
   <url>
+    <loc>https://brynhild.online/tools/tetris/tetris1/index.html</loc>
+    
+    <lastmod>2020-03-13T02:08:05.073Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://brynhild.online/tools/2048/index.html</loc>
+    
+    <lastmod>2020-03-13T02:08:05.073Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://brynhild.online/tools/tetris/tetris2/index.html</loc>
     
     <lastmod>2020-03-13T02:08:05.073Z</lastmod>
     
