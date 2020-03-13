@@ -1,468 +1,58 @@
 
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>doc</title>
-    <script src="https://cdn.jsdelivr.net/gh/jquery/jquery@3.2.1/dist/jquery.min.js"></script>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0">
+<title>2048</title>
+<link rel="shortcut icon" type="image/x-icon" href="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/2048.png">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/2048/reset.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/2048/style.css">
 
-        body {
-            font-family: "微软雅黑";
-            font-size: 16px;
-        }
-
-        .page {
-            width: 350px;
-            height: 500px;
-            background-color: #faf7ee;
-        }
-
-        .titleLeft {
-            float: left;
-            width: 40%;
-            margin-top: .2em;
-            margin-left: 2.5em;
-        }
-
-        .title {
-            font-size: 2.6em;
-            margin: .1em;
-        }
-
-        .start {
-            background-color: #baaea0;
-            color: #fff;
-            font-size: 1.4em;
-            font-weight: 600;
-            line-height: 1.8;
-            width: 5em;
-            text-align: center;
-            border-radius: .3em;
-            cursor: pointer;
-        }
-
-        .titleRight {
-            margin-top: 1.2em;
-            margin-right: 1.5em;
-            width: 30%;
-            padding: .5em;
-            float: right;
-            background-color: #cdc3b7;
-            border-radius: .5em;
-        }
-
-        .score {
-            font-size: 1.6em;
-            font-weight: 600;
-            text-align: center;
-        }
-
-        /*游戏*/
-        .gameBox {
-            background-color: #baaea0;
-            margin: 2em auto;
-            padding: .5em 0;
-            width: 92%;
-            border-radius: .5em;
-            /*禁止选中*/
-            moz-user-select: -moz-none;
-            -moz-user-select: none;
-            -o-user-select: none;
-            -khtml-user-select: none;
-            -webkit-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-        }
-
-        .item {
-            width: 4.2em;
-            height: 4.2em;
-            margin: .2em;
-            border-radius: .5em;
-            font-size: 1em;
-            background-color: #cdc1b3;
-            display: inline-block;
-            text-align: center;
-            vertical-align: middle;
-            position: relative;
-        }
-
-        .item:nth-of-type(4n+1) {
-            margin-left: .6em;
-        }
-
-        .cell {
-            font-size: 3em;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 100%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-        }
-
-        .numBgc {
-            background-color: #eee4da;
-        }
-    </style>
 <meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Next Dream..." type="application/atom+xml">
 </head>
-
 <body>
-    <div class="page" id="page">
-        <div class="titleBox">
-            <div class="titleLeft">
-                <h1 class="title">2048</h1>
-                <div class="start" id="start">START</div>
-            </div>
-            <div class="titleRight">
-                <p class="score" style="color: #9b9388">score</p>
-                <p class="score" id="score" style="color: #fff;">0</p>
-            </div>
-            <div style="clear: both;"></div>
-        </div>
-        <div class="gameBox" id="gameBox">
-            <div class="item"><span class="cell"></span></div>
-            <div class="item"><span class="cell"></span></div>
-            <div class="item"><span class="cell"></span></div>
-            <div class="item"><span class="cell"></span></div>
-            <div class="item"><span class="cell"></span></div>
-            <div class="item"><span class="cell"></span></div>
-            <div class="item"><span class="cell"></span></div>
-            <div class="item"><span class="cell"></span></div>
-            <div class="item"><span class="cell"></span></div>
-            <div class="item"><span class="cell"></span></div>
-            <div class="item"><span class="cell"></span></div>
-            <div class="item"><span class="cell"></span></div>
-            <div class="item"><span class="cell"></span></div>
-            <div class="item"><span class="cell"></span></div>
-            <div class="item"><span class="cell"></span></div>
-            <div class="item"><span class="cell"></span></div>
-        </div>
-    </div>
-    <script>
-        var cell = [
-            [0, 0, 0, 0],
-            [0, 0, 0, 0],
-            [0, 0, 0, 0],
-            [0, 0, 0, 0]
-        ];
-        var cellEmpty = [];
-        var direction = "0";
-        var score = 0;
 
-        // 记录为空的格子
-        function signCellEmpty() {
-            cellEmpty = [];
-            for (var i = 0; i < cell.length; i++) {
-                for (var j = 0; j < cell[i].length; j++) {
-                    if (cell[i][j] == 0) {
-                        cellEmpty.push([i, j]);
-                    }
-                }
-            }
-            if (cellEmpty.length <= 0) return false;
-            return true;
-        }
-        // 随机选择一个空的单元格
-        function selCellEmpty() {
-            return Math.floor(Math.random() * cellEmpty.length);
-        }
-        // 设置单元格数字
-        function setCell(posi, num) {
-            var posX = cellEmpty[posi][0];
-            var posY = cellEmpty[posi][1];
-            console.log("第几个空的单元格:" + posi);
-            console.log("随机生成的2或者4：" + num);
-            cell[posX][posY] = num;
-            console.log(cell.toString())
-        }
-        // 随机生成2或者4
-        function generateNum() {
-            return Math.random() < 0.8 ? 2 : 4;
-        }
+<header>
+	<div class="container">
+		<h1><span>2</span><span>0</span><span>4</span><span>8</span></h1>
+	</div>
+</header>
 
-        //生成两个数字
-        function generate2Num() {
-            for (var i = 0; i < 2; i++) {
-                signCellEmpty();
-                if (cellEmpty.length > 0) {
-                    setCell(selCellEmpty(), generateNum());
-                } else {
-                    return false;
-                }
-            }
-            return true;
-        }
+<div class="container">
+	<div class="directions">
+		<p><strong>Welcome!</strong> </p>
+	</div>
+	<div class="scores">
+		<div class="score-container best-score">
+			BEST: 
+			<div class="score">
+				<div id="bestScore">0</div>
+			</div>
+		</div>
+		<div class="score-container">
+			SCORE: 
+			<div class="score">
+				<div id="score">0</div>
+				<div class="add" id="add"></div>
+			</div>
+		</div>
+	</div>
+	<div class="game">
+		<div id="tile-container" class="tile-container"></div>
+		<div class="end" id="end">GAME OVER<div class="monkey"></div><button class="btn not-recommended__item js-restart-btn" id="try-again">RETRY</button></div>
+	</div>
 
-        // 渲染：将对应数组的数字加载到UI中
-        function renderUI() {
-            var cellFill = cell.toString().split(',');
-            $.each(cellFill, function (index, val) {
-                $(".cell:eq(" + index + ")").text("");
-                $(".item:eq(" + index + ")").css("background-color", "#cdc1b3");
-                $(".cell:eq(" + index + ")").css("font-size", "3em");
-                if (val != 0) {
-                    $(".cell:eq(" + index + ")").text(val);
-                    //不同数字设置不同的背景颜色
-                    var bgc = "";
-                    var fontSize = "3em";
-                    switch (parseInt(val, 10)) {
-                        case 2:
-                            bgc = "#FFCC99";
-                            break;
-                        case 4:
-                            bgc = "#FFFF99";
-                            break;
-                        case 8:
-                            bgc = "#FF9966";
-                            break;
-                        case 16:
-                            bgc = "#FFFFCC";
-                            break;
-                        case 32:
-                            bgc = "#FFFF00";
-                            break;
-                        case 64:
-                            bgc = "#CCCC33";
-                            break;
-                        case 128:
-                            bgc = "#FF9900";
-                            fontSize = "2.2em";
-                            break;
-                        case 256:
-                            bgc = "#FFCCCC";
-                            fontSize = "2.2em";
-                            break;
-                        case 512:
-                            bgc = "#FF6666";
-                            fontSize = "2.2em";
-                            break;
-                        case 1024:
-                            bgc = "#FF0033";
-                            fontSize = "1.8em";
-                            break;
-                        case 2048:
-                            bgc = "#CC3333";
-                            fontSize = "1.8em";
-                            break;
-                        case 4096:
-                            bgc = "#993333";
-                            fontSize = "1.8em";
-                            break;
-                        case 8192:
-                            bgc = "#FFCC33";
-                            fontSize = "1.8em";
-                            break;
-                        default:
-                            bgc = "#ff0000";
-                    }
-                    $(".item:eq(" + index + ")").css("background-color", bgc);
-                    $(".cell:eq(" + index + ")").css("font-size", fontSize);
-                    $("#score").text(score);
-                }
-            });
+	<div class="not-recommended">
+		<button class="btn not-recommended__item js-restart-btn" id="restart">RESTART</button>
+	</div>
 
-        }
+</div>
 
-
-        //数字靠边:将不为0的数字按顺序添加到一个新的数组中
-        function changeCell() {
-            var cellNew = [
-                [0, 0, 0, 0],
-                [0, 0, 0, 0],
-                [0, 0, 0, 0],
-                [0, 0, 0, 0]
-            ];
-            var i = 0,
-                j = 0,
-                iNew = 0,
-                jNew = 0;
-            var row = 0,
-                col = 0,
-                rowNew = 0,
-                colNew = 0;
-            for (i = 0; i < 4; i++) {
-                jNew = 0;
-                for (j = 0; j < 4; j++) {
-                    switch (direction) {
-                        case "left":
-                            row = i;
-                            col = j;
-                            rowNew = iNew;
-                            colNew = jNew;
-                            break;
-                        case "right":
-                            row = i;
-                            col = 3 - j;
-                            rowNew = iNew;
-                            colNew = 3 - jNew;
-                            break;
-                        case "up":
-                            row = j;
-                            col = i;
-                            rowNew = jNew;
-                            colNew = iNew;
-                            break;
-                        case "down":
-                            row = 3 - j;
-                            col = i;
-                            rowNew = 3 - jNew;
-                            colNew = iNew;
-                            break;
-                        default:
-                            break;
-                    }
-                    if (cell[row][col] != 0) {
-                        cellNew[rowNew][colNew] = cell[row][col];
-                        jNew++;
-                    }
-                }
-                iNew++;
-            }
-            return cellNew;
-        }
-        //相等数字合并
-        function combineNum() {
-            var row = 0,
-                col = 0,
-                rowNearby = 0,
-                colNearby = 0;
-            for (var i = 0; i < 4; i++) {
-                for (var j = 0; j < 3; j++) {
-                    switch (direction) {
-                        case "left":
-                            row = i;
-                            col = j;
-                            rowNearby = i;
-                            colNearby = j + 1;
-                            break;
-                        case "right":
-                            row = i;
-                            col = 3 - j;
-                            rowNearby = i;
-                            colNearby = 3 - (j + 1);
-                            break;
-                        case "up":
-                            row = j;
-                            col = i;
-                            rowNearby = j + 1;
-                            colNearby = i;
-                            break;
-                        case "down":
-                            row = 3 - j;
-                            col = i;
-                            rowNearby = 3 - (j + 1);
-                            colNearby = i;
-                            break;
-                        default:
-                            break;
-                    }
-                    if (cell[row][col] != 0) {
-                        if (cell[row][col] == cell[rowNearby][colNearby]) {
-                            cell[row][col] = cell[row][col] * 2;
-                            score += cell[row][col];
-                            cell[rowNearby][colNearby] = 0;
-                        }
-                    }
-                }
-            }
-            return cell;
-        }
-
-        // 是否结束:没有空格子，并且不能在合并（相邻的都不相等）
-        function isOver() {
-            signCellEmpty();
-            if (cellEmpty.length > 0) return false;
-            for (var i = 0; i < 4; i++) {
-                for (var j = 0; j < 3; j++) {
-                    if (cell[i][j] == cell[i][j + 1]) return false;
-                    if (cell[j][i] == cell[j + 1][i]) return false;
-                }
-            }
-            return true;
-        }
-
-        function play() {
-            //检测鼠标滑动方向，上下左右
-            $("#gameBox").mousedown(function (e) {
-                e.preventDefault();
-                startX = e.pageX;
-                startY = e.pageY;
-                X = 0;
-                Y = 0;
-                $(this).mousemove(function (e) {
-                    e.preventDefault();
-                    moveEndX = e.pageX;
-                    moveEndY = e.pageY;
-                    X = moveEndX - startX;
-                    Y = moveEndY - startY;
-                    if (Math.abs(X) > Math.abs(Y)) {
-                        if (X > 0) {
-                            direction = "right";
-                        } else {
-                            direction = "left";
-                        }
-                    } else {
-                        if (Y > 0) {
-                            direction = "down";
-                        } else {
-                            direction = "up";
-                        }
-                    }
-
-                });
-            }).mouseup(function () {
-                if (Math.abs(X) > 20 || Math.abs(Y) > 20) { //学习：鼠标不动不会发生mousemove事件
-                    console.log("X:" + X + "   Y:" + Y);
-                    console.log("方向======================================：" + direction);
-                    if (direction != "0") {
-                        console.log("初始：" + cell.toString());
-
-                        cell = changeCell();
-                        console.log("数字靠边:" + cell.toString());
-
-                        combineNum();
-                        console.log("合并数字:" + cell.toString());
-
-                        cell = changeCell();
-                        console.log("再次数字靠边:" + cell.toString());
-
-                        if (isOver()) {
-                            alert("Game Over!")
-                        } else {
-                            generate2Num();
-                        }
-                        console.log("生成两个新的数字:" + cell.toString())
-
-                        //渲染UI
-                        renderUI();
-                    }
-                }
-            });
-
-        }
-
-        $("#start").click(function () {
-            cell = [
-                [0, 0, 0, 0],
-                [0, 0, 0, 0],
-                [0, 0, 0, 0],
-                [0, 0, 0, 0]
-            ];
-            renderUI();
-            generate2Num();
-            renderUI();
-            play();
-            $(this).text("RETRY");
-        })
-    </script>
+<script src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/2048/index.js"></script>
+<div style="text-align:center;margin:10px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+</div>
 </body>
-
 </html>
+
+

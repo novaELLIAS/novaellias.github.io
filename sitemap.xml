@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://brynhild.online/hiddenlist/index.html</loc>
+    <loc>https://brynhild.online/tools/2048/index.html</loc>
     
-    <lastmod>2020-03-13T02:00:01.449Z</lastmod>
+    <lastmod>2020-03-13T02:08:05.073Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://brynhild.online/tools/2048/index.html</loc>
+    <loc>https://brynhild.online/tools/2048/inde.html</loc>
     
-    <lastmod>2020-03-13T01:57:10.786Z</lastmod>
+    <lastmod>2020-03-13T02:07:30.825Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://brynhild.online/hiddenlist/index.html</loc>
+    
+    <lastmod>2020-03-13T02:00:01.449Z</lastmod>
     
   </url>
   
@@ -138,13 +145,6 @@
     <loc>https://brynhild.online/tools/element/index.html</loc>
     
     <lastmod>2020-02-17T08:15:02.160Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://brynhild.online/tools/2048/inde.html</loc>
-    
-    <lastmod>2020-02-17T04:44:21.197Z</lastmod>
     
   </url>
   
