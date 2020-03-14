@@ -5,9 +5,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://brynhild.online/"/>
+  <link href="brynhild.online/"/>
   <updated>2020-03-12T02:46:59.550Z</updated>
-  <id>https://brynhild.online/</id>
+  <id>brynhild.online/</id>
   
   <author>
     <name>ELLIAS</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>珂学上网 基于VultrVPS的SSR服务器的基本搭建</title>
-    <link href="https://brynhild.online/vultr_ssr_vpn_buildup/"/>
-    <id>https://brynhild.online/vultr_ssr_vpn_buildup/</id>
+    <link href="brynhild.online/vultr_ssr_vpn_buildup/"/>
+    <id>brynhild.online/vultr_ssr_vpn_buildup/</id>
     <published>2020-03-01T22:08:23.000Z</published>
     <updated>2020-03-12T02:46:59.550Z</updated>
     
@@ -34,27 +34,27 @@
     </summary>
     
     
-      <category term="VPS" scheme="https://brynhild.online/categories/VPS/"/>
+      <category term="VPS" scheme="brynhild.online/categories/VPS/"/>
     
     
-      <category term="Vultr" scheme="https://brynhild.online/tags/Vultr/"/>
+      <category term="Vultr" scheme="brynhild.online/tags/Vultr/"/>
     
-      <category term="SSR" scheme="https://brynhild.online/tags/SSR/"/>
+      <category term="SSR" scheme="brynhild.online/tags/SSR/"/>
     
-      <category term="VPS" scheme="https://brynhild.online/tags/VPS/"/>
+      <category term="VPS" scheme="brynhild.online/tags/VPS/"/>
     
-      <category term="锐速" scheme="https://brynhild.online/tags/%E9%94%90%E9%80%9F/"/>
+      <category term="锐速" scheme="brynhild.online/tags/%E9%94%90%E9%80%9F/"/>
     
-      <category term="BBR" scheme="https://brynhild.online/tags/BBR/"/>
+      <category term="BBR" scheme="brynhild.online/tags/BBR/"/>
     
-      <category term="firewall" scheme="https://brynhild.online/tags/firewall/"/>
+      <category term="firewall" scheme="brynhild.online/tags/firewall/"/>
     
   </entry>
   
   <entry>
     <title>扫盲向 利用OBS虚拟摄像头在网课上摸鱼</title>
-    <link href="https://brynhild.online/obs_internet_class_fishing/"/>
-    <id>https://brynhild.online/obs_internet_class_fishing/</id>
+    <link href="brynhild.online/obs_internet_class_fishing/"/>
+    <id>brynhild.online/obs_internet_class_fishing/</id>
     <published>2020-03-01T02:08:23.000Z</published>
     <updated>2020-03-08T15:24:33.560Z</updated>
     
@@ -69,17 +69,17 @@
     </summary>
     
     
-      <category term="Trick" scheme="https://brynhild.online/categories/Trick/"/>
+      <category term="Trick" scheme="brynhild.online/categories/Trick/"/>
     
     
-      <category term="OBS" scheme="https://brynhild.online/tags/OBS/"/>
+      <category term="OBS" scheme="brynhild.online/tags/OBS/"/>
     
   </entry>
   
   <entry>
     <title>网易云VIP歌曲NCM格式解密</title>
-    <link href="https://brynhild.online/ncm_unlock/"/>
-    <id>https://brynhild.online/ncm_unlock/</id>
+    <link href="brynhild.online/ncm_unlock/"/>
+    <id>brynhild.online/ncm_unlock/</id>
     <published>2020-01-11T08:08:00.000Z</published>
     <updated>2020-03-10T23:47:05.355Z</updated>
     
@@ -94,17 +94,17 @@
     </summary>
     
     
-      <category term="Trick" scheme="https://brynhild.online/categories/Trick/"/>
+      <category term="Trick" scheme="brynhild.online/categories/Trick/"/>
     
     
-      <category term="Trick" scheme="https://brynhild.online/tags/Trick/"/>
+      <category term="Trick" scheme="brynhild.online/tags/Trick/"/>
     
   </entry>
   
   <entry>
     <title>buzzer scale define</title>
-    <link href="https://brynhild.online/buzzer-define/"/>
-    <id>https://brynhild.online/buzzer-define/</id>
+    <link href="brynhild.online/buzzer-define/"/>
+    <id>brynhild.online/buzzer-define/</id>
     <published>2019-07-07T02:29:42.000Z</published>
     <updated>2020-03-02T06:46:42.162Z</updated>
     
@@ -119,19 +119,19 @@
     </summary>
     
     
-      <category term="buzzer" scheme="https://brynhild.online/categories/buzzer/"/>
+      <category term="buzzer" scheme="brynhild.online/categories/buzzer/"/>
     
     
-      <category term="Template" scheme="https://brynhild.online/tags/Template/"/>
+      <category term="Template" scheme="brynhild.online/tags/Template/"/>
     
-      <category term="buzzer" scheme="https://brynhild.online/tags/buzzer/"/>
+      <category term="buzzer" scheme="brynhild.online/tags/buzzer/"/>
     
   </entry>
   
   <entry>
     <title>ELLIAS的OI之路</title>
-    <link href="https://brynhild.online/oi_history/"/>
-    <id>https://brynhild.online/oi_history/</id>
+    <link href="brynhild.online/oi_history/"/>
+    <id>brynhild.online/oi_history/</id>
     <published>2019-02-02T05:57:07.000Z</published>
     <updated>2020-03-11T15:35:32.002Z</updated>
     
@@ -147,15 +147,15 @@
     </summary>
     
     
-      <category term="memory" scheme="https://brynhild.online/categories/memory/"/>
+      <category term="memory" scheme="brynhild.online/categories/memory/"/>
     
     
   </entry>
   
   <entry>
     <title>倍增 洛谷P1967 货车运输</title>
-    <link href="https://brynhild.online/luogu-P1967-noip2018-day-1/"/>
-    <id>https://brynhild.online/luogu-P1967-noip2018-day-1/</id>
+    <link href="brynhild.online/luogu-P1967-noip2018-day-1/"/>
+    <id>brynhild.online/luogu-P1967-noip2018-day-1/</id>
     <published>2018-11-09T13:20:49.000Z</published>
     <updated>2019-06-10T11:32:06.832Z</updated>
     
@@ -170,23 +170,23 @@ RP倍增祈愿&lt;br&gt;
     </summary>
     
     
-      <category term="Olympiad in Informatics" scheme="https://brynhild.online/categories/Olympiad-in-Informatics/"/>
+      <category term="Olympiad in Informatics" scheme="brynhild.online/categories/Olympiad-in-Informatics/"/>
     
     
-      <category term="Template" scheme="https://brynhild.online/tags/Template/"/>
+      <category term="Template" scheme="brynhild.online/tags/Template/"/>
     
-      <category term="倍增" scheme="https://brynhild.online/tags/%E5%80%8D%E5%A2%9E/"/>
+      <category term="倍增" scheme="brynhild.online/tags/%E5%80%8D%E5%A2%9E/"/>
     
-      <category term="生成树" scheme="https://brynhild.online/tags/%E7%94%9F%E6%88%90%E6%A0%91/"/>
+      <category term="生成树" scheme="brynhild.online/tags/%E7%94%9F%E6%88%90%E6%A0%91/"/>
     
-      <category term="并查集" scheme="https://brynhild.online/tags/%E5%B9%B6%E6%9F%A5%E9%9B%86/"/>
+      <category term="并查集" scheme="brynhild.online/tags/%E5%B9%B6%E6%9F%A5%E9%9B%86/"/>
     
   </entry>
   
   <entry>
     <title>OPTIMIZATION</title>
-    <link href="https://brynhild.online/OPTIMIZE/"/>
-    <id>https://brynhild.online/OPTIMIZE/</id>
+    <link href="brynhild.online/OPTIMIZE/"/>
+    <id>brynhild.online/OPTIMIZE/</id>
     <published>2018-11-07T11:17:42.000Z</published>
     <updated>2019-06-10T11:32:32.244Z</updated>
     
@@ -201,17 +201,17 @@ RP倍增祈愿&lt;br&gt;
     </summary>
     
     
-      <category term="Olympiad in Informatics" scheme="https://brynhild.online/categories/Olympiad-in-Informatics/"/>
+      <category term="Olympiad in Informatics" scheme="brynhild.online/categories/Olympiad-in-Informatics/"/>
     
     
-      <category term="Template" scheme="https://brynhild.online/tags/Template/"/>
+      <category term="Template" scheme="brynhild.online/tags/Template/"/>
     
   </entry>
   
   <entry>
     <title>GSS1 - Can you answer these queries I</title>
-    <link href="https://brynhild.online/GSS1/"/>
-    <id>https://brynhild.online/GSS1/</id>
+    <link href="brynhild.online/GSS1/"/>
+    <id>brynhild.online/GSS1/</id>
     <published>2018-11-02T02:08:23.000Z</published>
     <updated>2019-06-10T11:31:26.799Z</updated>
     
@@ -226,19 +226,19 @@ RP倍增祈愿&lt;br&gt;
     </summary>
     
     
-      <category term="Olympiad in Informatics" scheme="https://brynhild.online/categories/Olympiad-in-Informatics/"/>
+      <category term="Olympiad in Informatics" scheme="brynhild.online/categories/Olympiad-in-Informatics/"/>
     
     
-      <category term="GSS" scheme="https://brynhild.online/tags/GSS/"/>
+      <category term="GSS" scheme="brynhild.online/tags/GSS/"/>
     
-      <category term="segment tree" scheme="https://brynhild.online/tags/segment-tree/"/>
+      <category term="segment tree" scheme="brynhild.online/tags/segment-tree/"/>
     
   </entry>
   
   <entry>
     <title>SP1716 GSS3 - Can you answer these queries III</title>
-    <link href="https://brynhild.online/GSS3/"/>
-    <id>https://brynhild.online/GSS3/</id>
+    <link href="brynhild.online/GSS3/"/>
+    <id>brynhild.online/GSS3/</id>
     <published>2018-11-02T02:08:23.000Z</published>
     <updated>2019-06-10T11:31:22.545Z</updated>
     
@@ -253,19 +253,19 @@ RP倍增祈愿&lt;br&gt;
     </summary>
     
     
-      <category term="Olympiad in Informatics" scheme="https://brynhild.online/categories/Olympiad-in-Informatics/"/>
+      <category term="Olympiad in Informatics" scheme="brynhild.online/categories/Olympiad-in-Informatics/"/>
     
     
-      <category term="GSS" scheme="https://brynhild.online/tags/GSS/"/>
+      <category term="GSS" scheme="brynhild.online/tags/GSS/"/>
     
-      <category term="segment tree" scheme="https://brynhild.online/tags/segment-tree/"/>
+      <category term="segment tree" scheme="brynhild.online/tags/segment-tree/"/>
     
   </entry>
   
   <entry>
     <title>SP2713 GSS4 - Can you answer these queries IV</title>
-    <link href="https://brynhild.online/GSS4/"/>
-    <id>https://brynhild.online/GSS4/</id>
+    <link href="brynhild.online/GSS4/"/>
+    <id>brynhild.online/GSS4/</id>
     <published>2018-11-02T02:08:23.000Z</published>
     <updated>2019-06-10T11:31:32.924Z</updated>
     
@@ -280,19 +280,19 @@ RP倍增祈愿&lt;br&gt;
     </summary>
     
     
-      <category term="Olympiad in Informatics" scheme="https://brynhild.online/categories/Olympiad-in-Informatics/"/>
+      <category term="Olympiad in Informatics" scheme="brynhild.online/categories/Olympiad-in-Informatics/"/>
     
     
-      <category term="GSS" scheme="https://brynhild.online/tags/GSS/"/>
+      <category term="GSS" scheme="brynhild.online/tags/GSS/"/>
     
-      <category term="segment tree" scheme="https://brynhild.online/tags/segment-tree/"/>
+      <category term="segment tree" scheme="brynhild.online/tags/segment-tree/"/>
     
   </entry>
   
   <entry>
     <title>SP2916 GSS5 - Can you answer these queries V</title>
-    <link href="https://brynhild.online/GSS5/"/>
-    <id>https://brynhild.online/GSS5/</id>
+    <link href="brynhild.online/GSS5/"/>
+    <id>brynhild.online/GSS5/</id>
     <published>2018-11-02T02:08:23.000Z</published>
     <updated>2020-02-13T14:46:22.452Z</updated>
     
@@ -307,19 +307,19 @@ RP倍增祈愿&lt;br&gt;
     </summary>
     
     
-      <category term="Olympiad in Informatics" scheme="https://brynhild.online/categories/Olympiad-in-Informatics/"/>
+      <category term="Olympiad in Informatics" scheme="brynhild.online/categories/Olympiad-in-Informatics/"/>
     
     
-      <category term="GSS" scheme="https://brynhild.online/tags/GSS/"/>
+      <category term="GSS" scheme="brynhild.online/tags/GSS/"/>
     
-      <category term="segment tree" scheme="https://brynhild.online/tags/segment-tree/"/>
+      <category term="segment tree" scheme="brynhild.online/tags/segment-tree/"/>
     
   </entry>
   
   <entry>
     <title>Nescafé17 守卫者的挑战</title>
-    <link href="https://brynhild.online/Nescafe17-Defenders&#39;-Challenge/"/>
-    <id>https://brynhild.online/Nescafe17-Defenders&#39;-Challenge/</id>
+    <link href="brynhild.online/Nescafe17-Defenders&#39;-Challenge/"/>
+    <id>brynhild.online/Nescafe17-Defenders&#39;-Challenge/</id>
     <published>2018-11-02T02:08:23.000Z</published>
     <updated>2019-06-10T11:32:24.468Z</updated>
     
@@ -334,19 +334,19 @@ RP倍增祈愿&lt;br&gt;
     </summary>
     
     
-      <category term="Olympiad in Informatics" scheme="https://brynhild.online/categories/Olympiad-in-Informatics/"/>
+      <category term="Olympiad in Informatics" scheme="brynhild.online/categories/Olympiad-in-Informatics/"/>
     
     
-      <category term="contest" scheme="https://brynhild.online/tags/contest/"/>
+      <category term="contest" scheme="brynhild.online/tags/contest/"/>
     
-      <category term="DP" scheme="https://brynhild.online/tags/DP/"/>
+      <category term="DP" scheme="brynhild.online/tags/DP/"/>
     
   </entry>
   
   <entry>
     <title>STL 洛谷P3369 普通平衡树</title>
-    <link href="https://brynhild.online/lg-P3369-STL/"/>
-    <id>https://brynhild.online/lg-P3369-STL/</id>
+    <link href="brynhild.online/lg-P3369-STL/"/>
+    <id>brynhild.online/lg-P3369-STL/</id>
     <published>2018-10-30T08:31:14.000Z</published>
     <updated>2019-06-10T11:32:01.705Z</updated>
     
@@ -359,19 +359,19 @@ RP倍增祈愿&lt;br&gt;
     </summary>
     
     
-      <category term="Olympiad in Informatics" scheme="https://brynhild.online/categories/Olympiad-in-Informatics/"/>
+      <category term="Olympiad in Informatics" scheme="brynhild.online/categories/Olympiad-in-Informatics/"/>
     
     
-      <category term="Template" scheme="https://brynhild.online/tags/Template/"/>
+      <category term="Template" scheme="brynhild.online/tags/Template/"/>
     
-      <category term="STL" scheme="https://brynhild.online/tags/STL/"/>
+      <category term="STL" scheme="brynhild.online/tags/STL/"/>
     
   </entry>
   
   <entry>
     <title>洛谷 线段树模板</title>
-    <link href="https://brynhild.online/luogu-segment-tree/"/>
-    <id>https://brynhild.online/luogu-segment-tree/</id>
+    <link href="brynhild.online/luogu-segment-tree/"/>
+    <id>brynhild.online/luogu-segment-tree/</id>
     <published>2018-06-08T11:29:26.000Z</published>
     <updated>2019-06-10T11:32:20.647Z</updated>
     
@@ -386,19 +386,19 @@ RP倍增祈愿&lt;br&gt;
     </summary>
     
     
-      <category term="Olympiad in Informatics" scheme="https://brynhild.online/categories/Olympiad-in-Informatics/"/>
+      <category term="Olympiad in Informatics" scheme="brynhild.online/categories/Olympiad-in-Informatics/"/>
     
     
-      <category term="segment tree" scheme="https://brynhild.online/tags/segment-tree/"/>
+      <category term="segment tree" scheme="brynhild.online/tags/segment-tree/"/>
     
-      <category term="Template" scheme="https://brynhild.online/tags/Template/"/>
+      <category term="Template" scheme="brynhild.online/tags/Template/"/>
     
   </entry>
   
   <entry>
     <title>最短路模板</title>
-    <link href="https://brynhild.online/shortest-path/"/>
-    <id>https://brynhild.online/shortest-path/</id>
+    <link href="brynhild.online/shortest-path/"/>
+    <id>brynhild.online/shortest-path/</id>
     <published>2017-12-05T06:47:00.000Z</published>
     <updated>2019-06-10T11:32:38.796Z</updated>
     
@@ -414,19 +414,19 @@ C++模板&lt;/p&gt;
     </summary>
     
     
-      <category term="Olympiad in Informatics" scheme="https://brynhild.online/categories/Olympiad-in-Informatics/"/>
+      <category term="Olympiad in Informatics" scheme="brynhild.online/categories/Olympiad-in-Informatics/"/>
     
     
-      <category term="Template" scheme="https://brynhild.online/tags/Template/"/>
+      <category term="Template" scheme="brynhild.online/tags/Template/"/>
     
-      <category term="最短路" scheme="https://brynhild.online/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF/"/>
+      <category term="最短路" scheme="brynhild.online/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF/"/>
     
   </entry>
   
   <entry>
     <title>HEXO博客的基本搭建</title>
-    <link href="https://brynhild.online/hexo-buildup/"/>
-    <id>https://brynhild.online/hexo-buildup/</id>
+    <link href="brynhild.online/hexo-buildup/"/>
+    <id>brynhild.online/hexo-buildup/</id>
     <published>2017-11-13T03:10:00.000Z</published>
     <updated>2020-03-02T06:46:52.166Z</updated>
     
@@ -442,10 +442,10 @@ C++模板&lt;/p&gt;
     </summary>
     
     
-      <category term="HEXO" scheme="https://brynhild.online/categories/HEXO/"/>
+      <category term="HEXO" scheme="brynhild.online/categories/HEXO/"/>
     
     
-      <category term="HEXO" scheme="https://brynhild.online/tags/HEXO/"/>
+      <category term="HEXO" scheme="brynhild.online/tags/HEXO/"/>
     
   </entry>
   
