@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>brynhild.online/tools/minesweeper/minesweeper-pri/index.html</loc>
+    
+    <lastmod>2020-03-16T05:53:57.113Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>brynhild.online/hiddenlist/index.html</loc>
     
     <lastmod>2020-03-16T05:50:00.387Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>brynhild.online/tools/minesweeper/minesweeper-adv/index.html</loc>
     
     <lastmod>2020-03-16T05:47:09.228Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>brynhild.online/tools/minesweeper/minesweeper-pri/index.html</loc>
-    
-    <lastmod>2020-03-16T04:52:05.195Z</lastmod>
     
   </url>
   
