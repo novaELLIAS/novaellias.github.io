@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>brynhild.online/tools/soduku/index.html</loc>
+    
+    <lastmod>2020-03-16T06:30:51.650Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>brynhild.online/hiddenlist/index.html</loc>
+    
+    <lastmod>2020-03-16T06:30:26.279Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>brynhild.online/tools/minesweeper/minesweeper-adv/index.html</loc>
     
     <lastmod>2020-03-16T06:10:47.787Z</lastmod>
@@ -19,13 +33,6 @@
     <loc>brynhild.online/tools/minesweeper/minesweeper-pri/index.html</loc>
     
     <lastmod>2020-03-16T05:53:57.113Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>brynhild.online/hiddenlist/index.html</loc>
-    
-    <lastmod>2020-03-16T05:50:00.387Z</lastmod>
     
   </url>
   
