@@ -1,11 +1,9 @@
 # hexo robots.txt
 User-agent: *
 
-Disallow:
-Disallow: /images/
 Disallow: /about/
 Disallow: /oi_history/
-Disallow: /composition/
+Disallow: /essay/
 Disallow: /friends/
 
 Sitemap: https://brynhild.online/sitemap.xml
