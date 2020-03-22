@@ -1,10 +1,10 @@
 # hexo robots.txt
 User-agent: *
-
+Disallow: 
 Disallow: /about/
 Disallow: /oi_history/
 Disallow: /essay/
 Disallow: /friends/
 
-Sitemap: https://brynhild.online/sitemap.xml
-Sitemap: https://brynhild.online/baidusitemap.xml
+Sitemap: http://brynhild.online/sitemap.xml
+Sitemap: http://brynhild.online/baidusitemap.xml
