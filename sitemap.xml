@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>brynhild.online/tools/arcaea/index.html</loc>
+    <loc>brynhild.online/tools/sudoku/index.html</loc>
     
-    <lastmod>2020-03-29T05:01:16.281Z</lastmod>
+    <lastmod>2020-03-29T14:22:33.930Z</lastmod>
     
   </url>
   
   <url>
     <loc>brynhild.online/hiddenlist/index.html</loc>
     
-    <lastmod>2020-03-21T12:29:55.391Z</lastmod>
+    <lastmod>2020-03-29T14:21:52.683Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>brynhild.online/tools/arcaea/index.html</loc>
+    
+    <lastmod>2020-03-29T05:01:16.281Z</lastmod>
     
   </url>
   
@@ -40,13 +47,6 @@
     <loc>brynhild.online/vultr_ssr_vpn_buildup/</loc>
     
     <lastmod>2020-03-18T08:45:08.144Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>brynhild.online/tools/soduku/index.html</loc>
-    
-    <lastmod>2020-03-16T08:10:47.565Z</lastmod>
     
   </url>
   
