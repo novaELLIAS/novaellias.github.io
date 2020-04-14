@@ -336,8 +336,8 @@
 <p>对于情况1就很简单,满足全排列概率为${\frac{1}{2}}$,满足连续段包含关系的概率为 ${2*\frac{i*(n-j+1)}{n*(n+1)}}$,概率相乘结果</p>
 <p>$${P_{i,j}=\frac{i*(n-j+1)}{n*(n+1)}}$$</p>
 <p>那么总期望为</p>
-<p>$${P=\sum_{i=1}<sup>n\sum_{j=i+1}</sup>n\frac{i*(n-j+1)}{n*(n+1)}}$$</p>
-<p>$${P=\frac{1}{2}\sum_{i=1}^n\frac{i*(n-i)<em>(n-i+1)}{n</em>(n+1)}}$$</p>
+<p>$${P=\sum_{i=1}<sup>n\sum_{j=i+1}</sup>n \frac{i*(n-j+1)}{n*(n+1)}}$$</p>
+<p>$${P=\frac{1}{2}\sum_{i=1}^n \frac{i*(n-i)<em>(n-i+1)}{n</em>(n+1)}}$$</p>
 <h3 id="code">code</h3>
 <p>加入操作</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">add</span> <span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> w, ll *c)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">while</span> (x) &#123; c[x] += w, x &amp;= x<span class="number">-1</span>;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -429,7 +429,7 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-04-14T18:25:46+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-04-14T18:29:21+08:00">
   <a class='notlink'>
     <i class="fas fa-clock" aria-hidden="true"></i>
     <p>updated at Apr 14, 2020</p>
