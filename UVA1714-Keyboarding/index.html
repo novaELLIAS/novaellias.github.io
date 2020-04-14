@@ -1,0 +1,1537 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  <title>UVA1714 Keyboarding | Next Dream...</title>
+  
+  
+
+  
+  <link rel="alternate" href="/atom.xml" title="Next Dream...">
+  
+
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <!-- meta -->
+  
+
+  <!-- link -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.css">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.10.1/css/all.min.css">
+  
+
+  
+  <link rel="shortcut icon" type='image/x-icon' href="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/favicon_KK.ico">
+  
+
+  
+    
+<link rel="stylesheet" href="/style.css">
+
+  
+
+  <script>
+    function setLoadingBarProgress(num) {
+      document.getElementById('loading-bar').style.width=num+"%";
+    }
+  </script>
+
+  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141886684-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-141886684-1');
+    </script>
+  
+  
+<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Next Dream..." type="application/atom+xml">
+</head>
+
+<body>
+  <script src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/js/instant.page.js" type="module"></script>
+  
+  
+  <header class="l_header pure">
+  <div id="loading-bar-wrapper">
+    <div id="loading-bar" class="pure"></div>
+  </div>
+
+	<div class='wrapper'>
+		<div class="nav-main container container--flex">
+      <a class="logo flat-box" target="_self" href='/' >
+        
+          Next Dream...
+        
+      </a>
+			<div class='menu navgation'>
+				<ul class='h-list'>
+          
+  					
+  						<li>
+								<a class="nav flat-box" href="/"
+                  
+                  
+                  id="home">
+									<i class='fas fa-grin fa-fw'></i>&nbsp;Latest
+								</a>
+							</li>
+      			
+  						<li>
+								<a class="nav flat-box" href="/blog/categories/"
+                  
+                    rel="nofollow"
+                  
+                  
+                  id="blogcategories">
+									<i class='fas fa-folder-open fa-fw'></i>&nbsp;Category
+								</a>
+							</li>
+      			
+  						<li>
+								<a class="nav flat-box" href="/blog/tags/"
+                  
+                    rel="nofollow"
+                  
+                  
+                  id="blogtags">
+									<i class='fas fa-hashtag fa-fw'></i>&nbsp;Label
+								</a>
+							</li>
+      			
+  						<li>
+								<a class="nav flat-box" href="/blog/archives/"
+                  
+                    rel="nofollow"
+                  
+                  
+                  id="blogarchives">
+									<i class='fas fa-archive fa-fw'></i>&nbsp;Archive
+								</a>
+							</li>
+      			
+      		
+				</ul>
+			</div>
+
+			
+				<div class="m_search">
+					<form name="searchform" class="form u-search-form">
+						<input type="text" class="input u-search-input" placeholder="Search" />
+						<i class="icon fas fa-search fa-fw"></i>
+					</form>
+				</div>
+			
+			<ul class='switcher h-list'>
+				
+					<li class='s-search'><a class="fas fa-search fa-fw" target="_self" href='javascript:void(0)'></a></li>
+				
+				<li class='s-menu'><a class="fas fa-bars fa-fw" target="_self" href='javascript:void(0)'></a></li>
+			</ul>
+		</div>
+
+		<div class='nav-sub container container--flex'>
+			<a class="logo flat-box"></a>
+			<ul class='switcher h-list'>
+				<li class='s-comment'><a class="flat-btn fas fa-comments fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+          <li class='s-toc'><a class="flat-btn fas fa-list fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+			</ul>
+		</div>
+	</div>
+</header>
+	<aside class="menu-phone">
+    <header>
+		<nav class="menu navgation">
+      <ul>
+        
+          
+            <li>
+							<a class="nav flat-box" href="/"
+                
+                
+                id="home">
+								<i class='fas fa-clock fa-fw'></i>&nbsp;Latest
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="/blog/archives/"
+                
+                  rel="nofollow"
+                
+                
+                id="blogarchives">
+								<i class='fas fa-archive fa-fw'></i>&nbsp;File
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="/projects/"
+                
+                
+                id="projects">
+								<i class='fas fa-code-branch fa-fw'></i>&nbsp;Branch
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="/friends/"
+                
+                  rel="nofollow"
+                
+                
+                id="friends">
+								<i class='fas fa-link fa-fw'></i>&nbsp;Friend
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="/about/"
+                
+                  rel="nofollow"
+                
+                
+                id="about">
+								<i class='fas fa-info-circle fa-fw'></i>&nbsp;About
+							</a>
+            </li>
+          
+       
+      </ul>
+		</nav>
+    </header>
+	</aside>
+<script>setLoadingBarProgress(40);</script>
+
+
+
+  <div class="l_body nocover">
+    <div class='body-wrapper'>
+      <div class='l_main'>
+  
+
+  <article id="post" class="post white-box article-type-post" itemscope itemprop="blogPost">
+    
+
+
+  <section class='meta'>
+    
+    
+    <div class="meta" id="header-meta">
+      
+        
+  
+    <h1 class="title">
+      <a href="/UVA1714-Keyboarding/">
+        UVA1714 Keyboarding
+      </a>
+    </h1>
+  
+
+
+      
+      <div class='new-meta-box'>
+        
+          
+        
+          
+            
+  <div class='new-meta-item author'>
+    
+      <a href="/brynhild.online" rel="nofollow">
+        
+          <img src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/avater_sayaka_1.jpg">
+        
+        <p>ELLIAS</p>
+      </a>
+    
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+    <p>2018-08-31</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  
+  <div class='new-meta-item category'>
+    <a href='/categories/Olympiad-in-Informatics/' rel="nofollow">
+      <i class="fas fa-folder-open" aria-hidden="true"></i>
+      <p>Olympiad in Informatics</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+  
+    <div class="new-meta-item browse busuanzi">
+      <a class='notlink'>
+        <i class="fas fa-eye" aria-hidden="true"></i>
+        <p>
+          <span id="busuanzi_value_page_pv">
+            <i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i>
+          </span>
+        </p>
+      </a>
+    </div>
+  
+
+
+          
+        
+          
+            
+  
+
+          
+        
+          
+            
+
+          
+        
+      </div>
+      
+        <hr>
+      
+    </div>
+  </section>
+
+
+    <section class="article typo">
+      <div class="article-entry" itemprop="articleBody">
+        <a id="more"></a>
+<h3 id="NULL">NULL</h3>
+<p>这道题居然是<code>ACM-ICPC World Final</code>的题目</p>
+<p>先来翻译一下题面~~(为什么我在讨论里发的翻译都没人看到)~~</p>
+<h4 id="Description">Description</h4>
+<p>给定一个r行c列的在屏幕上的“虚拟键盘”，我们需要通过“上，下，左，右，选择”5个控制键来移动屏幕上的光标来打印文本。一开始，光标在键盘的左上 角，每次按方向键，光标总是跳到下一个在该方向上与当前位置不同的字符，若不存在则不移动。每次按选择键，则将光标所在位置的字符打印出来。<br>
+现在求打印给定文本（要在结尾打印换行符）的最少按键次数。</p>
+<h4 id="Input">Input</h4>
+<p>第一行输入${r,c(1≤r,c≤50)}$</p>
+<p>接下来给出一个 ${r* c}$ 的键盘，包括大写字母，数字，横线以及星号（星号代表${Enter}$换行） 最后一行是要打印的文本串s，s的长度不超过10000.</p>
+<h4 id="Output">Output</h4>
+<p>输出打印文本（包括结尾换行符）的最少按键次数。保证一定有解。</p>
+<p>Sample Input</p>
+<p>2 19</p>
+<p>ABCDEFGHIJKLMNOPQZY</p>
+<p>X*****Y</p>
+<p>AZAZ</p>
+<p>Sample Output</p>
+<p>19</p>
+<p>注:　部分内容被省略　数据可能有多组</p>
+<h3 id="EINS">EINS</h3>
+<p>用<code>nxt[][]</code>维护向四个方向能到的第一个非当前点字符的位置</p>
+<p>BFS容器维护四个值:<code>nowx</code> 当前x坐标 <code>nowy</code> 当前y坐标 <code>ste</code> 当前有效字符长度 <code>sum</code> 总步数</p>
+<p>先查看当前扩展的字符是否有效,有效则直接入队,判断是否结束,无效则考虑向周围移动.</p>
+<h3 id="ZWEI">ZWEI</h3>
+<p>直接上代码</p>
+<ul>
+<li><code>next</code> 处理部分</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (rint i = <span class="number">1</span>; i &lt;= n; i ++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">for</span> (rint j = <span class="number">1</span>; j &lt;= m; j ++)</span><br><span class="line">			&#123;</span><br><span class="line">				ch = dat[i][j];</span><br><span class="line"></span><br><span class="line">				<span class="keyword">if</span> (dat[i<span class="number">-1</span>][j] != ch) nxt[i][j][<span class="number">0</span>] = make_pair (i<span class="number">-1</span>, j);</span><br><span class="line">				<span class="keyword">else</span> nxt[i][j][<span class="number">0</span>] = nxt[i<span class="number">-1</span>][j][<span class="number">0</span>];</span><br><span class="line"></span><br><span class="line">				<span class="keyword">for</span> (rint k = i + <span class="number">1</span>; k &lt;= n; k ++)</span><br><span class="line">				&#123;</span><br><span class="line">					<span class="keyword">if</span> (dat[k][j] != ch) &#123;nxt[i][j][<span class="number">1</span>] = make_pair (k, j); <span class="keyword">break</span>;&#125;</span><br><span class="line">				&#125;</span><br><span class="line"></span><br><span class="line">				<span class="keyword">if</span> (dat[i][j<span class="number">-1</span>] != ch) nxt[i][j][<span class="number">2</span>] = make_pair (i, j<span class="number">-1</span>);</span><br><span class="line">				<span class="keyword">else</span> nxt[i][j][<span class="number">2</span>] = nxt[i][j<span class="number">-1</span>][<span class="number">2</span>];</span><br><span class="line"></span><br><span class="line">				<span class="keyword">for</span> (rint k = j + <span class="number">1</span>; k &lt;= m; k ++)</span><br><span class="line">				&#123;</span><br><span class="line">					<span class="keyword">if</span> (dat[i][k] != ch) &#123;nxt[i][j][<span class="number">3</span>] = make_pair (i, k); <span class="keyword">break</span>;&#125;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br></pre></td></tr></table></figure>
+<p>左和上直接继承,右侧暴力枚举,顺便更新路过的点也可以,但是<s>我太菜了</s>没写</p>
+<ul>
+<li>比较基本的BFS</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> (!que.empty())</span><br><span class="line">&#123;</span><br><span class="line">	fr = que.front(), que.pop ();</span><br><span class="line">	nowx = fr.x, nowy = fr.y, nste = fr.ste, nsum = fr.sum;</span><br><span class="line">	<span class="keyword">if</span> (dat[nowx][nowy] == s[nste + <span class="number">1</span>])</span><br><span class="line">	&#123;</span><br><span class="line">		que.push ((node) &#123;nowx, nowy, nste + <span class="number">1</span>, nsum + <span class="number">1</span>&#125;);</span><br><span class="line">		<span class="keyword">if</span> (nste + <span class="number">1</span> == lens) &#123;<span class="built_in">printf</span> (<span class="string">"%d\n"</span>, nsum + <span class="number">1</span>); <span class="keyword">break</span>;&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span> (rint i = <span class="number">0</span>; i &lt;= <span class="number">3</span>; i ++)</span><br><span class="line">		&#123;</span><br><span class="line">			gox = nxt[nowx][nowy][i].first, goy = nxt[nowx][nowy][i].second;</span><br><span class="line">			<span class="keyword">if</span>(!gox || !goy) <span class="keyword">continue</span>;</span><br><span class="line">			<span class="keyword">if</span> (vis[gox][goy] &lt; nste) &#123; vis[gox][goy] = nste; que.push ((node)&#123;gox, goy, nste, nsum + <span class="number">1</span>&#125;);&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="DREI">DREI</h3>
+<h4 id="注意事项">注意事项</h4>
+<ul>
+<li>可能有多组数据</li>
+<li>最后不要忘记打空格</li>
+<li>小心字符串的输入和各种换行符</li>
+<li>留心初始化</li>
+</ul>
+<h3 id="VIER">VIER</h3>
+<p>最后,祝大家 <code>RP ++</code></p>
+
+      </div>
+      
+        <div id="reward">
+  
+  <div>DONATE</div>
+  
+  <div class="reward">
+    
+    <a href="/hiddenlist" target="_blank" class=" tr3" title="HiddenList"><span
+        id="github"></span></a>
+    <ul id="RewardBox" class="list pos-f tr3">
+      
+      <li id="PayPal" title="PayPal"><a href="https://www.paypal.me/" target="_blank">PayPal</a></li>
+      
+      
+      <li id="AliPayOR" title="支付宝">AliPay</li>
+      
+      
+      <li id="WeChatPayOR" title="WeChat">WeChatPay</li>
+      
+      
+      <li id="QQPayOR" title="QQ">QQPay</li>
+      
+    </ul>
+    <div id="RewardText" class="tr3">Donate</div>
+    <div id="QRBox" class="pos-f left-100">
+      <div id="MainBox"></div>
+    </div>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/js/reward/jquery-2.0.3.min.js"></script>
+<script>
+  jQuery(document).ready(function () {
+    var QRBox = $('#QRBox');
+    var MainBox = $('#MainBox');
+    var AliPayOR = 'https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/reward/qq_pic_merged_1581578634684.jpg';
+    var WeChatPayOR = 'https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/reward/wepay-2-e1541232487203.png';
+    var QQPayOR = 'https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/reward/qq_pic_merged_1581578554413.jpg';
+
+    function showQR(QR) {
+      if (QR) {
+        MainBox.css('background-image', 'url(' + QR + ')');
+      }
+      $('#RewardText,#RewardBox,#github').addClass('blur');
+      QRBox.fadeIn(300, function (argument) {
+        MainBox.addClass('showQR');
+      });
+    }
+
+    $('#RewardBox>li').click(function (event) {
+      var thisID = $(this).attr('id');
+      if (thisID === 'AliPayOR') {
+        showQR(AliPayOR);
+      } else if (thisID === 'WeChatPayOR') {
+        showQR(WeChatPayOR);
+      } else if (thisID === 'QQPayOR') {
+        showQR(QQPayOR);
+      }
+    });
+
+    MainBox.click(function (event) {
+      MainBox.removeClass('showQR').addClass('hideQR');
+      setTimeout(function (a) {
+        QRBox.fadeOut(300, function (argument) {
+          MainBox.removeClass('hideQR');
+        });
+        $('#RewardText,#RewardBox,#github').removeClass('blur');
+      }, 600);
+
+    });
+  });
+</script>
+
+      
+      
+      
+        <br>
+        
+
+
+  <section class='meta' id="footer-meta">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-04-14T17:53:09+08:00">
+  <a class='notlink'>
+    <i class="fas fa-clock" aria-hidden="true"></i>
+    <p>updated at Apr 14, 2020</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class='qrcode' rel="external nofollow noopener noreferrer" href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACMklEQVR42u3aQY6DMBAEwP3/p7PXlSJIt4dIiymfIpKAi8PInvbPTzxeb+P9+tGVv9fbu108MDAwbst4nY7z6b5/Tp6y9pqOfoOBgfEcxtGtz8tlO91zZP6CMDAwMNpbJ+X4/DfJczEwMDDa200WlGsLUAwMDIzkAUmRTRpt7eeL9+IYGBg3ZFy1yfzG56/kGxgYGLdivMqRRJKT5ePawMDA2JuxFkC2IcGkcBeBKAYGxtaMpETmTbekHE/acxEVAwNjO0YeDExigLbRX2MwMDA2Zczb9G1UOfnlIR4DA2NrRh4G5IHBpATnpbkIDzAwMLZgtFvQtfhzLWAoduEYGBgPYOSdq3ZCedsuuVLsxTEwMDZi5A21SRtubYmZt+cwMDB2ZSQTbQto2yxLCuuHOWBgYGzNWJtie8xrcsisCAwwMDA2ZSQ3mh+baCOBeoGIgYHxAEZ+wKKNCuZLzGhZiYGB8QBGe8QhL5TttnYxGMDAwNiaMQ8GJjHk2kv5Sr6BgYHx7xnzNtnasbC20H/4FwYGxgMYbettEjrmky4qKgYGxmMY7UTbb9tinT8FAwNjV8arHHmDbG0JmCxAiwNhGBgYWzDmxa44ElEW97X/YmBg7MpIiux5Qby2RLavBgMD4zmMtr2VNOOSFl679DxEYmBgYKxtGsuyuxZqYmBgYKyR6oXdUoEeFVwMDIwbMpJN7FqQkJfa0fEODAyMrRn5wi4/PNFmEflxtAvyDQwMjDsxfgFmExkGx0w65QAAAABJRU5ErkJggg=='>
+        
+          <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qrcode.png">
+        
+        </a>
+      
+    
+      
+        <a class="-mob-share-qq" title="QQ Friends" rel="external nofollow noopener noreferrer"
+          
+          href="http://connect.qq.com/widget/shareqq/index.html?url=brynhild.online/UVA1714-Keyboarding/&title=UVA1714 Keyboarding | Next Dream...&pics=https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/avater_sayaka_1.jpg&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qq.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="QZONE" rel="external nofollow noopener noreferrer"
+          
+          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=brynhild.online/UVA1714-Keyboarding/&title=UVA1714 Keyboarding | Next Dream...&pics=https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/avater_sayaka_1.jpg&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qzone.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-wechat" title="WeChat" rel="external nofollow noopener noreferrer"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/wechat.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="WeiBo" rel="external nofollow noopener noreferrer"
+          
+          href="http://service.weibo.com/share/share.php?url=brynhild.online/UVA1714-Keyboarding/&title=UVA1714 Keyboarding | Next Dream...&pics=https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/avater_sayaka_1.jpg&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/weibo.png">
+          
+        </a>
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </section>
+
+
+      
+      
+          <div class="prev-next">
+              
+                  <section class="prev">
+                      <span class="art-item-left">
+                          <h6><i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;Previous</h6>
+                          <h4>
+                              <a href="/CF372B-Counting-Rectangles-is-Fun/" rel="prev" title="CF372B Counting Rectangles is Fun">
+                                
+                                    CF372B Counting Rectangles is Fun
+                                
+                              </a>
+                          </h4>
+                          
+                      </span>
+                  </section>
+              
+              
+                  <section class="next">
+                      <span class="art-item-right" aria-hidden="true">
+                          <h6>Next&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
+                          <h4>
+                              <a href="/Luogu-P4289/" rel="prev" title="Luogu P4289 [HAOI2008]移动玩具">
+                                  
+                                      Luogu P4289 [HAOI2008]移动玩具
+                                  
+                              </a>
+                          </h4>
+                          
+                      </span>
+                  </section>
+              
+          </div>
+      
+    </section>
+  </article>
+
+
+
+  <!-- 显示推荐文章和评论 -->
+
+
+
+  <article class="post white-box comments">
+    <section class="article typo">
+      <h4><i class="fas fa-comments fa-fw" aria-hidden="true"></i>&nbsp;Comments</h4>
+      
+      
+      
+      
+        <section id="comments">
+          <div id="valine_container" class="valine_thread">
+            <i class="fas fa-spinner fa-spin fa-fw"></i>
+          </div>
+        </section>
+      
+    </section>
+  </article>
+
+
+
+
+
+
+<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
+
+  <!-- MathJax配置，可通过单美元符号书写行内公式等 -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    "HTML-CSS": {
+      preferredFont: "TeX",
+      availableFonts: ["STIX","TeX"],
+      linebreaks: { automatic:true },
+      EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+      inlineMath: [ ["$", "$"], ["\\(","\\)"] ],
+      processEscapes: true,
+      ignoreClass: "tex2jax_ignore|dno",
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      equationNumbers: { autoNumber: "AMS" },
+      noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+      Macros: { href: "{}" }
+    },
+    messageStyle: "none"
+  });
+</script>
+<!-- 给MathJax元素添加has-jax class -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += (all[i].SourceElement().parentNode.className ? ' ' : '') + 'has-jax';
+    }
+  });
+</script>
+<!-- 通过连接CDN加载MathJax的js代码 -->
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+
+
+  <script>
+    window.subData = {
+      title: 'UVA1714 Keyboarding',
+      tools: true
+    }
+  </script>
+
+
+</div>
+<aside class='l_side'>
+  
+    
+    
+      
+      
+        
+          
+          
+            
+              <section class='widget author'>
+  <div class='content pure'>
+    
+      <div class='avatar'>
+        <img class='avatar' src='https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/fracture_ray.jpg'/>
+      </div>
+    
+    
+    
+      <div class="social-wrapper">
+        
+          
+            <a href="/atom.xml"
+              class="social fas fa-rss flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+          
+            <a href="mailto:eternalkiri@outlook.com"
+              class="social fas fa-envelope flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+          
+            <a href="https://github.com/novaellias"
+              class="social fab fa-github flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+          
+            <a href="https://wpa.qq.com/msgrd?v=3&uin=3218673140&site=qq&menu=yes"
+              class="social fab fa-qq flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+      </div>
+    
+  </div>
+</section>
+
+            
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+      
+        
+          
+          
+        
+          
+          
+            
+              <section class='widget plain'>
+  
+<header class='pure'>
+  <div><i class="fas fa-comment-alt fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;ヒトコト</div>
+  
+    <a class="rightBtn"
+    
+      rel="external nofollow noopener noreferrer"
+    
+    
+      target="_blank"
+    
+    href="/www.hitokoto.cn"
+    title="www.hitokoto.cn">
+    <i class="far fa-heart fa-fw"></i></a>
+  
+</header>
+
+  <div class='content pure'>
+    <p id="hitokoto">正在加载一言...</p><script src="https://v1.hitokoto.cn/?c=a&c=b&c=c&encode=js&select=%23hitokoto" defer></script>
+  </div>
+</section>
+            
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+            
+              <section class='widget plain'>
+  
+<header class='pure'>
+  <div><i class="fas fa-handshake fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;Welcome!</div>
+  
+</header>
+
+  <div class='content pure'>
+    <script src="https://pv.sohu.com/cityjson?ie=utf-8"></script><script>var getOSAndBrowser=function(){var os=navigator.platform;var userAgent=navigator.userAgent;var info="";var tempArray="";if(os.indexOf("Win")>-1){if(userAgent.indexOf("Windows NT 5.0")>-1){info+="Win2000"}else if(userAgent.indexOf("Windows NT 5.1")>-1){info+="WinXP"}else if(userAgent.indexOf("Windows NT 5.2")>-1){info+="Win2003"}else if(userAgent.indexOf("Windows NT 6.0")>-1){info+="WindowsVista"}else if(userAgent.indexOf("Windows NT 6.1")>-1||userAgent.indexOf("Windows 7")>-1){info+="Win7"}else if(userAgent.indexOf("Windows NT 6.2")>-1||userAgent.indexOf("Windows 8")>-1){info+="Win8"}else if(userAgent.indexOf("Windows NT 6.3")>-1||userAgent.indexOf("Windows 8.1")>-1){info+="Win8.1"}else if(userAgent.indexOf("Windows NT 10.0")>-1||userAgent.indexOf("Windows 10")>-1){info+="Win10"}else{info+="Other"}}else if(os.indexOf("Mac")>-1){info+="Mac"}else if(os.indexOf("X11")>-1){info+="Unix"}else if(os.indexOf("Linux")>-1){info+="Linux"}else{info+="Other"}info+="/";var isOpera=userAgent.indexOf("Opera")>-1;var isIE=userAgent.indexOf("compatible")>-1&&userAgent.indexOf("MSIE")>-1&&!isOpera;var isEdge=userAgent.toLowerCase().indexOf("edge")>-1&&!isIE;var isIE11=(userAgent.toLowerCase().indexOf("trident")>-1&&userAgent.indexOf("rv")>-1);if(/[Ff]irefox(\/\d+\.\d+)/.test(userAgent)){tempArray=/([Ff]irefox)\/(\d+\.\d+)/.exec(userAgent);info+=tempArray[1]+tempArray[2]}else if(isIE){var version="";var reIE=new RegExp("MSIE (\\d+\\.\\d+);");reIE.test(userAgent);var fIEVersion=parseFloat(RegExp["$1"]);if(fIEVersion==7){version="IE7"}else if(fIEVersion==8){version="IE8"}else if(fIEVersion==9){version="IE9"}else if(fIEVersion==10){version="IE10"}else{version="0"}info+=version}else if(isEdge){info+="Edge"}else if(isIE11){info+="IE11"}else if(/[Cc]hrome\/\d+/.test(userAgent)){tempArray=/([Cc]hrome)\/(\d+)/.exec(userAgent);info+=tempArray[1]+tempArray[2]}else if(/[Vv]ersion\/\d+\.\d+\.\d+(\.\d)* *[Ss]afari/.test(userAgent)){tempArray=/[Vv]ersion\/(\d+\.\d+\.\d+)(\.\d)* *([Ss]afari)/.exec(userAgent);info+=tempArray[3]+tempArray[1]}else if(/[Oo]pera.+[Vv]ersion\/\d+\.\d+/.test(userAgent)){tempArray=/([Oo]pera).+[Vv]ersion\/(\d+)\.\d+/.exec(userAgent);info+=tempArray[1]+tempArray[2]}else{info+="unknown"}return info};document.write("Location : "+returnCitySN["cname"]);document.write("<br>IP : "+returnCitySN["cip"]);document.write("<br>Environment : "+getOSAndBrowser());</script>
+  </div>
+</section>
+            
+          
+        
+          
+          
+            
+              <section class='widget plain'>
+  
+<header class='pure'>
+  <div><i class="fas fa-map-marked-alt fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;map</div>
+  
+</header>
+
+  <div class='content pure'>
+    <script type="text/javascript" src="//rf.revolvermaps.com/0/0/6.js?i=57u8duk5pjw&amp;m=7&amp;c=e63100&amp;cr1=ffffff&amp;f=arial&amp;l=0&amp;bv=90&amp;lx=-420&amp;ly=420&amp;hi=20&amp;he=7&amp;hc=a8ddff&amp;rs=80" async="async"></script>
+  </div>
+</section>
+            
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+      
+        
+          
+          
+        
+          
+          
+        
+          
+          
+            
+              
+  <section class='widget toc-wrapper'>
+    
+<header class='pure'>
+  <div><i class="fas fa-list fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;TOC</div>
+  
+    <!-- <div class='wrapper'><a class="s-toc rightBtn" rel="external nofollow noopener noreferrer" href="javascript:void(0)"><i class="fas fa-thumbtack fa-fw"></i></a></div> -->
+  
+</header>
+
+    <div class='content pure'>
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#NULL"><span class="toc-text">NULL</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Description"><span class="toc-text">Description</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Input"><span class="toc-text">Input</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Output"><span class="toc-text">Output</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#EINS"><span class="toc-text">EINS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ZWEI"><span class="toc-text">ZWEI</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DREI"><span class="toc-text">DREI</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#注意事项"><span class="toc-text">注意事项</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#VIER"><span class="toc-text">VIER</span></a></li></ol>
+    </div>
+  </section>
+
+
+            
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+      
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+            
+              <section class='widget grid'>
+  
+<header class='pure'>
+  <div><i class="fas fa-map-signs fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;NAVIGATOR</div>
+  
+</header>
+
+  <div class='content pure'>
+    <ul class="grid navgation">
+      
+        <li><a class="flat-box" title="/" href="/"
+          
+          
+          id="home">
+          
+            <i class="fas fa-clock fa-fw" aria-hidden="true"></i>
+          
+          Latest
+        </a></li>
+      
+        <li><a class="flat-box" title="/projects/" href="/projects/"
+          
+          
+          id="projects">
+          
+            <i class="fas fa-code-branch fa-fw" aria-hidden="true"></i>
+          
+          Branch
+        </a></li>
+      
+        <li><a class="flat-box" title="/friends/" href="/friends/"
+          
+            rel="nofollow"
+          
+          
+          id="friends">
+          
+            <i class="fas fa-link fa-fw" aria-hidden="true"></i>
+          
+          Friend
+        </a></li>
+      
+        <li><a class="flat-box" title="/about/" href="/about/"
+          
+            rel="nofollow"
+          
+          
+          id="about">
+          
+            <i class="fas fa-info-circle fa-fw" aria-hidden="true"></i>
+          
+          About
+        </a></li>
+      
+    </ul>
+  </div>
+</section>
+
+            
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+      
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+            
+              
+  <section class='widget category'>
+    
+<header class='pure'>
+  <div><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;Categories</div>
+  
+    <a class="rightBtn"
+    
+      rel="nofollow"
+    
+    
+    href="/blog/categories/"
+    title="blog/categories/">
+    <i class="fas fa-expand-arrows-alt fa-fw"></i></a>
+  
+</header>
+
+    <div class='content pure'>
+      <ul class="entry">
+        
+          <li><a class="flat-box" title="/categories/HEXO/" href="/categories/HEXO/"><div class='name'>HEXO</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/Olympiad-in-Informatics/" href="/categories/Olympiad-in-Informatics/"><div class='name'>Olympiad in Informatics</div><div class='badge'>(17)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/Trick/" href="/categories/Trick/"><div class='name'>Trick</div><div class='badge'>(2)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/VPN/" href="/categories/VPN/"><div class='name'>VPN</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/buzzer/" href="/categories/buzzer/"><div class='name'>buzzer</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/memory/" href="/categories/memory/"><div class='name'>memory</div><div class='badge'>(1)</div></a></li>
+        
+      </ul>
+    </div>
+  </section>
+
+
+            
+          
+        
+          
+          
+        
+          
+          
+        
+      
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+            
+              
+  <section class='widget tagcloud'>
+    
+<header class='pure'>
+  <div><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;Hot Tags</div>
+  
+    <a class="rightBtn"
+    
+      rel="nofollow"
+    
+    
+    href="/blog/tags/"
+    title="blog/tags/">
+    <i class="fas fa-expand-arrows-alt fa-fw"></i></a>
+  
+</header>
+
+    <div class='content pure'>
+      <a href="/tags/DP/" style="font-size: 14px; color: #999">DP</a> <a href="/tags/GSS/" style="font-size: 17.33px; color: #828282">GSS</a> <a href="/tags/HEXO/" style="font-size: 14px; color: #999">HEXO</a> <a href="/tags/OBS/" style="font-size: 14px; color: #999">OBS</a> <a href="/tags/STL/" style="font-size: 14px; color: #999">STL</a> <a href="/tags/Template/" style="font-size: 24px; color: #555">Template</a> <a href="/tags/Trick/" style="font-size: 14px; color: #999">Trick</a> <a href="/tags/VPN/" style="font-size: 14px; color: #999">VPN</a> <a href="/tags/VPS/" style="font-size: 14px; color: #999">VPS</a> <a href="/tags/buzzer/" style="font-size: 14px; color: #999">buzzer</a> <a href="/tags/contest/" style="font-size: 14px; color: #999">contest</a> <a href="/tags/segment-tree/" style="font-size: 20.67px; color: #6c6c6c">segment tree</a> <a href="/tags/%E5%80%8D%E5%A2%9E/" style="font-size: 14px; color: #999">倍增</a> <a href="/tags/%E5%B9%B6%E6%9F%A5%E9%9B%86/" style="font-size: 14px; color: #999">并查集</a> <a href="/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF/" style="font-size: 14px; color: #999">最短路</a> <a href="/tags/%E7%94%9F%E6%88%90%E6%A0%91/" style="font-size: 14px; color: #999">生成树</a> <a href="/tags/%E8%B4%AA%E5%BF%83/" style="font-size: 14px; color: #999">贪心</a>
+    </div>
+  </section>
+
+
+            
+          
+        
+          
+          
+        
+      
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+      
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+      
+    
+
+  
+</aside>
+
+<footer id="footer" class="clearfix">
+  
+  
+    <div class="social-wrapper">
+      
+        
+          <a href="/atom.xml"
+            class="social fas fa-rss flat-btn"
+            target="_blank"
+            rel="external nofollow noopener noreferrer">
+          </a>
+        
+      
+        
+          <a href="mailto:eternalkiri@outlook.com"
+            class="social fas fa-envelope flat-btn"
+            target="_blank"
+            rel="external nofollow noopener noreferrer">
+          </a>
+        
+      
+        
+          <a href="https://github.com/novaellias"
+            class="social fab fa-github flat-btn"
+            target="_blank"
+            rel="external nofollow noopener noreferrer">
+          </a>
+        
+      
+        
+          <a href="https://wpa.qq.com/msgrd?v=3&amp;uin=3218673140&amp;site=qq&amp;menu=yes"
+            class="social fab fa-qq flat-btn"
+            target="_blank"
+            rel="external nofollow noopener noreferrer">
+          </a>
+        
+      
+    </div>
+  
+  <!--
+  <div><p>Blog content follows the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) License</a></p>
+</div>
+  <div>
+    
+    Use
+    <a href="https://xaoxuu.com/wiki/material-x/" target="_blank" class="codename">material-x</a>
+    as theme
+    
+  -->
+
+  Copyright <i class="far fa-copyright"></i> 2017-2020
+  <a href="https://novaellias.github.io/" target="_blank"> ELLIAS </a>丨
+  <!--
+    
+      , 
+      total visits
+      <span id="busuanzi_value_site_pv"><i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span>
+      times
+    
+    . 
+  </div>
+  -->
+  PV <span id="busuanzi_value_site_pv"><i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span>丨
+
+  <span id="timeDate">Loading...</span><span id="times">Loading...</span>
+<script>
+    var now = new Date(); 
+    function createtime() { 
+        var grt= new Date("10/13/2017 21:12:13");
+        now.setTime(now.getTime()+250); 
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+        document.getElementById("timeDate").innerHTML = "Run Time "+dnum+" d "; 
+        document.getElementById("times").innerHTML = hnum + " h " + mnum + " m " + snum + " s"; 
+    } 
+setInterval("createtime()",250);
+</script>丨
+<img src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/moeicp.png" style="width:18px;height:18px;margin-bottom:-3px" alt="MOE ICP">
+<a href="https://icp.gov.moe" target="_blank">MOE ICP </a><a href="https://icp.gov.moe/?keyword=20201096" target="_blank"> 20201096号</a>
+<br>
+<!--
+<div class="github-badge">
+  <span class="badge-subject">Powered</span><span class="badge-value bg-blue">Hexo</span>
+</div>
+-->
+<!--
+<div class="github-badge">
+  <span class="badge-subject">Hosted</span><span class="badge-value bg-brightgreen">GitHub</span>
+</div>
+-->
+
+<!--
+  https://img.shields.io/badge/dynamic/json?url=<URL>&label=<LABEL>&query=<$.DATA.SUBDATA>&color=<COLOR>&prefix=<PREFIX>&suffix=<SUFFIX>
+-->
+
+<img alt="GitHub release (latest by date including pre-releases)" src="https://img.shields.io/github/v/release/novaELLIAS/novaellias.github.io?include_prereleases&label=blog%20version">
+
+<img alt="GitHub release (latest by date including pre-releases)" src="https://img.shields.io/github/v/release/novaELLIAS/CDN_for_ND?include_prereleases&label=CDN%20version">
+
+<img alt="GitHub commits since tagged version (branch)" src="https://img.shields.io/github/commits-since/novaELLIAS/novaellias.github.io/v1.0.0/master?label=commits">
+
+<img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/novaELLIAS/novaellias.github.io?label=blog%20size">
+
+<img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/novaELLIAS/CDN_for_ND?label=CDN%20size">
+
+<!--
+<div class="github-badge">
+  <span class="badge-subject">DNR</span><span class="badge-value bg-firebrick">Aliyun</span>
+</div>
+-->
+<!--
+<div class="github-badge">
+  <span class="badge-subject">CDN</span><span class="badge-value bg-orange">jsDelivr</span>
+</div>
+-->
+
+<!--
+<div class="github-badge">
+  <span class="badge-subject">Version</span><span class="badge-value bg-blue">v2.0.0</span>
+</div>
+-->
+
+<!--
+<div class="github-badge">
+  <span class="badge-subject">PictureBed</span><span class="badge-value bg-blueviolet">WordPress</span>
+</div>
+-->
+<!--
+<div class="github-badge">
+  <span class="badge-subject">Theme</span><span class="badge-value bg-blue">Material X</span>
+</div>
+-->
+<!--
+<div class="github-badge">
+  <span class="badge-subject"><i class="fa fa-copyright"></i></span><span class="badge-value bg-lightgrey">BY-NC-SA 4.0</span>
+</div>
+-->
+
+
+<img alt="PictureBed" src="https://img.shields.io/badge/PictureBed-WordPress-orange">
+
+<img alt="PictureBed" src="https://img.shields.io/badge/CDN-jsDelivr-orange">
+
+</footer>
+<script>setLoadingBarProgress(80);</script>
+
+
+      <script>setLoadingBarProgress(60);</script>
+    </div>
+    <a class="s-top fas fa-arrow-up fa-fw" href='javascript:void(0)'></a>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+
+  <script>
+    
+    var SEARCH_SERVICE = "hexo" || "hexo";
+    var ROOT = "/" || "/";
+    if (!ROOT.endsWith('/')) ROOT += '/';
+  </script>
+
+<script src="//instant.page/1.2.2" type="module" integrity="sha384-2xV8M5griQmzyiY3CDqh1dn4z3llDVqZDqzjzcY+jCBCk/a5fXJmuZ/40JJAPeoU"></script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/scrollreveal@4.0.5/dist/scrollreveal.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      const $reveal = $('.reveal');
+      if ($reveal.length === 0) return;
+      const sr = ScrollReveal({ distance: 0 });
+      sr.reveal('.reveal');
+    });
+  </script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      Waves.attach('.flat-btn', ['waves-button']);
+      Waves.attach('.float-btn', ['waves-button', 'waves-float']);
+      Waves.attach('.float-btn-light', ['waves-button', 'waves-float', 'waves-light']);
+      Waves.attach('.flat-box', ['waves-block']);
+      Waves.attach('.float-box', ['waves-block', 'waves-float']);
+      Waves.attach('.waves-image');
+      Waves.init();
+    });
+  </script>
+
+
+  <script async src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+  
+  
+    <script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-material-x@20.2/js/backstretch.min.js"></script>
+    <script type="text/javascript">
+      $(function(){
+        if ('') {
+          $('').backstretch(
+          ["https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/bg_mls_hzc.jpg", "https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/TH/fish.jpg", "https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/TH/xs.jpg", "https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/bg_summergirl.jpg", "https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@2.2.19/img/TH/yyz.png", "https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/TH/komeiji.png", "https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/bg_flyingboat.jpg", "https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/bg_liliw.png", "https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/bg_sagume1.jpg", "https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/bg_sao.jpg", "https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/backgrond_sayaka.jpg", "https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/bg_winter.jpg", "https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/TH/sky.jpg"],
+          {
+            duration: "120000",
+            fade: "4000"
+          });
+        } else {
+          $.backstretch(
+          ["https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/bg_mls_hzc.jpg", "https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/TH/fish.jpg", "https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/TH/xs.jpg", "https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/bg_summergirl.jpg", "https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@2.2.19/img/TH/yyz.png", "https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/TH/komeiji.png", "https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/bg_flyingboat.jpg", "https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/bg_liliw.png", "https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/bg_sagume1.jpg", "https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/bg_sao.jpg", "https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/backgrond_sayaka.jpg", "https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/bg_winter.jpg", "https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/TH/sky.jpg"],
+          {
+            duration: "120000",
+            fade: "4000"
+          });
+        }
+      });
+    </script>
+  
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  
+    
+      
+<script src="/js/volantis.js"></script>
+
+    
+  
+  <script>
+  var GUEST_INFO = ['nick','mail','link'];
+  var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+    return GUEST_INFO.indexOf(item) > -1
+  });
+  var notify = 'true' == true;
+  var verify = 'true' == true;
+  var valine = new Valine();
+  valine.init({
+    el: '#valine_container',
+    notify: notify,
+    verify: verify,
+    guest_info: guest_info,
+    
+    appId: "21B1peOzTLV0I7A5xmnyUmRx-gzGzoHsz",
+    appKey: "DM4Dg5a8rjqR98t4sKPjFiHC",
+    placeholder: "Please!",
+    pageSize:'10',
+    avatar:'mp',
+    lang:'en',
+    highlight:'true'
+  })
+  </script>
+
+
+
+  
+<script src="/js/app.js"></script>
+
+
+
+  
+<script src="/js/search.js"></script>
+
+
+
+
+
+
+
+<!-- 复制 -->
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+  let COPY_SUCCESS = "Copied";
+  let COPY_FAILURE = "Copy failed";
+  /*页面载入完成后，创建复制按钮*/
+  !function (e, t, a) {
+    /* code */
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '  <i class="fa fa-copy"></i><span>Copy</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+
+      clipboard.on('success', function(e) {
+        //您可以加入成功提示
+        console.info('Action:', e.action);
+        console.info('Text:', e.text);
+        console.info('Trigger:', e.trigger);
+        success_prompt(COPY_SUCCESS);
+        e.clearSelection();
+      });
+      clipboard.on('error', function(e) {
+        //您可以加入失败提示
+        console.error('Action:', e.action);
+        console.error('Trigger:', e.trigger);
+        fail_prompt(COPY_FAILURE);
+      });
+    }
+    initCopyCode();
+
+  }(window, document);
+
+  /**
+   * 弹出式提示框，默认1.5秒自动消失
+   * @param message 提示信息
+   * @param style 提示样式，有alert-success、alert-danger、alert-warning、alert-info
+   * @param time 消失时间
+   */
+  var prompt = function (message, style, time)
+  {
+      style = (style === undefined) ? 'alert-success' : style;
+      time = (time === undefined) ? 1500 : time*1000;
+      $('<div>')
+          .appendTo('body')
+          .addClass('alert ' + style)
+          .html(message)
+          .show()
+          .delay(time)
+          .fadeOut();
+  };
+
+  // 成功提示
+  var success_prompt = function(message, time)
+  {
+      prompt(message, 'alert-success', time);
+  };
+
+  // 失败提示
+  var fail_prompt = function(message, time)
+  {
+      prompt(message, 'alert-danger', time);
+  };
+
+  // 提醒
+  var warning_prompt = function(message, time)
+  {
+      prompt(message, 'alert-warning', time);
+  };
+
+  // 信息提示
+  var info_prompt = function(message, time)
+  {
+      prompt(message, 'alert-info', time);
+  };
+
+</script>
+
+
+<!-- fancybox -->
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script>
+  let LAZY_LOAD_IMAGE = "";
+  $(".article-entry").find("fancybox").find("img").each(function () {
+      var element = document.createElement("a");
+      $(element).attr("data-fancybox", "gallery");
+      $(element).attr("href", $(this).attr("src"));
+      /* 图片采用懒加载处理时,
+       * 一般图片标签内会有个属性名来存放图片的真实地址，比如 data-original,
+       * 那么此处将原本的属性名src替换为对应属性名data-original,
+       * 修改如下
+       */
+       if (LAZY_LOAD_IMAGE) {
+         $(element).attr("href", $(this).attr("data-original"));
+       }
+      $(this).wrap(element);
+  });
+</script>
+
+
+
+
+
+  <script>setLoadingBarProgress(100);</script>
+</body>
+</html>
