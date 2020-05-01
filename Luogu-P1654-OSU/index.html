@@ -333,6 +333,11 @@
 <p>看到楼下大佬的代码，用庞大的数组会造成大量的内存浪费. 从算法中可以看到，一个状态只从它前一个状态转移而来，就可以使用滚动数组节约空间.</p>
 <p>第一次使用数组取 <code>0</code> 位， 每次转移将 <code>pos ^ 1</code>. 代码如下</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">register</span> <span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++ i, pos ^= <span class="number">1</span>)</span><br><span class="line">&#123;</span><br><span class="line">	<span class="built_in">exp</span> = !pos, k = getdou ();</span><br><span class="line">	x[pos] = (x[<span class="built_in">exp</span>] + <span class="number">1</span>) * k;</span><br><span class="line">	y[pos] = (y[<span class="built_in">exp</span>] + <span class="number">2</span>*x[<span class="built_in">exp</span>] + <span class="number">1</span>) * k;</span><br><span class="line">	v[pos] = v[<span class="built_in">exp</span>] + (<span class="number">3</span>*x[<span class="built_in">exp</span>] + <span class="number">3</span>*y[<span class="built_in">exp</span>]+<span class="number">1</span>) * k;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>博客内容遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed" target="_blank" rel="noopener">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)</a> 协议.</p>
+<p>本文永久链接: <a href="https://brynhild.online/Luogu-P1654-OSU/">https://brynhild.online/Luogu-P1654-OSU/</a></p>
+</blockquote>
+
       </div>
       
         <div id="reward">
@@ -417,10 +422,10 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-04-14T18:10:42+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-05-01T23:37:31+08:00">
   <a class='notlink'>
     <i class="fas fa-clock" aria-hidden="true"></i>
-    <p>updated at Apr 14, 2020</p>
+    <p>updated at May 1, 2020</p>
   </a>
 </div>
 

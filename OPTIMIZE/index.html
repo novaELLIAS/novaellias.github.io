@@ -344,6 +344,10 @@
 <h3 id="内嵌asm优化">内嵌asm优化</h3>
 <h4 id="a-b-mo">a * b % mo</h4>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">long</span> <span class="keyword">long</span> <span class="title">mul_mod</span> <span class="params">(<span class="keyword">register</span> <span class="keyword">long</span> <span class="keyword">long</span> a,<span class="keyword">register</span> <span class="keyword">long</span> <span class="keyword">long</span> b,<span class="keyword">register</span> <span class="keyword">long</span> <span class="keyword">long</span> mo)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">register</span> <span class="keyword">long</span> <span class="keyword">long</span> ret;</span><br><span class="line">	__asm__ __volatile__ (<span class="string">"\tmull %%ebx\n\tdivl %%ecx\n"</span> : <span class="string">"=d"</span>(ret):<span class="string">"a"</span>(a),<span class="string">"b"</span>(b),<span class="string">"c"</span>(mo));</span><br><span class="line">	<span class="keyword">return</span> ret;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>博客内容遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed" target="_blank" rel="noopener">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)</a> 协议.</p>
+<p>本文永久链接: <a href="https://brynhild.online/OPTIMIZE/">https://brynhild.online/OPTIMIZE/</a></p>
+</blockquote>
 
       </div>
       
@@ -429,10 +433,10 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2019-06-10T19:32:32+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-05-01T23:36:38+08:00">
   <a class='notlink'>
     <i class="fas fa-clock" aria-hidden="true"></i>
-    <p>updated at Jun 10, 2019</p>
+    <p>updated at May 1, 2020</p>
   </a>
 </div>
 
@@ -550,16 +554,16 @@
                       <span class="art-item-right" aria-hidden="true">
                           <h6>Next&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
                           <h4>
-                              <a href="/GSS3/" rel="prev" title="SP1716 GSS3 - Can you answer these queries III">
+                              <a href="/Nescafe17-Defenders&#39;-Challenge/" rel="prev" title="Nescafé17 守卫者的挑战">
                                   
-                                      SP1716 GSS3 - Can you answer these queries III
+                                      Nescafé17 守卫者的挑战
                                   
                               </a>
                           </h4>
                           
                               
                               <h6 class="tags">
-                                  <a class="tag" href="/tags/GSS/"><i class="fas fa-tag fa-fw" aria-hidden="true"></i> GSS</a> <a class="tag" href="/tags/segment-tree/"><i class="fas fa-tag fa-fw" aria-hidden="true"></i> segment tree</a>
+                                  <a class="tag" href="/tags/contest/"><i class="fas fa-tag fa-fw" aria-hidden="true"></i> contest</a> <a class="tag" href="/tags/DP/"><i class="fas fa-tag fa-fw" aria-hidden="true"></i> DP</a>
                               </h6>
                           
                       </span>

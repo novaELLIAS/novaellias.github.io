@@ -341,6 +341,11 @@
 <h3 id="ZWEI-Code">ZWEI Code</h3>
 <p>代码就比较好写:</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">register</span> <span class="keyword">int</span> n = read (), m = read (), _ = read (), nico;</span><br><span class="line">	<span class="keyword">for</span> (Re <span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++ i)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span> (Re <span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= m; ++ j)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">scanf</span> (<span class="string">"%1d"</span>, &amp;nico);</span><br><span class="line">			<span class="keyword">if</span> (nico) lin[i][j] = <span class="number">0</span>;</span><br><span class="line">			<span class="keyword">else</span> lin[i][j] = lin[i<span class="number">-1</span>][j] + <span class="number">1</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">for</span> (Re <span class="keyword">int</span> frx = <span class="number">1</span>; frx &lt;= n; ++ frx)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span> (Re <span class="keyword">int</span> fry = <span class="number">1</span>; fry &lt;= m; ++ fry)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">for</span> (Re <span class="keyword">int</span> tox = frx; tox &lt;= n; ++ tox)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">for</span> (Re <span class="keyword">int</span> toy = fry; toy &lt;= m; ++ toy)</span><br><span class="line">				&#123;</span><br><span class="line">					ans[frx][fry][tox][toy] = ans[frx][fry][tox<span class="number">-1</span>][toy] + ans[frx][fry][tox][toy<span class="number">-1</span>] - ans[frx][fry][tox<span class="number">-1</span>][toy<span class="number">-1</span>];</span><br><span class="line">					nico = tox - frx + <span class="number">1</span>;</span><br><span class="line">					<span class="keyword">for</span> (Re <span class="keyword">int</span> k = toy; k &gt;= fry; -- k)</span><br><span class="line">					&#123;</span><br><span class="line">						nico = min (nico, lin[tox][k]);</span><br><span class="line">						ans[frx][fry][tox][toy] += nico;</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">while</span> (_ --) writelen (ans[read()][read()][read()][read()]);</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>博客内容遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed" target="_blank" rel="noopener">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)</a> 协议.</p>
+<p>本文永久链接: <a href="https://brynhild.online/CF372B-Counting-Rectangles-is-Fun/">https://brynhild.online/CF372B-Counting-Rectangles-is-Fun/</a></p>
+</blockquote>
+
       </div>
       
         <div id="reward">
@@ -425,10 +430,10 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-04-14T18:12:31+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-05-01T23:33:21+08:00">
   <a class='notlink'>
     <i class="fas fa-clock" aria-hidden="true"></i>
-    <p>updated at Apr 14, 2020</p>
+    <p>updated at May 1, 2020</p>
   </a>
 </div>
 
