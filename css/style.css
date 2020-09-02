@@ -2384,6 +2384,206 @@ pre {
 .article pre:hover .btn-copy {
   opacity: 1;
 }
+.darkmode-layer {
+  display: none;
+}
+.darkmode-toggle {
+  z-index: 1001;
+}
+.darkmode-toggle:before {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: bold;
+  content: '\f186';
+  color: #fff;
+}
+.darkmode-background {
+  z-index: -1000000 !important;
+}
+.darkmode--activated {
+  --color-site-bg: #222;
+  --color-site-inner: #eee;
+  --color-site-footer: #aaa;
+  --color-card: #333;
+  --color-text: #eee;
+  --color-block: #3a3a3a;
+  --color-codeblock: #343a3c;
+  --color-inlinecode: #d56d28;
+  --color-h1: #eee;
+  --color-h2: #eee;
+  --color-h3: #ddd;
+  --color-h4: #ddd;
+  --color-h5: #ddd;
+  --color-h6: #ddd;
+  --color-p: #bbb;
+  --color-list: #aaa;
+  --color-list-hl: #69dfc4;
+  --color-meta: #888;
+  --color-link: #888;
+}
+.darkmode--activated .backstretch {
+  background-color: #282c34 !important;
+}
+.darkmode--activated .backstretch-item {
+  display: none !important;
+}
+.darkmode--activated img {
+  filter: brightness(70%) !important;
+}
+.darkmode--activated .lazyload {
+  filter: brightness(70%) !important;
+}
+.darkmode--activated .pdf {
+  filter: brightness(70%) !important;
+}
+.darkmode--activated .l_header .wrapper .title {
+  color: var(--color-meta);
+}
+.darkmode--activated .l_header ul.nav-list-h>li>a,
+.darkmode--activated ul.list-v >li>a {
+  color: var(--color-list);
+}
+.darkmode--activated .blur {
+  background: var(--color-site-bg) !important;
+}
+.darkmode--activated .nav-main .u-search-input {
+  background: var(--color-card) !important;
+}
+.darkmode--activated .l_main .article .prev-next>a {
+  background: var(--color-block);
+}
+.darkmode--activated .l_main .article .prev-next>a:hover {
+  background: var(--color-card);
+}
+.darkmode--activated .article blockquote {
+  background: var(--color-block);
+}
+.darkmode--activated .article-title a {
+  color: var(--color-h1);
+}
+.darkmode--activated details>summary {
+  color: var(--color-p);
+  background: var(--color-site-bg);
+}
+.darkmode--activated details {
+  border: 1px solid var(--color-site-bg);
+  background: var(--color-site-bg);
+}
+.darkmode--activated #u-search .modal {
+  background: var(--color-card) !important;
+}
+.darkmode--activated #u-search .modal-header {
+  background: var(--color-card) !important;
+}
+.darkmode--activated #u-search .modal-body {
+  background: var(--color-card) !important;
+}
+.darkmode--activated #u-search .modal-body .modal-results .result:hover {
+  background: var(--color-block) !important;
+}
+@media screen and (max-width: 500px) {
+  .darkmode--activated .l_header .m_search {
+    background: var(--color-site-bg) !important;
+  }
+}
+.darkmode--activated .widget.blogger .content .social-wrapper a.social:hover {
+  background: var(--color-card);
+}
+.darkmode--activated .content {
+  color: var(--color-p);
+}
+.darkmode--activated .note {
+  background: var(--color-block) !important;
+}
+.darkmode--activated div.tabs ul.nav-tabs li.tab.active a {
+  color: var(--color-p);
+  background: var(--color-card);
+}
+.darkmode--activated kbd {
+  background: var(--color-block) !important;
+}
+.darkmode--activated .cover-wrapper.dock .menu .list-h a:hover,
+.darkmode--activated .cover-wrapper.featured .menu .list-h a:hover,
+.darkmode--activated .cover-wrapper.focus .menu .list-h a:hover {
+  color: var(--color-text) !important;
+}
+.darkmode--activated .gutter {
+  background: var(--color-card) !important;
+  background-color: var(--color-card) !important;
+}
+.darkmode--activated .highlight figcaption {
+  background-color: #21252b;
+}
+.darkmode--activated .highlight pre .line,
+.darkmode--activated .highlight pre .params {
+  color: rgba(158,142,142,0.9);
+}
+.darkmode--activated *:not(.highlight) >table tr {
+  background-color: var(--color-card);
+}
+.darkmode--activated *:not(.highlight) >table th {
+  background: var(--color-site-bg);
+}
+.darkmode--activated *:not(.highlight) table td,
+.darkmode--activated *:not(.highlight) table th {
+  border-color: var(--color-site-bg);
+}
+.darkmode--activated *:not(.highlight) >table tr:hover {
+  background: var(--color-codeblock);
+}
+.darkmode--activated .timenode .highlight {
+  border-color: var(--color-site-bg) !important;
+}
+.darkmode--activated blockquote p {
+  color: var(--color-p);
+}
+.darkmode--activated #archive-page .archive .all-tags ul li span {
+  color: var(--color-text);
+  background: #6f6f72;
+}
+.darkmode--activated #valine_container button {
+  background-color: var(--color-block) !important;
+}
+.darkmode--activated #valine_container .vcards .vcontent.expand:before {
+  background: none !important;
+}
+.darkmode--activated #valine_container .vcards .vcontent.expand:after {
+  background: #393c40 !important;
+}
+.darkmode--activated .v[data-class=v] code,
+.darkmode--activated .v[data-class=v] pre {
+  background-color: #332828 !important;
+}
+.darkmode--activated .darkmode-toggle {
+  z-index: 1001;
+}
+.darkmode--activated .darkmode-toggle:before {
+  content: '\f185';
+  transform: scale(1.4);
+  color: #000;
+}
+.darkmode--activated .highlight {
+  background: var(--color-site-bg) !important;
+}
+.darkmode--activated .highlight figcaption {
+  color: #847a7d !important;
+  background: var(--color-site-bg) !important;
+}
+.darkmode--activated .highlight pre .comment {
+  color: #847a7d !important;
+}
+.darkmode--activated .list-h i {
+  color: #b04213 !important;
+}
+.darkmode--activated #comments p {
+  color: var(--color-p);
+}
+.darkmode--activated .gutter {
+  background-color: var(--color-site-bg) !important;
+}
+.darkmode--activated .timeline-item:before,
+.darkmode--activated hr {
+  background-color: var(--color-block);
+}
 div.gallery {
   margin: 1em 0;
   overflow: hidden;
