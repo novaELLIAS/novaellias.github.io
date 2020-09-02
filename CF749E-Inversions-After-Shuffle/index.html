@@ -20,6 +20,10 @@
   
 
   
+    <meta name="description" content="
+CF749E Inversions After Shuffle给出一个1~n的排列,从中等概率抽取一个连续的片段,并对其进行等概率全排列,求排列后整个序列的逆序对的期望个数.
+">
+  
 
   <!-- feed -->
   
@@ -478,7 +482,10 @@
 
   
   
-  <a id="more"></a>
+  <blockquote>
+<p>CF749E Inversions After Shuffle<br>给出一个1~n的排列,从中等概率抽取一个连续的片段,并对其进行等概率全排列,求排列后整个序列的逆序对的期望个数.</p>
+</blockquote>
+<a id="more"></a>
 
 <h3 id="problem"><a href="#problem" class="headerlink" title="problem"></a>problem</h3><p>给出一个1~n的排列,从中等概率抽取一个连续的片段,并对其进行等概率全排列,求排列后整个序列的逆序对的期望个数.</p>
 <h3 id="solution"><a href="#solution" class="headerlink" title="solution"></a>solution</h3><p>设所选的区间长度为l,考虑一个有序数对 ${a_i,a_j (i&lt;j)}$ 并计算其贡献.<br>这样一来,就有两种情况:</p>
@@ -500,12 +507,6 @@
 
 <p>主程序</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	n = read();</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">register</span> <span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++ i)</span><br><span class="line">	&#123;</span><br><span class="line">		a = read();</span><br><span class="line">		tmp += query (a+<span class="number">1</span>, c1);</span><br><span class="line">		ans -= (<span class="keyword">double</span>)query(a+<span class="number">1</span>, c2)*(n-i+<span class="number">1</span>);</span><br><span class="line">		ans += (<span class="keyword">double</span>)(n-i+<span class="number">1</span>)*i*(i<span class="number">-1</span>)/<span class="number">4.0</span>;</span><br><span class="line">		add (a, <span class="number">1</span>, c1); add (a, i, c2);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span> (<span class="string">&quot;%.20lf&quot;</span>, (<span class="keyword">double</span>)(tmp+ans/((<span class="keyword">double</span>)n*(n+<span class="number">1</span>)/<span class="number">2.0</span>)));</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>博客内容遵循 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)</a> 协议.</p>
-<p>本文永久链接: <a href="https://brynhild.online/CF749E-Inversions-After-Shuffle/">https://brynhild.online/CF749E-Inversions-After-Shuffle/</a></p>
-</blockquote>
-
   
     
     <div class='footer'>
@@ -538,10 +539,10 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-05-01T23:32:32+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-09-02T22:54:46+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>Updated at May 1, 2020</p>
+    <p>Updated at Sep 2, 2020</p>
   </a>
 </div>
 
@@ -570,7 +571,9 @@
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://brynhild.online/CF749E-Inversions-After-Shuffle/&title=CF749E Inversions After Shuffle - Next Dream...&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://brynhild.online/CF749E-Inversions-After-Shuffle/&title=CF749E Inversions After Shuffle - Next Dream...&summary=
+CF749E Inversions After Shuffle给出一个1~n的排列,从中等概率抽取一个连续的片段,并对其进行等概率全排列,求排列后整个序列的逆序对的期望个数.
+"
           
           >
           
@@ -582,7 +585,9 @@
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://brynhild.online/CF749E-Inversions-After-Shuffle/&title=CF749E Inversions After Shuffle - Next Dream...&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://brynhild.online/CF749E-Inversions-After-Shuffle/&title=CF749E Inversions After Shuffle - Next Dream...&summary=
+CF749E Inversions After Shuffle给出一个1~n的排列,从中等概率抽取一个连续的片段,并对其进行等概率全排列,求排列后整个序列的逆序对的期望个数.
+"
           
           >
           
@@ -594,7 +599,9 @@
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=https://brynhild.online/CF749E-Inversions-After-Shuffle/&title=CF749E Inversions After Shuffle - Next Dream...&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://brynhild.online/CF749E-Inversions-After-Shuffle/&title=CF749E Inversions After Shuffle - Next Dream...&summary=
+CF749E Inversions After Shuffle给出一个1~n的排列,从中等概率抽取一个连续的片段,并对其进行等概率全排列,求排列后整个序列的逆序对的期望个数.
+"
           
           >
           
@@ -635,19 +642,25 @@
         <a class='prev' href='/Luogu-P4289/'>
           <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>Luogu P4289 [HAOI2008]移动玩具</p>
           <p class='content'>
+Luogu P4289 [HAOI2008]移动玩具
 
-NULL在一个4*4的方框内摆放了若干个相同的玩具，某人想将这些玩具重新摆放成为他心中理想的状态，规定移动时只能将玩具向上下左右四个方向移动，并且移动的位置不能有玩具，请你用最少的移动次数将...</p>
+
+
+NULL在一个4*4的方框内摆放了若干个相同的玩具，某人想将这些玩具重新摆放成为他心中理想的状态，规定移动时只能将玩具向上下左右四个...</p>
         </a>
       
       
         <a class='next' href='/Luogu-P1654-OSU/'>
           <p class='title'>洛谷 P1654 OSU!<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>
+洛谷 P1654 OSU! 滚动数组
+
+
 
 本题可以使用滚动数组进一步优化空间.
 空间多精贵.
 
-订正一下本题题干:小H和小Z正在玩一个取石子游戏。 取石子游戏的规则是这样的，每个人每次可以从一堆石子中取出若干个石子，每次取石子的个数...</p>
+订正一下本题题干:小H和小Z正在玩一个取石子游戏。 取石子游戏的规则是这样的，每个人每次可以从...</p>
         </a>
       
     </div>

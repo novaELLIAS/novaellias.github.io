@@ -20,6 +20,10 @@
   
 
   
+    <meta name="description" content="
+SP2885 WORDRING - Word Rings
+">
+  
 
   <!-- feed -->
   
@@ -478,7 +482,10 @@
 
   
   
-  <a id="more"></a>
+  <blockquote>
+<p>SP2885 WORDRING - Word Rings</p>
+</blockquote>
+<a id="more"></a>
 
 <p>本题求平均环长,可以将每个字符串的前后两个字符看做点,这两个点存在于一个字符串的关系视为一条边,接着二分枚举答案(单调性是很显然的),用队列优化BellmanFord判断即可.</p>
 <p>关键代码:</p>
@@ -489,10 +496,6 @@
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> (<span class="literal">true</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		n = read (); <span class="keyword">if</span> (!n) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">		<span class="built_in">memset</span> (head, <span class="number">0</span>, <span class="keyword">sizeof</span> head);</span><br><span class="line">		<span class="built_in">memset</span> (hash, <span class="number">0</span>, <span class="keyword">sizeof</span> hash);</span><br><span class="line">		ecnt = hhsh = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">while</span> (n --)</span><br><span class="line">		&#123;</span><br><span class="line">			c = gc(), len = <span class="number">0</span>;</span><br><span class="line">			<span class="keyword">while</span> (c == <span class="string">&#x27;\n&#x27;</span> || c == <span class="string">&#x27;\r&#x27;</span>) c = gc ();</span><br><span class="line">			<span class="keyword">while</span> ((c != <span class="string">&#x27;\n&#x27;</span>) &amp;&amp; (c != <span class="string">&#x27;\r&#x27;</span>)) s[++ len] = c, c = gc();</span><br><span class="line">			fr = calc(s[<span class="number">1</span>], s[<span class="number">2</span>]), to = calc(s[len<span class="number">-1</span>], s[len]);</span><br><span class="line">			<span class="keyword">if</span> (!hash[fr]) hash[fr] = ++ hhsh;</span><br><span class="line">			<span class="keyword">if</span> (!hash[to]) hash[to] = ++ hhsh;</span><br><span class="line">			addedge (hash[fr], hash[to], len);</span><br><span class="line">		&#125;</span><br><span class="line">		l = <span class="number">0.0</span>, r = <span class="number">1000.0</span>;</span><br><span class="line">		<span class="keyword">while</span> (r - l &gt;= eps)</span><br><span class="line">		&#123;</span><br><span class="line">			mid = (l + r) / <span class="number">2</span>;</span><br><span class="line">			<span class="keyword">if</span> (judge(mid)) l = mid;</span><br><span class="line">			<span class="keyword">else</span> r = mid;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> (l == <span class="number">0</span>) <span class="built_in">puts</span> (<span class="string">&quot;No solution.&quot;</span>);</span><br><span class="line">		<span class="keyword">else</span> <span class="built_in">printf</span> (<span class="string">&quot;%.2lf\n&quot;</span>, l);</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
 
 <p>祝大家 <code>RP++</code> !</p>
-<blockquote>
-<p>博客内容遵循 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)</a> 协议.</p>
-<p>本文永久链接: <a href="https://brynhild.online/SP2885-WORDRING-World-Rings/">https://brynhild.online/SP2885-WORDRING-World-Rings/</a></p>
-</blockquote>
 
   
     
@@ -526,10 +529,10 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-05-01T23:40:21+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-09-02T22:51:23+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>Updated at May 1, 2020</p>
+    <p>Updated at Sep 2, 2020</p>
   </a>
 </div>
 
@@ -558,7 +561,9 @@
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://brynhild.online/SP2885-WORDRING-World-Rings/&title=SP2885 WORDRING - Word Rings - Next Dream...&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://brynhild.online/SP2885-WORDRING-World-Rings/&title=SP2885 WORDRING - Word Rings - Next Dream...&summary=
+SP2885 WORDRING - Word Rings
+"
           
           >
           
@@ -570,7 +575,9 @@
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://brynhild.online/SP2885-WORDRING-World-Rings/&title=SP2885 WORDRING - Word Rings - Next Dream...&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://brynhild.online/SP2885-WORDRING-World-Rings/&title=SP2885 WORDRING - Word Rings - Next Dream...&summary=
+SP2885 WORDRING - Word Rings
+"
           
           >
           
@@ -582,7 +589,9 @@
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=https://brynhild.online/SP2885-WORDRING-World-Rings/&title=SP2885 WORDRING - Word Rings - Next Dream...&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://brynhild.online/SP2885-WORDRING-World-Rings/&title=SP2885 WORDRING - Word Rings - Next Dream...&summary=
+SP2885 WORDRING - Word Rings
+"
           
           >
           
@@ -622,18 +631,23 @@
       
         <a class='prev' href='/lg-P3369-STL/'>
           <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>STL 洛谷P3369 普通平衡树</p>
-          <p class='content'>luogu P3369 普通平衡树
+          <p class='content'>
+luogu P3369 普通平衡树STL 实现
 
 
-12345678910111213141516171819202122232425262728293031323334353637383940414243...</p>
+
+123456789101112131415161718192021222324252627282930313233343536373839...</p>
         </a>
       
       
         <a class='next' href='/CF372B-Counting-Rectangles-is-Fun/'>
           <p class='title'>CF372B Counting Rectangles is Fun<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>
+CF372B Counting Rectangles is Fun
 
-NULL Problem :题目描述给定一个${n* m}$的01矩阵, q次询问, 每次询问指定一个子矩形, 求该子矩形种有多少个只包含0的子矩阵.矩阵从上到下编号1n, 从左到右编号1m...</p>
+
+
+NULL Problem :题目描述给定一个${n* m}$的01矩阵, q次询问, 每次询问指定一个子矩形, 求该子...</p>
         </a>
       
     </div>

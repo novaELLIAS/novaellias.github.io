@@ -22,6 +22,10 @@
   
 
   
+    <meta name="description" content="
+树状贪心洛谷 P2899 [USACO08JAN]手机网络Cell Phone Network
+">
+  
 
   <!-- feed -->
   
@@ -480,21 +484,16 @@
 
   
   
-  <a id="more"></a>
+  <blockquote>
+<p>树状贪心<br>洛谷 P2899 [USACO08JAN]手机网络Cell Phone Network</p>
+</blockquote>
+<a id="more"></a>
 
 <h4 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h4><p>Farmer John has decided to give each of his cows a cell phone in hopes to encourage their social interaction. This, however, requires him to set up cell phone towers on his N (1 ≤ N ≤ 10,000) pastures (conveniently numbered 1..N) so they can all communicate.</p>
 <p>Exactly N-1 pairs of pastures are adjacent, and for any two pastures A and B (1 ≤ A ≤ N; 1 ≤ B ≤ N; A ≠ B) there is a sequence of adjacent pastures such that A is the first pasture in the sequence and B is the last. Farmer John can only place cell phone towers in the pastures, and each tower has enough range to provide service to the pasture it is on and all pastures adjacent to the pasture with the cell tower.</p>
 <p>Help him determine the minimum number of towers he must install to provide cell phone service to each pasture.</p>
 <h4 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h4><p>本题要求使用最少的电磁塔, 把所有的节点覆盖掉. 由 N-1 条边我们可以了解到, 这是一棵树. 从树的叶子节点向上看, 显然在儿子节点摆电磁塔是不合算的. 所以很显然地, 从最后一层向上搜索, 每遇到一个儿子节点没有被覆盖, 就在他父亲上摆一个电磁塔. 很显然, 从下向上枚举, 对于本题的数据这种方法是成立的.</p>
 <h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize (<span class="meta-string">&quot;Ofast&quot;</span>)</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&quot;iostream&quot;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&quot;stdio.h&quot;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&quot;vector&quot;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> rint register int</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">read</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> x=<span class="number">0l</span>l,t=<span class="number">1l</span>l;</span><br><span class="line">    <span class="keyword">char</span> ch=getchar();</span><br><span class="line">    <span class="keyword">while</span>((ch&lt;<span class="string">&#x27;0&#x27;</span>||ch&gt;<span class="string">&#x27;9&#x27;</span>)&amp;&amp;ch!=<span class="string">&#x27;-&#x27;</span>)ch=getchar();</span><br><span class="line">    <span class="keyword">if</span>(ch==<span class="string">&#x27;-&#x27;</span>)t=<span class="number">-1</span>,ch=getchar();</span><br><span class="line">    <span class="keyword">while</span>(ch&lt;=<span class="string">&#x27;9&#x27;</span>&amp;&amp;ch&gt;=<span class="string">&#x27;0&#x27;</span>)x=x*<span class="number">10</span>+ch<span class="number">-48</span>,ch=getchar();</span><br><span class="line">    <span class="keyword">return</span> x*t;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">bool</span> check[<span class="number">10001</span>];</span><br><span class="line"><span class="keyword">int</span> n, fa[<span class="number">10001</span>], ans, mxdp;</span><br><span class="line"><span class="built_in">vector</span> &lt;<span class="keyword">int</span>&gt; mp[<span class="number">10001</span>], fl[<span class="number">10001</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">dfs</span> <span class="params">(<span class="keyword">int</span> u, <span class="keyword">int</span> de)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	mxdp = max (mxdp, de);</span><br><span class="line">	fl[de].push_back (u);</span><br><span class="line">	<span class="keyword">int</span> v;</span><br><span class="line">	<span class="keyword">for</span> (rint i = <span class="number">0</span>; i &lt; mp[u].size (); ++ i)</span><br><span class="line">	&#123;</span><br><span class="line">		v = mp[u][i];</span><br><span class="line">		<span class="keyword">if</span> (!(v ^ fa[u])) <span class="keyword">continue</span>;</span><br><span class="line">		fa[v] = u;</span><br><span class="line">		dfs (v, de + <span class="number">1</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">work</span> <span class="params">(<span class="keyword">int</span> u)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	check[u] = <span class="literal">true</span>;</span><br><span class="line">	<span class="keyword">for</span> (rint i = <span class="number">0</span>; i &lt; mp[u].size (); ++ i) check[mp[u][i]] = <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">signed</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	n = read ();</span><br><span class="line">	<span class="keyword">int</span> u, v;</span><br><span class="line">	<span class="keyword">for</span> (rint i = <span class="number">1</span>; i &lt; n; ++ i)</span><br><span class="line">	&#123;</span><br><span class="line">		u = read (), v = read ();</span><br><span class="line">		mp[u].push_back (v);</span><br><span class="line">		mp[v].push_back (u);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	dfs (<span class="number">1</span>, <span class="number">0</span>);</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">for</span> (rint i = mxdp; i &gt;= <span class="number">0</span>; -- i)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span> (rint j = <span class="number">0</span>; j &lt; fl[i].size (); ++ j)</span><br><span class="line">		&#123;</span><br><span class="line">			u = fl[i][j], v = fa[u];</span><br><span class="line">			<span class="keyword">if</span> (check[u]) <span class="keyword">continue</span>;</span><br><span class="line">			ans ++;</span><br><span class="line">			work (v);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span> (<span class="string">&quot;%d&quot;</span>, ans);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<blockquote>
-<p>博客内容遵循 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)</a> 协议.</p>
-<p>本文永久链接: <a href="https://brynhild.online/Luogu-P2899-Cell-Phone-Network/">https://brynhild.online/Luogu-P2899-Cell-Phone-Network/</a></p>
-</blockquote>
-
   
     
     <div class='footer'>
@@ -527,10 +526,10 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-05-01T23:35:28+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-09-02T22:55:56+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>Updated at May 1, 2020</p>
+    <p>Updated at Sep 2, 2020</p>
   </a>
 </div>
 
@@ -562,7 +561,9 @@
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://brynhild.online/Luogu-P2899-Cell-Phone-Network/&title=洛谷 P2899 [USACO08JAN]手机网络Cell Phone Network - Next Dream...&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://brynhild.online/Luogu-P2899-Cell-Phone-Network/&title=洛谷 P2899 [USACO08JAN]手机网络Cell Phone Network - Next Dream...&summary=
+树状贪心洛谷 P2899 [USACO08JAN]手机网络Cell Phone Network
+"
           
           >
           
@@ -574,7 +575,9 @@
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://brynhild.online/Luogu-P2899-Cell-Phone-Network/&title=洛谷 P2899 [USACO08JAN]手机网络Cell Phone Network - Next Dream...&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://brynhild.online/Luogu-P2899-Cell-Phone-Network/&title=洛谷 P2899 [USACO08JAN]手机网络Cell Phone Network - Next Dream...&summary=
+树状贪心洛谷 P2899 [USACO08JAN]手机网络Cell Phone Network
+"
           
           >
           
@@ -586,7 +589,9 @@
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=https://brynhild.online/Luogu-P2899-Cell-Phone-Network/&title=洛谷 P2899 [USACO08JAN]手机网络Cell Phone Network - Next Dream...&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://brynhild.online/Luogu-P2899-Cell-Phone-Network/&title=洛谷 P2899 [USACO08JAN]手机网络Cell Phone Network - Next Dream...&summary=
+树状贪心洛谷 P2899 [USACO08JAN]手机网络Cell Phone Network
+"
           
           >
           
@@ -627,11 +632,14 @@
         <a class='prev' href='/Luogu-P1654-OSU/'>
           <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>洛谷 P1654 OSU!</p>
           <p class='content'>
+洛谷 P1654 OSU! 滚动数组
+
+
 
 本题可以使用滚动数组进一步优化空间.
 空间多精贵.
 
-订正一下本题题干:小H和小Z正在玩一个取石子游戏。 取石子游戏的规则是这样的，每个人每次可以从一堆石子中取出若干个石子，每次取石子的个数...</p>
+订正一下本题题干:小H和小Z正在玩一个取石子游戏。 取石子游戏的规则是这样的，每个人每次可以从...</p>
         </a>
       
       

@@ -20,6 +20,10 @@
   
 
   
+    <meta name="description" content="
+洛谷 P1654 OSU! 滚动数组
+">
+  
 
   <!-- feed -->
   
@@ -478,7 +482,10 @@
 
   
   
-  <a id="more"></a>
+  <blockquote>
+<p>洛谷 P1654 OSU! 滚动数组</p>
+</blockquote>
+<a id="more"></a>
 
 <h3 id="本题可以使用滚动数组进一步优化空间"><a href="#本题可以使用滚动数组进一步优化空间" class="headerlink" title="本题可以使用滚动数组进一步优化空间."></a>本题可以使用滚动数组进一步优化空间.</h3><blockquote>
 <p>空间多精贵.</p>
@@ -487,13 +494,6 @@
 <h3 id="优化分析"><a href="#优化分析" class="headerlink" title="优化分析"></a>优化分析</h3><p>看到楼下大佬的代码，用庞大的数组会造成大量的内存浪费. 从算法中可以看到，一个状态只从它前一个状态转移而来，就可以使用滚动数组节约空间.</p>
 <p>第一次使用数组取 <code>0</code> 位， 每次转移将 <code>pos ^ 1</code>. 代码如下</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">register</span> <span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++ i, pos ^= <span class="number">1</span>)</span><br><span class="line">&#123;</span><br><span class="line">	<span class="built_in">exp</span> = !pos, k = getdou ();</span><br><span class="line">	x[pos] = (x[<span class="built_in">exp</span>] + <span class="number">1</span>) * k;</span><br><span class="line">	y[pos] = (y[<span class="built_in">exp</span>] + <span class="number">2</span>*x[<span class="built_in">exp</span>] + <span class="number">1</span>) * k;</span><br><span class="line">	v[pos] = v[<span class="built_in">exp</span>] + (<span class="number">3</span>*x[<span class="built_in">exp</span>] + <span class="number">3</span>*y[<span class="built_in">exp</span>]+<span class="number">1</span>) * k;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-<blockquote>
-<p>博客内容遵循 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)</a> 协议.</p>
-<p>本文永久链接: <a href="https://brynhild.online/Luogu-P1654-OSU/">https://brynhild.online/Luogu-P1654-OSU/</a></p>
-</blockquote>
-
   
     
     <div class='footer'>
@@ -526,10 +526,10 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-05-01T23:37:31+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-09-02T22:56:30+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>Updated at May 1, 2020</p>
+    <p>Updated at Sep 2, 2020</p>
   </a>
 </div>
 
@@ -558,7 +558,9 @@
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://brynhild.online/Luogu-P1654-OSU/&title=洛谷 P1654 OSU! - Next Dream...&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://brynhild.online/Luogu-P1654-OSU/&title=洛谷 P1654 OSU! - Next Dream...&summary=
+洛谷 P1654 OSU! 滚动数组
+"
           
           >
           
@@ -570,7 +572,9 @@
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://brynhild.online/Luogu-P1654-OSU/&title=洛谷 P1654 OSU! - Next Dream...&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://brynhild.online/Luogu-P1654-OSU/&title=洛谷 P1654 OSU! - Next Dream...&summary=
+洛谷 P1654 OSU! 滚动数组
+"
           
           >
           
@@ -582,7 +586,9 @@
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=https://brynhild.online/Luogu-P1654-OSU/&title=洛谷 P1654 OSU! - Next Dream...&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://brynhild.online/Luogu-P1654-OSU/&title=洛谷 P1654 OSU! - Next Dream...&summary=
+洛谷 P1654 OSU! 滚动数组
+"
           
           >
           
@@ -623,17 +629,22 @@
         <a class='prev' href='/CF749E-Inversions-After-Shuffle/'>
           <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>CF749E Inversions After Shuffle</p>
           <p class='content'>
+CF749E Inversions After Shuffle给出一个1~n的排列,从中等概率抽取一个连续的片段,并对其进行等概率全排列,求排列后整个序列的逆序对的期望个数.
 
-problem给出一个1~n的排列,从中等概率抽取一个连续的片段,并对其进行等概率全排列,求排列后整个序列的逆序对的期望个数.
-solution设所选的区间长度为l,考虑一个有序数对 ${a...</p>
+
+
+probl...</p>
         </a>
       
       
         <a class='next' href='/Luogu-P2899-Cell-Phone-Network/'>
           <p class='title'>洛谷 P2899 [USACO08JAN]手机网络Cell Phone Network<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>
+树状贪心洛谷 P2899 [USACO08JAN]手机网络Cell Phone Network
 
-题目Farmer John has decided to give each of his cows a cell phone in hopes to encourage their soc...</p>
+
+
+题目Farmer John has decided to give each of his...</p>
         </a>
       
     </div>
