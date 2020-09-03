@@ -16,15 +16,9 @@
 
   <!-- 页面元数据 -->
   
-  <title>SP1716 GSS3 - Can you answer these queries III - Next Dream...</title>
-  
-    <meta name="keywords" content="GSS,segment tree">
+  <title>Hidden List - Next Dream...</title>
   
 
-  
-    <meta name="description" content="
-线段树GSS3 - Can you answer these queries III
-">
   
 
   <!-- feed -->
@@ -335,7 +329,7 @@
 
   
   
-      <div class='cover-wrapper post search' style="display: none;">
+      <div class='cover-wrapper friends search' style="display: none;">
         
           <div class='cover-backstretch'></div>
         
@@ -383,8 +377,8 @@
 
 
 <div id="pjax-data" style="display: none">
-  <div id="pjax-ispage">true</div>
-  <div id="pjax-pageTitle">SP1716 GSS3 - Can you answer these queries III</div>
+  <div id="pjax-ispage">false</div>
+  <div id="pjax-pageTitle"></div>
   <div id="pjax-enable-cover">true</div>
   <div id="pjax-comment-path"></div>
   <div id="pjax-comment-placeholder"></div>
@@ -414,8 +408,8 @@
         
 
 <div class='l_main'>
-  <article class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
-  
+  <article id="friends" class="post article article-entry l_friends white-box reveal shadow article-type-friends" itemscope itemprop="blogPost">
+    
 
 
   
@@ -424,7 +418,7 @@
     
     
       <h1 class="title">
-        SP1716 GSS3 - Can you answer these queries III
+        Hidden List
       </h1>
       <div class='new-meta-box'>
         
@@ -441,13 +435,6 @@
         
           
             
-  <div class='new-meta-item category'>
-    <a class='notlink'>
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/Olympiad-in-Informatics/">Olympiad in Informatics</a>
-    </a>
-  </div>
-
 
           
         
@@ -455,7 +442,7 @@
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>Released at Nov 2, 2018</p>
+    <p>Released at Sep 3, 2020</p>
   </a>
 </div>
 
@@ -466,7 +453,7 @@
   <div class="new-meta-item browse leancloud">
     <a class='notlink'>
       
-      <div id="lc-pv" data-title="SP1716 GSS3 - Can you answer these queries III" data-path="/GSS3/">
+      <div id="lc-pv" data-title="Hidden List" data-path="/hiddenlist/index-p.html">
         <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
         <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
         views
@@ -482,125 +469,52 @@
   </div>
 
 
-  
-  
-  <blockquote>
-<p>线段树<br>GSS3 - Can you answer these queries III</p>
-</blockquote>
-<a id="more"></a>
-
-<p><a target="_blank" rel="noopener" href="https://www.luogu.org/problemnew/show/SP1716">Luogu</a><br><a target="_blank" rel="noopener" href="https://vjudge.net/problem/SPOJ-GSS3">Vjudge</a></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize (<span class="meta-string">&quot;-fdelete-null-pointer-checks,inline-functions-called-once,-funsafe-loop-optimizations,-fexpensive-optimizations,-foptimize-sibling-calls,-ftree-switch-conversion,-finline-small-functions,inline-small-functions,-frerun-cse-after-loop,-fhoist-adjacent-loads,-findirect-inlining,-freorder-functions,no-stack-protector,-fpartial-inlining,-fsched-interblock,-fcse-follow-jumps,-fcse-skip-blocks,-falign-functions,-fstrict-overflow,-fstrict-aliasing,-fschedule-insns2,-ftree-tail-merge,inline-functions,-fschedule-insns,-freorder-blocks,-fwhole-program,-funroll-loops,-fthread-jumps,-fcrossjumping,-fcaller-saves,-fdevirtualize,-falign-labels,-falign-loops,-falign-jumps,unroll-loops,-fsched-spec,-ffast-math,Ofast,inline,-fgcse,-fgcse-lm,-fipa-sra,-ftree-pre,-ftree-vrp,-fpeephole2&quot;</span>, 3)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> G++ optimize (<span class="meta-string">&quot;Ofast&quot;</span>, 3)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize (<span class="meta-string">&quot;Ofast&quot;</span>, 3)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC target (<span class="meta-string">&quot;sse3&quot;</span>,<span class="meta-string">&quot;sse2&quot;</span>,<span class="meta-string">&quot;sse&quot;</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC target (<span class="meta-string">&quot;avx&quot;</span>,<span class="meta-string">&quot;sse4&quot;</span>,<span class="meta-string">&quot;sse4.1&quot;</span>,<span class="meta-string">&quot;sse4.2&quot;</span>,<span class="meta-string">&quot;ssse3&quot;</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC target (<span class="meta-string">&quot;f16c&quot;</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> G++ target (<span class="meta-string">&quot;sse3&quot;</span>,<span class="meta-string">&quot;sse2&quot;</span>,<span class="meta-string">&quot;sse&quot;</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> G++ target (<span class="meta-string">&quot;avx&quot;</span>,<span class="meta-string">&quot;sse4&quot;</span>,<span class="meta-string">&quot;sse4.1&quot;</span>,<span class="meta-string">&quot;sse4.2&quot;</span>,<span class="meta-string">&quot;ssse3&quot;</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> G++ target (<span class="meta-string">&quot;f16c&quot;</span>)</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;ctype.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> lson rt&lt;&lt;1,l,mid</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> rson rt&lt;&lt;1|1,mid+1,r</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> rint register int</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n, m, x, y, in, opt;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span> &#123;</span></span><br><span class="line">    <span class="keyword">int</span> sum, lmax, rmax, dat, l, r;</span><br><span class="line">&#125; tr[<span class="number">200001</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> FastIO &#123;</span><br><span class="line">    <span class="keyword">const</span> <span class="keyword">int</span> str=<span class="number">1</span>&lt;&lt;<span class="number">20</span>;</span><br><span class="line">    <span class="keyword">const</span> <span class="keyword">char</span>* <span class="built_in">endl</span>=<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">Reader</span> &#123;</span></span><br><span class="line">        <span class="keyword">char</span> buf[str],*s,*t;</span><br><span class="line">        <span class="keyword">bool</span> EOF_FLG;</span><br><span class="line">        Reader():s(buf),t(buf),EOF_FLG(<span class="literal">false</span>) &#123;&#125;;</span><br><span class="line">        <span class="function"><span class="keyword">inline</span> <span class="keyword">char</span> <span class="title">gt</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> s==t&amp;&amp;((t=(s=buf)+fread(buf,<span class="number">1</span>,str,<span class="built_in">stdin</span>))==s)?EOF:(*s++);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;Reader&amp;<span class="keyword">operator</span>&gt;&gt;(T&amp;x) &#123;</span><br><span class="line">            <span class="keyword">if</span>(EOF_FLG)<span class="keyword">return</span> *<span class="keyword">this</span>;</span><br><span class="line">            <span class="keyword">register</span> <span class="keyword">char</span> c=<span class="number">0</span>,d;</span><br><span class="line">            <span class="keyword">while</span>(c!=EOF&amp;&amp;(c&lt;<span class="string">&#x27;0&#x27;</span>||c&gt;<span class="string">&#x27;9&#x27;</span>))d=c,c=gt();</span><br><span class="line">            <span class="keyword">if</span>(c==EOF) &#123;</span><br><span class="line">                EOF_FLG=<span class="literal">true</span>;</span><br><span class="line">                <span class="keyword">return</span> *<span class="keyword">this</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> x=<span class="number">0</span>;</span><br><span class="line">            <span class="keyword">while</span>(c&gt;=<span class="string">&#x27;0&#x27;</span>&amp;&amp;c&lt;=<span class="string">&#x27;9&#x27;</span>)x=(x&lt;&lt;<span class="number">3</span>)+(x&lt;&lt;<span class="number">1</span>)+c-<span class="string">&#x27;0&#x27;</span>,c=gt();</span><br><span class="line">            <span class="keyword">if</span>(d==<span class="string">&#x27;-&#x27;</span>)x=-x;</span><br><span class="line">            <span class="keyword">return</span> *<span class="keyword">this</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; <span class="built_in">cin</span>;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">Writer</span> &#123;</span></span><br><span class="line">        <span class="keyword">char</span> buf[str],*s,*t;</span><br><span class="line">        Writer():s(buf),t(buf+str) &#123;&#125;</span><br><span class="line">        ~Writer() &#123;</span><br><span class="line">            fwrite(buf,<span class="number">1</span>,s-buf,<span class="built_in">stdout</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">pt</span><span class="params">(<span class="keyword">char</span> c)</span> </span>&#123;</span><br><span class="line">            (s==t)?(fwrite(s=buf,<span class="number">1</span>,str,<span class="built_in">stdout</span>),*s++=c):(*s++=c);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;Writer&amp;<span class="keyword">operator</span>&lt;&lt;(T x) &#123;</span><br><span class="line">            <span class="keyword">if</span>(!x)<span class="keyword">return</span> pt(<span class="string">&#x27;0&#x27;</span>),*<span class="keyword">this</span>;</span><br><span class="line">            <span class="keyword">if</span>(x&lt;<span class="number">0</span>)pt(<span class="string">&#x27;-&#x27;</span>),x=-x;</span><br><span class="line">            <span class="keyword">register</span> <span class="keyword">char</span> a[<span class="number">30</span>],t=<span class="number">0</span>;</span><br><span class="line">            <span class="keyword">while</span>(x)a[t++]=x%<span class="number">10</span>,x/=<span class="number">10</span>;</span><br><span class="line">            <span class="keyword">while</span>(t--)pt(a[t]+<span class="string">&#x27;0&#x27;</span>);</span><br><span class="line">            <span class="keyword">return</span> *<span class="keyword">this</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        Writer&amp;<span class="keyword">operator</span>&lt;&lt;(<span class="keyword">const</span> <span class="keyword">char</span>*s) &#123;</span><br><span class="line">            <span class="keyword">while</span>(*s)pt(*s++);</span><br><span class="line">            <span class="keyword">return</span> *<span class="keyword">this</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; <span class="built_in">cout</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">const</span> <span class="keyword">int</span>&amp; <span class="title">max</span><span class="params">(<span class="keyword">const</span> <span class="keyword">int</span>&amp; x,<span class="keyword">const</span> <span class="keyword">int</span>&amp; y)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> x&gt;y?x:y;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">update</span> <span class="params">(<span class="keyword">int</span> rt)</span> </span>&#123;</span><br><span class="line">    tr[rt].sum =tr[rt&lt;&lt;<span class="number">1</span>].sum + tr[rt&lt;&lt;<span class="number">1</span>|<span class="number">1</span>].sum;</span><br><span class="line">    tr[rt].lmax= <span class="built_in">max</span> (tr[rt&lt;&lt;<span class="number">1</span>].lmax, tr[rt&lt;&lt;<span class="number">1</span>].sum + tr[rt&lt;&lt;<span class="number">1</span>|<span class="number">1</span>].lmax);</span><br><span class="line">    tr[rt].rmax= <span class="built_in">max</span> (tr[rt&lt;&lt;<span class="number">1</span>|<span class="number">1</span>].rmax, tr[rt&lt;&lt;<span class="number">1</span>|<span class="number">1</span>].sum + tr[rt&lt;&lt;<span class="number">1</span>].rmax);</span><br><span class="line">    tr[rt].dat = <span class="built_in">max</span> (<span class="built_in">max</span>(tr[rt&lt;&lt;<span class="number">1</span>].dat, tr[rt&lt;&lt;<span class="number">1</span>|<span class="number">1</span>].dat), tr[rt&lt;&lt;<span class="number">1</span>].rmax + tr[rt&lt;&lt;<span class="number">1</span>|<span class="number">1</span>].lmax);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">build</span> <span class="params">(<span class="keyword">int</span> rt,<span class="keyword">int</span> l,<span class="keyword">int</span> r)</span> </span>&#123;</span><br><span class="line">    tr[rt].l = l, tr[rt].r = r;</span><br><span class="line">    <span class="keyword">if</span>(l==r) &#123;</span><br><span class="line">        FastIO::<span class="built_in">cin</span>&gt;&gt;in;</span><br><span class="line">        tr[rt].dat = tr[rt].sum = tr[rt].lmax = tr[rt].rmax = in;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> mid = (l+r)&gt;&gt;<span class="number">1</span>;</span><br><span class="line">    build (lson);</span><br><span class="line">    build (rson);</span><br><span class="line">    update (rt);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> node <span class="title">query</span> <span class="params">(<span class="keyword">int</span> rt, <span class="keyword">int</span> l, <span class="keyword">int</span> r, <span class="keyword">int</span> ql, <span class="keyword">int</span> qr)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (ql &lt;= l &amp;&amp; qr &gt;= r) <span class="keyword">return</span> tr[rt];</span><br><span class="line">    <span class="keyword">int</span> mid = (l+r)&gt;&gt;<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span> (ql &gt;  mid) <span class="keyword">return</span> query (rson, ql, qr);</span><br><span class="line">    <span class="keyword">if</span> (qr &lt;= mid) <span class="keyword">return</span> query (lson, ql, qr);</span><br><span class="line">    <span class="keyword">else</span> &#123;</span><br><span class="line">        node ans,a,b;</span><br><span class="line">        a = query (lson,ql,qr);</span><br><span class="line">        b = query (rson,ql,qr);</span><br><span class="line">        ans.sum = a.sum + b.sum;</span><br><span class="line">        ans.dat = <span class="built_in">max</span> (a.dat, a.rmax + b.lmax), ans.dat = <span class="built_in">max</span> (ans.dat, b.dat);</span><br><span class="line">        ans.lmax= <span class="built_in">max</span> (a.lmax, a.sum + b.lmax);</span><br><span class="line">        ans.rmax= <span class="built_in">max</span> (b.rmax, b.sum + a.rmax);</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">work</span> <span class="params">(<span class="keyword">int</span> rt, <span class="keyword">int</span> to, <span class="keyword">int</span> val)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (tr[rt].l == tr[rt].r) &#123;</span><br><span class="line">        tr[rt].sum = tr[rt].lmax = tr[rt].rmax = tr[rt].dat = val; <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">register</span> <span class="keyword">int</span> mid = (tr[rt].l + tr[rt].r) &gt;&gt; <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span> (to &lt;= mid) work (rt&lt;&lt;<span class="number">1</span>, to, val);</span><br><span class="line">    <span class="keyword">else</span> work (rt&lt;&lt;<span class="number">1</span>|<span class="number">1</span>, to, val);</span><br><span class="line">    update(rt);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> FastIO;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">//freopen (&quot;nico.in&quot;,&quot;r&quot;,stdin);</span></span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line">    build (<span class="number">1</span>, <span class="number">1</span>, n);</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; m;</span><br><span class="line">    <span class="keyword">while</span> (m --) &#123;</span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt; opt &gt;&gt; x &gt;&gt; y;</span><br><span class="line">        <span class="keyword">if</span> (opt) <span class="built_in">cout</span> &lt;&lt; query (<span class="number">1</span>, <span class="number">1</span>, n, x, y).dat &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">        <span class="keyword">else</span> work (<span class="number">1</span>,x,y);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-  
     
-    <div class='footer'>
+    
       
-      
-      
-        <div class='copyright'>
-          <blockquote>
+        
+          <div class='friends-group'>
             
-              
-                <p>内容遵循 <a href="%22https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en%22">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) License</a>.</p>
-
-              
-            
-              
-                <p>本文永久链接：<a href=https://brynhild.online/GSS3/>https://brynhild.online/GSS3/</a></p>
+              <br>
+              <h2 class='friend-header'>
+                
+                  <i class="fas fa-compact-disc fa-fw" aria-hidden="true"></i>
+                
+                Music Room
+              </h2>
               
             
-          </blockquote>
-        </div>
-      
-      
-        <div>
-          <div class='donate'>
-            <div class='imgs'>
+            <div class='friend-content'>
               
-                <img src='https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/reward/qq_pic_merged_1581578634684.jpg'>
-              
-                <img src='https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/reward/wepay-2-e1541232487203.png'>
-              
-                <img src='https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/reward/qq_pic_merged_1581578554413.jpg'>
+                <a class='friend-card' style='background:; color:'
+                  target="_blank" rel="external nofollow noopener noreferrer" href='/tools/arcaea'>
+                  <div class='friend-left'>
+                    
+                      
+                        
+                          <img class='avatar lazyload' src='https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@2.3.15/img/hiddenlist/title2.2.0.webp'/>
+                        
+                      
+                    
+                  </div>
+                  <div class='friend-right'>
+                    <p class="friend-name">Arcaea</p>
+                    
+                    
+                      <div class='friend-tags-wrapper'>
+                        <p class="tags">upd 2.0.0</p>
+                      </div>
+                    
+                  </div>
+                </a>
               
             </div>
-          <!--<div id="reward">
-  <link rel="stylesheet" type="text/less" href="/less/_reward.css">
-  
-  <div>DONATE</div>
-  
-  <div class="reward">
+          </div>
+        
+      
     
-    <a href="/hiddenlist" target="_blank" class=" tr3" title="HiddenList"><span
-        id="github"></span></a>
-    <ul id="RewardBox" class="list pos-f tr3">
-      
-      <li id="PayPal" title="PayPal"><a href="https://paypal.me/novaellias" target="_blank">PayPal</a></li>
-      
-      
-      <li id="AliPayOR" title="支付宝">AliPay</li>
-      
-      
-      <li id="WeChatPayOR" title="WeChat">WeChatPay</li>
-      
-      
-      <li id="QQPayOR" title="QQ">QQPay</li>
-      
-    </ul>
-    <div id="RewardText" class="tr3">Donate</div>
-    <div id="QRBox" class="pos-f left-100">
-      <div id="MainBox"></div>
-    </div>
-  </div>
-</div>
-<script src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/js/reward/jquery-2.0.3.min.js"></script>
-<script>
-  jQuery(document).ready(function () {
-    var QRBox = $('#QRBox');
-    var MainBox = $('#MainBox');
-    var AliPayOR = 'https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/reward/qq_pic_merged_1581578634684.jpg';
-    var WeChatPayOR = 'https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/reward/wepay-2-e1541232487203.png';
-    var QQPayOR = 'https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/reward/qq_pic_merged_1581578554413.jpg';
-
-    function showQR(QR) {
-      if (QR) {
-        MainBox.css('background-image', 'url(' + QR + ')');
-      }
-      $('#RewardText,#RewardBox,#github').addClass('blur');
-      QRBox.fadeIn(300, function (argument) {
-        MainBox.addClass('showQR');
-      });
-    }
-
-    $('#RewardBox>li').click(function (event) {
-      var thisID = $(this).attr('id');
-      if (thisID === 'AliPayOR') {
-        showQR(AliPayOR);
-      } else if (thisID === 'WeChatPayOR') {
-        showQR(WeChatPayOR);
-      } else if (thisID === 'QQPayOR') {
-        showQR(QQPayOR);
-      }
-    });
-
-    MainBox.click(function (event) {
-      MainBox.removeClass('showQR').addClass('hideQR');
-      setTimeout(function (a) {
-        QRBox.fadeOut(300, function (argument) {
-          MainBox.removeClass('hideQR');
-        });
-        $('#RewardText,#RewardBox,#github').removeClass('blur');
-      }, 600);
-
-    });
-  });
-</script>
--->
-        </div>
-      
-    </div>
-  
-  
+    <br><br>
+    
     
 
 
@@ -608,10 +522,10 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-09-02T22:50:13+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-09-03T12:18:34+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>Updated at Sep 2, 2020</p>
+    <p>Updated at Sep 3, 2020</p>
   </a>
 </div>
 
@@ -619,9 +533,6 @@
       
         
           
-  
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/GSS/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>GSS</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/segment-tree/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>segment tree</p></a></div>
-
 
         
       
@@ -635,7 +546,7 @@
         <div class='hoverbox'>
           <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qrcode.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qrcode.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></a>
           <div class='target'>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPgAAAD4CAAAAADkunTXAAACPklEQVR42u3aMZLCQAwEQP//01x+iaXRmqLk3gwMtnpJhGavz0vXBQ4ODg4Ovgh+hev/90+/vnteXC84ODg4OPhCeLkBCAut3re7Ue16wcHBwcHBF8NTyPR7Tzc84ODg4ODg4P1C7t6vPhccHBwcHBz8ew1MFVYFgoODg4ODg58PFFJ4N+j/uSQFHBwcHBz8h+DddToQmAYI5XrBwcHBwcEXwaer++DuYKLbsNzWCw4ODg4OvgieBvvd4H8aWEyDBnBwcHBw8M3wU0F9N2hIG6LuRoODg4ODg2+Ep5DHBgVhoFA+oAAODg4ODr4InjYuaaHdAUL3ety5gYODg4ODL4BXg/zTg4fuhsf1gYODg4ODL4KnN0objWlQMD54AA4ODg4Ovgie/rFPg4XuQCK9Dzg4ODg4+Bvh00amu1HTwUd7Y8DBwcHBwRfB08YiBXUHCNONBQcHBwcHfwO8WkC6MeXChp+7rRccHBwcHHwRvBsEnAryq43PqaABHBwcHBx8I3w8oG8eLJg2TN0NBQcHBwcHfwO8O0DoDiBOHSxInwMODg4ODr4Znq6nAvzu9fIPBw4ODg4Ovgg+bRC+NaCYBhHg4ODg4OCb4WmwUC1kemBgukHg4ODg4OBvgJ9qWKYHDOJBQzVQAAcHBwcHB/+khXYHFNODBeDg4ODg4OB1eHewkDZM7UEJODg4ODj4YnjaSHQbimnjkgYR4ODg4ODgG+HTA37dAqcHA+LgAhwcHBwcfBH8bQscHBwcHHzB+gNJR0IM4eFA9AAAAABJRU5ErkJggg==">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARgAAAEYCAAAAACi5bZQAAAC+ElEQVR42u3aQXLDMAgF0Nz/0u2+04zho7ihedrF9ijiacMAjy/r1/VAAAYMGDBgwKyBeYTr2EF+7Ff932fnmMYDBgwYMGDAgNkHkwbSDejZ912oq+/jiwEDBgwYMGDArIWZHqQLUg3kar9j8YABAwYMGDBgPg6mevBuopi+BwMGDBgwYMCASWFONfKmz8GAAQMGDBgwnwOTDvpcfZ8mZtNC1Z91IsGAAQMGDBgwt8Gkidi7/o7jAQMGDBgwYMCsgZmubuEpLSxVL2YcDxgwYMCAAQNmDcz0YOk+acGpCpVeGBgwYMCAAQNmH0w6wNMNpJsgpoND6UWBAQMGDBgwYPbBpIWkVzXu0oDT84MBAwYMGDBg9sJ0G1fdRCxOuIaw7QsCAwYMGDBgwKyFqR7sdMHoLtD24BAYMGDAgAEDZj1Me5B42KDr7j9t7IEBAwYMGDBg9sN0N0oTqvS70+dsN9zAgAEDBgwYMG8Hc6oBlxawpvt3ocuFKjBgwIABAwbM28N017TwNA2sm/iVwcGAAQMGDBgwa2BON7K6+0wHi7rnKTfcwIABAwYMGDBvD9M9WNpY60Lf1aCLK3hgwIABAwYMmD+HSVc1UTuVOE4hy/uBAQMGDBgwYNbBdBtj1QTr1Pu7YMGAAQMGDBgwe2CqhZ1qone64NUtOI0HmMCAAQMGDBgw62CmBapxo+vQ4NH0wsGAAQMGDBgw/wfm9KDPqcBS0EswMGDAgAEDBsx6mO5B0sQubeyNB4TAgAEDBgwYMOthpuv0INE0sDQBBAMGDBgwYMDsg3mEa3yA4b5pIezy/8CAAQMGDBgw62BePThUbcS9KsErfw8GDBgwYMCAWQuTJlDTAaNuAStNUONOJBgwYMCAAQPm38JUE7i0gJQ2/toNOTBgwIABAwbMx8Gkz1PAaSJ4e6EKDBgwYMCAAfNymGkidRXIqeenLgIMGDBgwIABsx/meONqmMh1B4G6+z29ADBgwIABAwbMGhgLDBgwYMCAAbNsfQMSeGlS5fHNNAAAAABJRU5ErkJggg==">
           </div>
         </div>
       
@@ -643,9 +554,7 @@
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://brynhild.online/GSS3/&title=SP1716 GSS3 - Can you answer these queries III - Next Dream...&summary=
-线段树GSS3 - Can you answer these queries III
-"
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://brynhild.online/hiddenlist/index-p.html&title=Hidden List - Next Dream...&summary="
           
           >
           
@@ -657,9 +566,7 @@
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://brynhild.online/GSS3/&title=SP1716 GSS3 - Can you answer these queries III - Next Dream...&summary=
-线段树GSS3 - Can you answer these queries III
-"
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://brynhild.online/hiddenlist/index-p.html&title=Hidden List - Next Dream...&summary="
           
           >
           
@@ -671,9 +578,7 @@
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=https://brynhild.online/GSS3/&title=SP1716 GSS3 - Can you answer these queries III - Next Dream...&summary=
-线段树GSS3 - Can you answer these queries III
-"
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://brynhild.online/hiddenlist/index-p.html&title=Hidden List - Next Dream...&summary="
           
           >
           
@@ -685,7 +590,7 @@
       
         <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
           
-            target="_blank" href="https://t.me/share/url?url=https://brynhild.online/GSS3/&text=SP1716 GSS3 - Can you answer these queries III - Next Dream..."
+            target="_blank" href="https://t.me/share/url?url=https://brynhild.online/hiddenlist/index-p.html&text=Hidden List - Next Dream..."
           
           >
           
@@ -705,38 +610,7 @@
   </div>
 
 
-  
-  
-
-  
-    <div class="prev-next">
-      
-        <a class='prev' href='/GSS1/'>
-          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>GSS1 - Can you answer these queries I</p>
-          <p class='content'>
-线段树GSS1 - Can you answer these queries I
-
-
-
-Luogu SP1043Vjudge
-123456789101112131415161718192021...</p>
-        </a>
-      
-      
-        <a class='next' href='/GSS4/'>
-          <p class='title'>SP2713 GSS4 - Can you answer these queries IV<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>
-GSS4 - Can you answer these queries IVLuoguVjudge
-
-
-
-1234567891011121314151617181920212223242526...</p>
-        </a>
-      
-    </div>
-  
-</article>
-
+  </article>
 
   
 
@@ -750,62 +624,6 @@ GSS4 - Can you answer these queries IVLuoguVjudge
 </div>
 
   </article>
-
-
-
-
-
-  <script>
-  // https://github.com/theme-next/hexo-theme-next/blob/master/layout/_third-party/math/mathjax.swig
-  if (typeof MathJax === 'undefined') {
-    window.MathJax = {
-      loader: {
-        source: {
-          '[tex]/amsCd': '[tex]/amscd',
-          '[tex]/AMScd': '[tex]/amscd'
-        }
-      },
-      tex: {
-        inlineMath: {'[+]': [['$', '$']]},
-        tags: 'ams'
-      },
-      options: {
-        renderActions: {
-          findScript: [10, doc => {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
-              const display = !!node.type.match(/; *mode=display/);
-              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-              const text = document.createTextNode('');
-              node.parentNode.replaceChild(text, node);
-              math.start = {node: text, delim: '', n: 0};
-              math.end = {node: text, delim: '', n: 0};
-              doc.math.push(math);
-            });
-          }, '', false],
-          insertedScript: [200, () => {
-            document.querySelectorAll('mjx-container').forEach(node => {
-              let target = node.parentNode;
-              if (target.nodeName.toLowerCase() === 'li') {
-                target.parentNode.classList.add('has-jax');
-              }
-            });
-          }, '', false]
-        }
-      }
-    };
-    (function () {
-      var script = document.createElement('script');
-      script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3.0/es5/tex-mml-chtml.js';
-      script.defer = true;
-      document.head.appendChild(script);
-    })();
-  } else {
-    // 文章章节标题不能为 “MathJax” ，否则会报错。
-    MathJax.startup.document.state(0);
-    MathJax.texReset();
-    MathJax.typeset();
-  }
-</script>
 
 
 
@@ -930,7 +748,6 @@ GSS4 - Can you answer these queries IVLuoguVjudge
 
 
 </aside>
-
 
 
       </div>
