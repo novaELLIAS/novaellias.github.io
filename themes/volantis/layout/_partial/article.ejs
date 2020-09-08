@@ -7,6 +7,13 @@
     <div class='fancybox'><img src='<%- url_for(photo) %>'/></div>
   <% }) %>
   <%- post.content %>
+  <% if (page.link) { %>
+    <div class='div-ori-link'>
+      <a class='ori-link' href='<%- url_for(post.link || post.path) %>'>
+        <%- post.link ? __('post.readoriginal') : __('post.readmore') %>
+      </a>
+    </div>
+  <% } %>
   <% if (['post','docs'].includes(page.layout)) { %>
     <% let footer_widget = theme.article.body.footer_widget; %>
     <div class='footer'>
@@ -52,14 +59,12 @@
         </div>
       <% } %>
       <% if (['post'].includes(page.layout) && footer_widget.donate && footer_widget.donate.enable == true) { %>
-        <div>
-          <div class='donate'>
-            <div class='imgs'>
-              <% (footer_widget.donate.images||[]).forEach(function(url){ %>
-                <img src='<%- url_for(url) %>'>
-              <% }) %>
-            </div>
-          <!--<%- partial('reward') %>-->
+        <div class='donate'>
+          <div class='imgs'>
+            <% (footer_widget.donate.images||[]).forEach(function(url){ %>
+              <img src='<%- url_for(url) %>'>
+            <% }) %>
+          </div>
         </div>
       <% } %>
     </div>

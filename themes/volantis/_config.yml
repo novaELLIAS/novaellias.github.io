@@ -1,7 +1,7 @@
 ############################### Volantis ###############################
 info:
   theme_name: Volantis # This is theme's name.
-  theme_version: '4.0.0-rc.2' # This is theme's version.
+  theme_version: '4.0.0-rc.3' # This is theme's version.
   theme_docs: https://volantis.js.org/ # This is theme's URL.
   theme_repo: https://github.com/volantis-x/hexo-theme-volantis
   cdn:
@@ -107,6 +107,10 @@ cover:
     #  url: https://github.com/volantis-x/hexo-theme-volantis/
 ############################### Cover ############################### > end
 
+pages:
+  # 友链页面配置
+  friends:
+    layout_scheme: traditional # simple: 简单布局, traditional: 传统布局,  sites: 网站卡片布局
 
 ############################### Article Layout ############################### > start
 # 文章布局
@@ -709,7 +713,7 @@ plugins:
     cacheBust: false     # When set to true, Pjax appends a timestamp  to skip the browser cache.
     animation: nprogress # nprogress, circle
     banUrl:              # 被屏蔽的 url 地址将不启用 pjax 跳转，可以在控制台下使用 window.location.pathname 获取
-      # - /artitalk/     # artitalk 不支持 pjax
+      - /webboard/     # artitalk 不支持 pjax
 
 
   # Artitalk https://artitalk.js.org
@@ -719,8 +723,8 @@ plugins:
     # Set `layout: artitalk` to enable in page
     appID: gxA2RKBLfguNWjuvulrCd6Kn-MdYXbMMI # your appID
     appKEY: i81KRAFMphpE5KLSBdRoROw8 # your appKEY
-    severurl: #leancloud绑定的安全域名，使用国际版的话不需要填写
-    slanguage: en # 语言设置，zh为汉语，en为英语，es为西班牙语。默认为汉语
+    # serverurl: #leancloud绑定的安全域名，使用国际版的话不需要填写
+    lang: en # 语言设置，zh为汉语，en为英语，es为西班牙语。默认为汉语
     #per: 15 #每页说说的显示数量
     # placeholder1: #在编辑说说的输入框中的占位符
     # placeholder2: #自定义头像url的输入框的占位符
@@ -729,6 +733,14 @@ plugins:
     # color1: #说说背景颜色1&按钮颜色1
     # color2: #说说背景颜色2&按钮颜色2
     # color3: #说说字体颜色
+
+  # 从 issues 加载动态数据
+  # {% issues sites/timeline/friends | api=xxx | group=key:a,b,c %}
+  # 例如：
+  # {% issues sites | api=https://api.github.com/repos/volantis-x/examples/issues?sort=updated&state=open&page=1&per_page=100 | group=version:latest,v6,v5,v4,v3,v2,v1,v0 %}
+  issues:
+    enable: #true
+    js:
   ##################################
   # 暗黑模式 darkmodejs
   # https://darkmodejs.learn.uno
