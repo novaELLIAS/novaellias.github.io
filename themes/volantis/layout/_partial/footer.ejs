@@ -1,0 +1,94 @@
+<% if (theme.site_footer) { %>
+  <%
+  var layout = theme.site_footer.layout;
+  if (config.theme_config && config.theme_config.footer && config.theme_config.footer.layout) {
+    layout = config.theme_config.footer.layout;
+  }
+  %>
+  <footer class="footer clearfix">
+    <br><br>
+    <% layout.forEach(function(item){ %>
+      <% if (item == 'social') { %>
+        <br>
+        <div class="social-wrapper">
+          <% (theme.site_footer.social||[]).forEach(function(value){ %>
+            <% if (value.url && (value.icon || value.img || value.avatar)) { %>
+              <a href="<%= url_for(value.url) %>"
+                class="social <%- value.icon %> flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+                <% if (value.img) { %>
+                  <img src="<%- value.img %>"/>
+                <% } else if (value.avatar) { %>
+                  <img src="<%- value.avatar %>" style="border-radius:120px"/>
+                <% } %>
+              </a>
+            <% } %>
+          <% }) %>
+        </div> <br>
+        <div>
+          <img alt="GitHub release (latest by date including pre-releases)" src="https://img.shields.io/github/v/release/novaELLIAS/novaellias.github.io?include_prereleases&label=blog%20version">
+          <img alt="GitHub release (latest by date including pre-releases)" src="https://img.shields.io/github/v/release/novaELLIAS/CDN_for_ND?include_prereleases&label=CDN%20version">
+          <!--
+          <img alt="GitHub commits since tagged version (branch)" src="https://img.shields.io/github/commits-since/novaELLIAS/novaellias.github.io/v1.0.0/master?label=commits">
+          -->
+          <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/novaELLIAS/novaellias.github.io?label=blog%20size">
+          <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/novaELLIAS/CDN_for_ND?label=CDN%20size">
+          <img alt="PictureBed" src="https://img.shields.io/badge/PictureBed-WordPress-orange">
+          <img alt="PictureBed" src="https://img.shields.io/badge/CDN-jsDelivr-orange">
+        </div>
+      <% } else if (item == 'aplayer') { %>
+        <div class="aplayer-container">
+          <%- partial('../_third-party/aplayer/layout', {post: null, where: 'footer'}) %>
+        </div>
+      <% } else if (item == 'license') { %>
+        <div><%- markdown(__('footer.license')) %></div>
+        <div>
+          Copyright <i class="far fa-copyright"></i> 2017-<%= date(new Date(), 'YYYY')%>
+          <a href="https://brynhild.online/" target="_blank">ELLIAS</a> 丨
+          <span id="lc-sv"><span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> views,</span>
+          <span id="lc-uv"><span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> viewers</span> 丨
+          <span id="timeDate">Loading... </span><span id="times">Loading...</span>
+          <script>
+            var now = new Date(); 
+            function createtime() { 
+              var grt= new Date("10/13/2017 21:12:13");
+              now.setTime(now.getTime()+250); 
+              days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+              hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+              if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+              mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+              seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+              snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+              document.getElementById("timeDate").innerHTML = "Run Time "+dnum+" d "; 
+              document.getElementById("times").innerHTML = hnum + " h " + mnum + " m " + snum + " s"; 
+            } setInterval("createtime()",250);
+          </script> <br>
+          <img src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/cn_icp.png" style="width:18px;height:18px;margin-bottom:-4px" alt="MOE ICP">
+          <a href="http://www.beian.miit.gov.cn/" target="_blank"> 辽ICP备20009666号-1</a> |
+          <img src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/moeicp.png" style="width:18px;height:18px;margin-bottom:-4px" alt="MOE ICP">
+          <a href="https://icp.gov.moe" target="_blank">MOEICP备</a><a href="https://icp.gov.moe/?keyword=20201096" target="_blank">20201096号</a>
+          <br>
+        </div>
+      <% } else if (item == 'info') { %>
+        <%- __('footer.use') %>
+        <a href="https://github.com/volantis-x/hexo-theme-volantis/tree/<%- theme.info.theme_version %>" target="_blank" class="codename">Volantis</a>
+        <%- __('footer.theme') %><% if (theme.analytics.busuanzi) { %><%- __('symbol.comma') %><%- __('footer.total_views') %>
+          <span id="busuanzi_value_site_pv"><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+          <%- __('footer.times') %>
+        <% } %>
+      <% } else if (item == 'source') { %>
+        <%- markdown(__('footer.site_source', '[Volantis](https://github.com/volantis-x/hexo-theme-volantis/tree/'+theme.info.theme_version+')', 'GitHub', 'https://github.com/volantis-x/volantis-docs')) %>
+      <% } else if (item == 'copyright') { %>
+        <div class='copyright'>
+        <%- markdown(theme.site_footer.copyright) %>
+        </div>
+      <% } else { %>
+        <% if (item in theme.site_footer) { %>
+          <div><%- markdown(theme.site_footer[item]) %></div>
+        <% } %>
+      <% } %>
+    <% }) %>
+  </footer>
+  <script>setLoadingBarProgress(80);</script>
+<% } %>
