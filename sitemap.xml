@@ -466,6 +466,13 @@
   </url>
   
   <url>
+    <loc>https://brynhild.online/tags/%E8%B4%AA%E5%BF%83/</loc>
+    <lastmod>2020-12-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://brynhild.online/tags/contest/</loc>
     <lastmod>2020-12-07</lastmod>
     <changefreq>daily</changefreq>
@@ -488,13 +495,6 @@
   
   <url>
     <loc>https://brynhild.online/tags/buzzer/</loc>
-    <lastmod>2020-12-07</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://brynhild.online/tags/%E8%B4%AA%E5%BF%83/</loc>
     <lastmod>2020-12-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
