@@ -2,16 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://brynhild.online/essay/FrenchRevolution/index.html</loc>
+    <loc>https://brynhild.online/HongYanAsstHard/</loc>
     
     <lastmod>2020-12-07</lastmod>
     
   </url>
   
   <url>
-    <loc>https://brynhild.online/HongYanAsstHard/</loc>
+    <loc>https://brynhild.online/essay/FrenchRevolution/index.html</loc>
     
-    <lastmod>2020-12-06</lastmod>
+    <lastmod>2020-12-07</lastmod>
     
   </url>
   
@@ -466,13 +466,6 @@
   </url>
   
   <url>
-    <loc>https://brynhild.online/tags/%E8%B4%AA%E5%BF%83/</loc>
-    <lastmod>2020-12-07</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://brynhild.online/tags/contest/</loc>
     <lastmod>2020-12-07</lastmod>
     <changefreq>daily</changefreq>
@@ -501,7 +494,21 @@
   </url>
   
   <url>
+    <loc>https://brynhild.online/tags/%E8%B4%AA%E5%BF%83/</loc>
+    <lastmod>2020-12-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://brynhild.online/tags/HEXO/</loc>
+    <lastmod>2020-12-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://brynhild.online/tags/STL/</loc>
     <lastmod>2020-12-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -523,13 +530,6 @@
   
   <url>
     <loc>https://brynhild.online/tags/%E5%B9%B6%E6%9F%A5%E9%9B%86/</loc>
-    <lastmod>2020-12-07</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://brynhild.online/tags/STL/</loc>
     <lastmod>2020-12-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
