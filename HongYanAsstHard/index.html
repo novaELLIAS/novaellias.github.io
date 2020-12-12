@@ -1145,9 +1145,9 @@
 
 <h4 id="cloudFunction-update-snapshots"><a href="#cloudFunction-update-snapshots" class="headerlink" title="cloudFunction update_snapshots"></a>cloudFunction <code>update_snapshots</code></h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">exports.main = async (event, context) =&gt; &#123;</span><br><span class="line">  <span class="keyword">return</span> await <span class="keyword">new</span> Promise((resolve, reject) =&gt; &#123;</span><br><span class="line">    db.collection(&#x27;events&#x27;).doc(event.taskId).update(&#123;</span><br><span class="line">      data: &#123;</span><br><span class="line">        snapshots: event.my_snapshot</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;).then(console.<span class="built_in">log</span>(<span class="string">&quot;[update_snapshots][updated successfully]&quot;</span>))</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="项目展示"><a href="#项目展示" class="headerlink" title="项目展示"></a>项目展示</h2><div class="note waring red"><p>警告: 由于小程序基本功能需要后台支持 请不要下载源码自行编译体验.</p></div>
+<h2 id="项目展示"><a href="#项目展示" class="headerlink" title="项目展示"></a>项目展示</h2><div class="note warning red"><p>警告: 由于小程序基本功能需要后台支持 请不要下载源码自行编译体验.</p></div>
 
-<div class="note notice blue"><p>提示: 文档中内容只有主要功能部分 如需详细讲解请联系<a href="https://brynhild.online/aboutme/">我</a>.</p></div>
+<div class="note info blue"><p>提示: 文档中内容只有主要功能部分 如需详细讲解请联系<a href="https://brynhild.online/aboutme/">我</a>.</p></div>
 
 <ul>
 <li>Arduino代码: <a target="_blank" rel="noopener" href="https://github.com/novaELLIAS/HongYanAsstHardware">HongYanAsstHardware</a></li>
@@ -1372,7 +1372,7 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-12-12T17:26:29+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-12-12T17:29:25+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
     <p>Updated at Dec 12, 2020</p>
