@@ -1078,7 +1078,7 @@
 
 <p>使用循环数组存储$150$个运行周期中三维陀螺仪的倾角信息, 通过更新循环数组求$150$个运行周期中的三维倾角平均值.</p>
 <p><code>acce</code>为三维加速度的等效值.</p>
-<p>报警条件: 等效加速度大小大于阈值<code>ACCIDENT_ ACCE</code>, 并且三个方向上的倾角只要有一个倾角相对于$30$个运行周期中的平均值的差的绝对值大于阈值<code>ACCIDENT_ANGEL</code>, 并且当前<code>GPS</code>速度大于阈值<code>ACCIDENT_ALERT_SPEED</code>, 即可触发报警.</p>
+<p>报警条件: 等效加速度大小大于阈值<code>ACCIDENT_ ACCE</code>, 并且三个方向上的倾角只要有一个倾角相对于$150$个运行周期中的平均值的差的绝对值大于阈值<code>ACCIDENT_ANGEL</code>, 并且当前<code>GPS</code>速度大于阈值<code>ACCIDENT_ALERT_SPEED</code>, 即可触发报警.</p>
 <p>需要注意的一点: <code>if</code>语句中各个判断条件从左向右计算, 如果发现在某种情况下判断结果已经可以确定, 其余的部分将不会被计算. 为了能够保证维护的循环数组的连续性, 我们牺牲了部分低速或静息状态下的续航和性能, 保证<code>isRotate()</code>在每一个程序周期中都会被调用.</p>
 <p><img src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@2.15.12/img/HYAH/20201127_232804.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@2.15.12/img/HYAH/20201127_232804.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="事故报警"></p>
 <h4 id="Bad-Attempt-向-Arduino-UNO-移植"><a href="#Bad-Attempt-向-Arduino-UNO-移植" class="headerlink" title="[Bad Attempt] 向 Arduino  UNO 移植"></a>[<strong><font color=red>Bad Attempt</font></strong>] 向 <code>Arduino  UNO</code> 移植</h4><p>想要做<code>Arduino</code>最小系统进一步减小体积, 后来发现有各种问题, 故终止.</p>
@@ -1404,7 +1404,7 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-12-14T19:00:38+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-12-14T19:05:49+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
     <p>Updated at Dec 14, 2020</p>
