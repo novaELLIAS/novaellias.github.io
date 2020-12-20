@@ -60,15 +60,13 @@ signed main() {
 			phi = phi / i * (i - 1);
 			while (!(mm % i)) mm /= i;
 		}
-	}
-	if (mm > 1) phi = phi / mm * (mm - 1);
+	} if (mm > 1) phi = phi / mm * (mm - 1);
 
 	register int la = strlen(aa), lb = strlen(bb);
 	for (register int i = 0; i < la; ++i) a = (a * 10 + (aa[i] ^ '0')) % m;
 	for (register int i = 0; i < lb; ++i) b = (b * 10 + (bb[i] ^ '0')) % phi;
 
-	printf("%lld", qpow(a, b > phi? (b % phi + phi) : b % phi, m));
-	return 0;
+	return printf("%lld", qpow(a, b > phi? (b % phi + phi) : b % phi, m)), 0;
 }
 
 ```
