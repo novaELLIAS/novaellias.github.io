@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0">
+<title>2048</title>
+<link rel="shortcut icon" type="image/x-icon" href="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/2048.png">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/2048/reset.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/2048/style.css">
+
+</head>
+<body>
+
+<header>
+	<div class="container">
+		<h1><span>2</span><span>0</span><span>4</span><span>8</span></h1>
+	</div>
+</header>
+
+<div class="container">
+	<div class="directions">
+		<p><strong>Welcome!</strong> </p>
+	</div>
+	<div class="scores">
+		<div class="score-container best-score">
+			BEST: 
+			<div class="score">
+				<div id="bestScore">0</div>
+			</div>
+		</div>
+		<div class="score-container">
+			SCORE: 
+			<div class="score">
+				<div id="score">0</div>
+				<div class="add" id="add"></div>
+			</div>
+		</div>
+	</div>
+	<div class="game">
+		<div id="tile-container" class="tile-container"></div>
+		<div class="end" id="end">GAME OVER<div class="monkey"></div><button class="btn not-recommended__item js-restart-btn" id="try-again">RETRY</button></div>
+	</div>
+
+	<div class="not-recommended">
+		<button class="btn not-recommended__item js-restart-btn" id="restart">RESTART</button>
+	</div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/2048/index.js"></script>
+<div style="text-align:center;margin:10px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+</div>
+<script async>window.onload=function(){var a=document.createElement('script'),b=document.getElementsByTagName('script')[0];a.type='text/javascript',a.async=!0,a.src='/sw-register.js?v='+Date.now(),b.parentNode.insertBefore(a,b)};</script></body></html>
