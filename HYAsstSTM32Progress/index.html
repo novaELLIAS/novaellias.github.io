@@ -5,8 +5,6 @@
   <!-- SEO相关 -->
   
     
-      <meta name="robots" content="noindex,follow">
-    
   
   <!-- 渲染优化 -->
   <meta name="renderer" content="webkit">
@@ -19,9 +17,15 @@
 
   <!-- 页面元数据 -->
   
-  <title>Tag: HEXO - Next Dream...</title>
+  <title>HYAsstSTM32 dev progress - Next Dream...</title>
   
 
+  
+    <meta name="description" content="
+HongYanAsst项目硬件部分
+HongYanAsstArduino及HongYanAsstSTM32
+Dev log
+">
   
 
   <!-- feed -->
@@ -616,7 +620,7 @@
   
     
     
-        <div class='cover-wrapper  search' style="display: none;">
+        <div class='cover-wrapper post search' style="display: none;">
           
             <div class='cover-backstretch'></div>
           
@@ -664,8 +668,8 @@
  
  
 <div id="pjax-data" style="display: none"> 
-  <div id="pjax-ispage">false</div> 
-  <div id="pjax-pageTitle"></div> 
+  <div id="pjax-ispage">true</div> 
+  <div id="pjax-pageTitle">HYAsstSTM32 dev progress</div> 
   <div id="pjax-enable-cover">true</div> 
   <div id="pjax-comment-path"></div> 
   <div id="pjax-comment-placeholder"></div> 
@@ -694,76 +698,404 @@
         
         
 
-
 <div class='l_main'>
+  <article class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
   
+
+
+  
+  <div class="article-meta" id="top">
     
-      
-  <section class="post-list">
     
-      
+    
+      <h1 class="title">
+        HYAsstSTM32 dev progress
+      </h1>
+      <div class='new-meta-box'>
         
           
+            
+<div class='new-meta-item author'>
+  <a class='author' href="/" rel="nofollow">
+    <img no-lazy src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@2.3.13/img/magician1_for_favicon.png">
+    <p>ELLIAS</p>
+  </a>
+</div>
+
+          
         
-      
-    
-    
-      
+          
+            
+
+          
         
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/hexo-buildup/">
-        HEXO博客的基本搭建
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <blockquote>
-<p>HEXO 博客的基本搭建<br>安装 初始化 部署</p>
-</blockquote>
-    
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>Released at Feb 4, 2021</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
+      
+      <div id="lc-pv" data-title="HYAsstSTM32 dev progress" data-path="/HYAsstSTM32Progress/">
+        <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        views
+      </div>
+    </a>
   </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2017-11-13</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/HEXO/">HEXO</a>
+
+
+          
         
       </div>
+    
+  </div>
+
+
+  
+  
+  <blockquote>
+<p><code>HongYanAsst</code>项目硬件部分</p>
+<p><code>HongYanAsstArduino</code>及<code>HongYanAsstSTM32</code></p>
+<p>Dev log</p>
+</blockquote>
+<a id="more"></a>
+
+<p>硬件开发总体分为两个阶段, <code>HongYanAsstArduino</code>阶段和<code>HongYanAsstSTM32</code>阶段, 主要区别是<code>MCU</code>不同.</p>
+<div class="timenode"><div class="meta"><p><p>2020/10/29</p>
+</p></div><div class="body"><h4 id="HYAsstArduino开发正式开始"><a href="#HYAsstArduino开发正式开始" class="headerlink" title="HYAsstArduino开发正式开始"></a>HYAsstArduino开发正式开始</h4><p>元件全部到齐, 硬件开发正式开始</p><details ><summary> <p>Photos</p> </summary>              <div class='content'>              <p><img src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@12.16.0/img/HYAsstSTM32/20201029_120832.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@12.16.0/img/HYAsstSTM32/20201029_120832.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="NEO-7N和SIM800C"></p>              </div>            </details></div></div>
+
+<div class="timenode"><div class="meta"><p><p>2020/10/30</p>
+</p></div><div class="body"><h4 id="阳台GPS调试"><a href="#阳台GPS调试" class="headerlink" title="阳台GPS调试"></a>阳台GPS调试</h4><p>因为天线的电缆长度不够, 所以只能在阳台调试<code>GPS</code>功能. 虽然只是接近11月, 但是晚间的阳台感觉已经到了12月, 需要穿羽绒服才能抵御严寒.</p><p>当时大概调了不到半个小时就调通了, 所以也没被冻到.</p><details ><summary> <p>Photos</p> </summary>              <div class='content'>              <p><img src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@12.16.0/img/HYAsstSTM32/wx_camera_1604071684741.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@12.16.0/img/HYAsstSTM32/wx_camera_1604071684741.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="阳台调试"></p>              </div>            </details></div></div>
+
+<div class="timenode"><div class="meta"><p><p>2020/11/14</p>
+</p></div><div class="body"><h4 id="HYAsstArduino-THE-ORIGIN-de-pre-release"><a href="#HYAsstArduino-THE-ORIGIN-de-pre-release" class="headerlink" title="HYAsstArduino THE ORIGIN de pre-release"></a><code>HYAsstArduino THE ORIGIN de pre-release</code></h4><p>具有<code>GSM</code>联网和<code>WLAN</code>联网能力的原型机. <code>1602</code>LCD屏幕用于调试信息展示, 按键单击切换数据页面, 长按超过三秒钟切换联网类型.</p><details ><summary> <p>Photos</p> </summary>              <div class='content'>              <p><img src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@12.16.0/img/HYAsstSTM32/20201114_092635.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@12.16.0/img/HYAsstSTM32/20201114_092635.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="THE ORIGIN"></p>              </div>            </details><p>实现的功能:</p><ol><li><code>GPS</code>解析</li><li>获取<code>MPU6050</code>三轴倾角</li><li>通过<code>ESP8266</code>的数据上传</li><li>通过<code>GSM</code>网络的数据上传</li></ol></div></div>
+
+<div class="timenode"><div class="meta"><p><p>2020/11/16</p>
+</p></div><div class="body"><p>校内户外调试, 主要测试<code>WG-84</code>转<code>GCJ-02</code>算法的准确性.</p><p>发现似乎拟合得还不错.</p></div></div>
+
+<div class="timenode"><div class="meta"><p><p>2020/11/20</p>
+</p></div><div class="body"><h4 id="居庸关长距离实景测试"><a href="#居庸关长距离实景测试" class="headerlink" title="居庸关长距离实景测试"></a>居庸关长距离实景测试</h4><p>主要测试两种联机方式和<code>GPS</code>定位在实际使用场景中的稳定性和精确度.</p><p>去程使用<code>GSM</code>, 回程使用<code>WLAN</code>联网, 均为出现掉线情况; <code>GPS</code>定位点留下来的轨迹也基本与佳明码表(<code>GARMIN Edge 520 plus</code>)记录的轨迹基本拟合.</p><details ><summary> <p>Photos</p> </summary>              <div class='content'>              <p><img src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@2.15.13/img/HYAH/20201120_132321.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@2.15.13/img/HYAH/20201120_132321.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="发车前"><br><img src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@2.15.13/img/HYAH/20201120_151832.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@2.15.13/img/HYAH/20201120_151832.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="居庸关"><br><img src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@12.16.0/img/HYAH/Screenshot_20201120-164410_Connect.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@12.16.0/img/HYAH/Screenshot_20201120-164410_Connect.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="Garmin记录"></p>              </div>            </details></div></div>
+
+<div class="timenode"><div class="meta"><p><p>2020/11/22</p>
+</p></div><div class="body"><h4 id="蟒山-户外调试"><a href="#蟒山-户外调试" class="headerlink" title="蟒山 户外调试"></a>蟒山 户外调试</h4><p>主要测试山区通信能力和颠簸路面事故侦测的精确度.</p><p>结果发现还不错.</p><details ><summary> <p>Photos</p> </summary>              <div class='content'>              <p><img src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@2.15.3/img/HYAH/mmexport1606278218069.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@2.15.3/img/HYAH/mmexport1606278218069.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="蟒山脚下合照"></p>              </div>            </details></div></div>
+
+<div class="timenode"><div class="meta"><p><p>2020/11/24</p>
+</p></div><div class="body"><h4 id="HYAsstArduino-THE-ORIGIN"><a href="#HYAsstArduino-THE-ORIGIN" class="headerlink" title="HYAsstArduino THE ORIGIN"></a><code>HYAsstArduino THE ORIGIN</code></h4><p><code>HYAsstArduino THE ORIGIN</code>是在<code>pre-release</code>版本基础上的改良版.</p><p>加入红外遥控来控制<code>LED</code>屏幕上的数据字段, 并且使用一块<code>Li14500</code>电池对设备供电.</p><details ><summary> <p>Photos</p> </summary>              <div class='content'>              <p><img src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@2.15.1/img/HYAH/20201124_224903.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@2.15.1/img/HYAH/20201124_224903.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="THE ORIGIN"><br><img src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@2.15.1/img/HYAH/20201124_224911.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@2.15.1/img/HYAH/20201124_224911.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="THE ORIGIN"><br><img src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@2.15.1/img/HYAH/20201124_224920.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@2.15.1/img/HYAH/20201124_224920.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="THE ORIGIN"></p>              </div>            </details></div></div>
+
+<div class="timenode"><div class="meta"><p><p>2020/11/27</p>
+</p></div><div class="body"><h4 id="实现告警功能"><a href="#实现告警功能" class="headerlink" title="实现告警功能"></a>实现告警功能</h4><p>在<code>HYAsstArduino THE ORIGIN</code>的基础上加入事故侦测及告警功能.</p><details ><summary> <p>Photos</p> </summary>              <div class='content'>              <p><img src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@12.16.0/img/HYAH/20201127_232804.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@12.16.0/img/HYAH/20201127_232804.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="触发告警"></p>              </div>            </details><p>实现了<code>HongYanAsstArduino</code>所有预期的核心功能, 进入迭代阶段.</p></div></div>
+
+<div class="timenode"><div class="meta"><p><p>2020/11/25-27</p>
+</p></div><div class="body"><h4 id="ASKR-YGGDRASILLS-pre-release续航测试"><a href="#ASKR-YGGDRASILLS-pre-release续航测试" class="headerlink" title="ASKR YGGDRASILLS pre-release续航测试"></a><code>ASKR YGGDRASILLS pre-release</code>续航测试</h4><table><thead><tr><th>调试项目</th><th>调试结果</th></tr></thead><tbody><tr><td><code>ESP8266</code>方案续航测试 (900mAh)</td><td><font color=green><strong>113min</strong></font></td></tr><tr><td><code>SIM800C</code>方案续航测试 (900mAh)</td><td><font color=green><strong>185min</strong></font></td></tr></tbody></table><p>由于准备使用的电池为<code>6500mAh</code>, 所以续航时间预计在<code>22</code>小时以上.</p></div></div>
+
+
+
+<div class="timenode"><div class="meta"><p><p>2020/11/27</p>
+</p></div><div class="body"><h4 id="ASKR-YGGDRASILLS"><a href="#ASKR-YGGDRASILLS" class="headerlink" title="ASKR YGGDRASILLS"></a><code>ASKR YGGDRASILLS</code></h4><details ><summary> <p>Photos</p> </summary>              <div class='content'>              <p><img src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@2.15.1/img/HYAH/1606476417218.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@2.15.1/img/HYAH/1606476417218.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="ASKR YGGDRASILLS"><br><img src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@2.15.1/img/HYAH/1606476459137.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@2.15.1/img/HYAH/1606476459137.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="ASKR YGGDRASILLS"></p>              </div>            </details><details ><summary> <p>迭代说明</p> </summary>              <div class='content'>              <ol><li>取消<code>LCD</code>数据展示, 使用<code>LED</code>灯作为交互接口.</li><li>弃用<code>ESP8266</code>, 改用<code>SIM800C</code>接入网络.</li></ol>              </div>            </details></div></div>
+
+
+<div class="timenode"><div class="meta"><p><p>2020/11/28</p>
+</p></div><div class="body"><h4 id="基于ASKR-YGGDRASILLS的户外调试"><a href="#基于ASKR-YGGDRASILLS的户外调试" class="headerlink" title="基于ASKR YGGDRASILLS的户外调试"></a>基于<code>ASKR YGGDRASILLS</code>的户外调试</h4><p>本次调试主要测试真实使用场景下微信小程序的使用体验.</p><details ><summary> <p>Photos</p> </summary>              <div class='content'>              <p><img src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@2.15.5/img/HYAH/ts2.2.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@2.15.5/img/HYAH/ts2.2.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="调试工具人: 移动电脑架"><br><img src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@2.15.5/img/HYAH/ts2.1.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@2.15.5/img/HYAH/ts2.1.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="桶上调试"></p>              </div>            </details></div></div>
+
+<div class="timenode"><div class="meta"><p><p>2020/11/29</p>
+</p></div><div class="body"><h4 id="SORYU-KYOKO-ZEPPELIN"><a href="#SORYU-KYOKO-ZEPPELIN" class="headerlink" title="SORYU KYOKO ZEPPELIN"></a><code>SORYU KYOKO ZEPPELIN</code></h4><details ><summary> <p>Photos</p> </summary>              <div class='content'>              <p><img src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@2.15.6/img/HYAH/20201129_223828.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@2.15.6/img/HYAH/20201129_223828.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="SORYU KYOKO ZEPPELIN"><br><img src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@2.15.6/img/HYAH/20201129_223839.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@2.15.6/img/HYAH/20201129_223839.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="SORYU KYOKO ZEPPELIN"><br><img src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@2.15.6/img/HYAH/20201129_223927.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@2.15.6/img/HYAH/20201129_223927.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="SORYU KYOKO ZEPPELIN"></p>              </div>            </details><details ><summary> <p>迭代说明</p> </summary>              <div class='content'>              <ol><li>弃用面包板, 使用主板铜柱固定各功能模块.</li><li>暂时放弃<code>LED</code>交互接口及用来稳定供电的电容.</li><li>更好的走线, 更坚固的框架, 更友好的外形, 便携性提升.</li></ol>              </div>            </details></div></div>
+
+<div class="timenode"><div class="meta"><p><p>2020/12/02</p>
+</p></div><div class="body"><h4 id="SORYU-ASUKA-RANGURE"><a href="#SORYU-ASUKA-RANGURE" class="headerlink" title="SORYU ASUKA RANGURE"></a><code>SORYU ASUKA RANGURE</code></h4><p><code>SORYU KYOKO ZEPPELIN</code>的改良版</p><details ><summary> <p>Photos</p> </summary>              <div class='content'>              <p><img src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@2.15.7/img/HYAH/20201202_125722.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@2.15.7/img/HYAH/20201202_125722.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="SORYU ASUKA RANGURE"><br><img src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@2.15.7/img/HYAH/20201202_125735.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@2.15.7/img/HYAH/20201202_125735.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="SORYU ASUKA RANGURE"></p>              </div>            </details><details ><summary> <p>迭代说明</p> </summary>              <div class='content'>              <ol><li>重新启用<code>LED</code>交互接口及电容, 将其整合到一张板上(为下一个版本做准备).</li><li><code>SIM800C</code>弃用胶棒天线, 换用弹簧天线, 进一步提升便携性.</li></ol>              </div>            </details></div></div>
+
+<div class="timenode"><div class="meta"><p><p>2020/12/05</p>
+</p></div><div class="body"><h4 id="RAMIEL-OCTAHEDRON"><a href="#RAMIEL-OCTAHEDRON" class="headerlink" title="RAMIEL OCTAHEDRON"></a><code>RAMIEL OCTAHEDRON</code></h4><details ><summary> <p>Photos</p> </summary>              <div class='content'>              <p><img src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/HYAH/20201205_230927.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/HYAH/20201205_230927.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="RAMIEL OCTAHEDRON"><br><img src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/HYAH/20201205_230945.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/HYAH/20201205_230945.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="RAMIEL OCTAHEDRON"><br><img src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/HYAH/20201205_230957.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/HYAH/20201205_230957.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="RAMIEL OCTAHEDRON"></p>              </div>            </details><details ><summary> <p>迭代说明</p> </summary>              <div class='content'>              <ol><li>重新制作灯板, 增加线路整理功能, 并整合到设备上部.</li><li>启用<code>NI-MH AA 5600mAh 4.8V</code>电池阵列并置于设备底部, 理论续航延长至<code>23</code>小时.</li><li>优化内存占用, 将静态内容优先存储至<code>Flash</code>.</li><li>事故侦测倾角维护时间增长至<code>150</code>个算法周期.</li></ol>              </div>            </details></div></div>
+
+<div class="timenode"><div class="meta"><p><p>2020/12/07</p>
+</p></div><div class="body"><h4 id="RAMIEL-FINAL"><a href="#RAMIEL-FINAL" class="headerlink" title="RAMIEL FINAL"></a><code>RAMIEL FINAL</code></h4><p>最后用来交导论大作业的版本.</p><details ><summary> <p>Photos</p> </summary>              <div class='content'>              <p><img src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/HYAH/20201207_205108.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/HYAH/20201207_205108.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="RAMIEL FINAL"><br><img src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/HYAH/20201207_205129.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/HYAH/20201207_205129.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="RAMIEL FINAL"><br><img src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/HYAH/20201207_205450.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/HYAH/20201207_205450.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="RAMIEL FINAL"></p>              </div>            </details><details ><summary> <p>迭代说明</p> </summary>              <div class='content'>              <ol><li>整理了排线, 提升便携性.</li><li>加固固定部分, 提升便携性.</li><li>优化灯板电气性能, 重写<code>LED</code>灯控代码, 延长续航.</li></ol>              </div>            </details><h4 id="灯板特写"><a href="#灯板特写" class="headerlink" title="灯板特写"></a>灯板特写</h4><details ><summary> <p>Photos</p> </summary>              <div class='content'>              <p><img src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@12.15.19/img/HYAH/20201212_164751.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@12.15.19/img/HYAH/20201212_164751.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="上面效果图"><br><img src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@12.15.19/img/HYAH/20201212_164847.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@12.15.19/img/HYAH/20201212_164847.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="侧面(背面?) 1"><br><img src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@12.15.19/img/HYAH/20201212_164915.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@12.15.19/img/HYAH/20201212_164915.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="侧面(背面?) 2"></p>              </div>            </details></div></div>
+
+
+<div class="timenode"><div class="meta"><p><p>2020/12/31</p>
+</p></div><div class="body"><h4 id="HYAsstSTM32开发准备开始"><a href="#HYAsstSTM32开发准备开始" class="headerlink" title="HYAsstSTM32开发准备开始"></a>HYAsstSTM32开发准备开始</h4><details ><summary> <p>Photos</p> </summary>              <div class='content'>              <p><img src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@12.16.1/img/HYAH/20201231_093940.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@12.16.1/img/HYAH/20201231_093940.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="STM32F411CEU6"></p>              </div>            </details><p>从此开始使用<code>platformIO</code>试图使用<code>Arduino</code>架构写<code>STM32</code>.</p></div></div>
+
+<div class="timenode"><div class="meta"><p><p>2021/01/08</p>
+</p></div><div class="body"><h4 id="HYAsstHybrid"><a href="#HYAsstHybrid" class="headerlink" title="HYAsstHybrid"></a><code>HYAsstHybrid</code></h4><p>成功使用<code>Arduino</code>构架实现简单的数据获取和上传, 但是会莫名其妙地死机, 故决定换用<code>STM32Cube</code>框架.</p><details ><summary> <p>Photos</p> </summary>              <div class='content'>              <p><img src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@12.16.0/img/HYAsstSTM32/20210108_233454.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@12.16.0/img/HYAsstSTM32/20210108_233454.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="HYAsstHybrid"><br><img src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@12.16.0/img/HYAsstSTM32/20210108_233513.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@12.16.0/img/HYAsstSTM32/20210108_233513.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="HYAsstHybrid"></p>              </div>            </details></div></div>
+
+<div class="timenode"><div class="meta"><p><p>2021/01/14</p>
+</p></div><div class="body"><h4 id="HYAsstSTM32-THE-ORIGIN"><a href="#HYAsstSTM32-THE-ORIGIN" class="headerlink" title="HYAsstSTM32 THE ORIGIN"></a><code>HYAsstSTM32 THE ORIGIN</code></h4><p>学习了<code>STM32Cube</code>框架并实现所有功能. 到上个版本为止通信协议一直使用<code>HTTP</code>协议, 在这个版本中使用<code>MQTT</code>协议.</p><details ><summary> <p>Photos</p> </summary>              <div class='content'>              <p><img src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@12.16.0/img/HYAsstSTM32/20210114_192949.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@12.16.0/img/HYAsstSTM32/20210114_192949.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="HYAsstSTM32 THE ORIGIN"><br><img src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@12.16.0/img/HYAsstSTM32/20210114_192957.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@12.16.0/img/HYAsstSTM32/20210114_192957.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="HYAsstSTM32 THE ORIGIN"></p>              </div>            </details></div></div>
+
+<div class="timenode"><div class="meta"><p><p>2021/01/14-15</p>
+</p></div><div class="body"><h4 id="HYAsstSTM32-THE-ORIGIN续航测试"><a href="#HYAsstSTM32-THE-ORIGIN续航测试" class="headerlink" title="HYAsstSTM32 THE ORIGIN续航测试"></a><code>HYAsstSTM32 THE ORIGIN</code>续航测试</h4><details ><summary> <p>Photos</p> </summary>              <div class='content'>              <p><img src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@12.16.0/img/HYAsstSTM32/20210114_215225.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@12.16.0/img/HYAsstSTM32/20210114_215225.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="14日当天"></p>              </div>            </details><p>电池容量<code>920mAh</code></p><table><thead><tr><th>测试序号</th><th>测试结果</th></tr></thead><tbody><tr><td>1</td><td><font color=red><strong>439min</strong></font></td></tr><tr><td>2</td><td><font color=green><strong>227min</strong></font></td></tr><tr><td>3</td><td><font color=green><strong>206min</strong></font></td></tr><tr><td>4</td><td><font color=green><strong>210min</strong></font></td></tr></tbody></table><p>准备使用的电池容量为<code>10Ah</code>, 续航估计为<code>38</code>小时.</p></div></div>
+
+<div class="timenode"><div class="meta"><p><p>2021/01/16</p>
+</p></div><div class="body"><h4 id="HYAsstSTM32-ADV"><a href="#HYAsstSTM32-ADV" class="headerlink" title="HYAsstSTM32 ADV"></a><code>HYAsstSTM32 ADV</code></h4><p>整合到了洞洞板上</p><details ><summary> <p>Photos</p> </summary>              <div class='content'>              <p><img src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@12.16.0/img/HYAsstSTM32/20210116_200556.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@12.16.0/img/HYAsstSTM32/20210116_200556.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="HYAsstSTM32 ADV"></p>              </div>            </details></div></div>
+
+<div class="timenode"><div class="meta"><p><p>2021/01/16-18</p>
+</p></div><div class="body"><h4 id="HYAsstSTM32-ADV续航测试"><a href="#HYAsstSTM32-ADV续航测试" class="headerlink" title="HYAsstSTM32 ADV续航测试"></a><code>HYAsstSTM32 ADV</code>续航测试</h4><details ><summary> <p>Photos</p> </summary>              <div class='content'>              <p><img src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@12.16.1/img/HYAsstSTM32/20210117_155458.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@12.16.1/img/HYAsstSTM32/20210117_155458.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="17日"></p>              </div>            </details><p>电池容量<code>920mAh</code></p><table><thead><tr><th>测试序号</th><th>测试结果</th></tr></thead><tbody><tr><td>1</td><td><font color=green><strong>274min</strong></font></td></tr><tr><td>2</td><td><font color=green><strong>268min</strong></font></td></tr><tr><td>3</td><td><font color=green><strong>278min</strong></font></td></tr></tbody></table><p>准备使用的电池容量为<code>10Ah</code>, 续航估计为<code>49</code>小时.</p></div></div>
+
+<div class="timenode"><div class="meta"><p><p>2021/01/17</p>
+</p></div><div class="body"><h4 id="开始绘制原理图与PCB板"><a href="#开始绘制原理图与PCB板" class="headerlink" title="开始绘制原理图与PCB板"></a>开始绘制原理图与PCB板</h4><details ><summary> <p>Photos</p> </summary>              <div class='content'>              <p><img src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@12.16.0/img/HYAsstSTM32/20210118_233704.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@12.16.0/img/HYAsstSTM32/20210118_233704.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="Workshop"></p>              </div>            </details></div></div>
+
+<div class="timenode"><div class="meta"><p><p>2021/01/22</p>
+</p></div><div class="body"><h4 id="原理图绘制完成"><a href="#原理图绘制完成" class="headerlink" title="原理图绘制完成"></a>原理图绘制完成</h4><p>准备绘制<code>PCB</code>板</p><details ><summary> <p>Photos</p> </summary>              <div class='content'>              <p><img src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@12.16.0/img/HYAsstSTM32/20210122_003746.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@12.16.0/img/HYAsstSTM32/20210122_003746.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="SchDocs"></p>              </div>            </details></div></div>
+
+<div class="timenode"><div class="meta"><p><p>2021/01/23</p>
+</p></div><div class="body"><h4 id="HYAsstSTM32-PCB-A-Series-Rev-1"><a href="#HYAsstSTM32-PCB-A-Series-Rev-1" class="headerlink" title="HYAsstSTM32 PCB A Series Rev.1"></a>HYAsstSTM32 PCB A Series Rev.1</h4><p>第一版<code>PCB</code>将作为调试板使用.</p><p><code>HYAsstSTM32 PCB A Series</code>命名为<code>Axium Crisis</code></p><details ><summary> <p>Photos</p> </summary>              <div class='content'>              <p><img src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@12.16.0/img/HYAsstSTM32/A1_2.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@12.16.0/img/HYAsstSTM32/A1_2.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="Axium Crisis Rev.1"><br><img src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@12.16.0/img/HYAsstSTM32/A1_1.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@12.16.0/img/HYAsstSTM32/A1_1.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="Axium Crisis Rev.1"></p>              </div>            </details><p>由于元件排布过于紧密, 走线相当阴间.</p></div></div>
+
+<div class="timenode"><div class="meta"><p><p>2021/01/24</p>
+</p></div><div class="body"><h4 id="Axium-Crisis-Rev-2"><a href="#Axium-Crisis-Rev-2" class="headerlink" title="Axium Crisis Rev.2"></a><code>Axium Crisis Rev.2</code></h4><p>这一版基本确定元件的基本布局</p><details ><summary> <p>Photos</p> </summary>              <div class='content'>              <p><img src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@12.16.0/img/HYAsstSTM32/A2_1.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@12.16.0/img/HYAsstSTM32/A2_1.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="Axium Crisis Rev.2"><br><img src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@12.16.0/img/HYAsstSTM32/A2_3.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@12.16.0/img/HYAsstSTM32/A2_3.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="Axium Crisis Rev.2"><br><img src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@12.16.0/img/HYAsstSTM32/A2_2.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@12.16.0/img/HYAsstSTM32/A2_2.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="Axium Crisis Rev.2"><br><img src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@12.16.0/img/HYAsstSTM32/A2_4.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@12.16.0/img/HYAsstSTM32/A2_4.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="Axium Crisis Rev.2"></p>              </div>            </details></div></div>
+
+
+<div class="timenode"><div class="meta"><p><p>2021/02/01</p>
+</p></div><div class="body"><h4 id="Axium-Crisis-Rev-7"><a href="#Axium-Crisis-Rev-7" class="headerlink" title="Axium Crisis Rev.7"></a><code>Axium Crisis Rev.7</code></h4><p>交付厂家打板的最终版本</p><details ><summary> <p>Photos</p> </summary>              <div class='content'>              <p><img src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@12.16.0/img/HYAsstSTM32/A7_4.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@12.16.0/img/HYAsstSTM32/A7_4.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="Axium Crisis Rev.7"><br><img src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@12.16.0/img/HYAsstSTM32/A7_2.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@12.16.0/img/HYAsstSTM32/A7_2.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="Axium Crisis Rev.7"><br><img src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@12.16.0/img/HYAsstSTM32/A7_3.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@12.16.0/img/HYAsstSTM32/A7_3.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="Axium Crisis Rev.7"><br><img src="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@12.16.0/img/HYAsstSTM32/A7_1.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@12.16.0/img/HYAsstSTM32/A7_1.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="Axium Crisis Rev.7"></p>              </div>            </details></div></div>
+
+<h4 id="To-be-continued"><a href="#To-be-continued" class="headerlink" title="To be continued.."></a>To be continued..</h4>
+  
+  
+    
+    <div class='footer'>
       
-        <div>
-          <a class='readmore' href='/hexo-buildup/'>
-            Read More
-          </a>
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>内容遵循 <a href="%22https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en%22">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) License</a>.</p>
+
+              
+            
+              
+                <p>本文永久链接：<a href=https://brynhild.online/HYAsstSTM32Progress/>https://brynhild.online/HYAsstSTM32Progress/</a></p>
+              
+            
+          </blockquote>
+        </div>
+      
+      
+        <div class='donate'>
+          <div class='imgs'>
+            
+              <img src='https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/reward/qq_pic_merged_1581578634684.jpg'>
+            
+              <img src='https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND@2.4.2/img/reward/wepay-2-e1541232487203.png'>
+            
+              <img src='https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/reward/qq_pic_merged_1581578554413.jpg'>
+            
+          </div>
         </div>
       
     </div>
   
+  
+    
 
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-02-04T22:36:56+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>Updated at Feb 4, 2021</p>
+  </a>
 </div>
 
-          </div>
         
       
+        
+          
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
     
-  </section>
-  
+      
+        
+        <div class='hoverbox'>
+          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qrcode.png"></a>
+          <div class='target'>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARgAAAEYCAAAAACi5bZQAAADCElEQVR42u3aS3ICMQwFQO5/6eQCoUZ6MmEE7R3Mx3bP5pXkx4/x53ggAAMGDBgwYNbAPMLx9MVPrj97Pp2vOk/3/WDAgAEDBgyYfTDlABTeP4WuAk33AwYMGDBgwIDZC3MZgJq/0wV3A+Kx/YABAwYMGDBgvhZmGvjSQhQYMGDAgAEDBsx04ipYt/HWbbiBAQMGDBgwYL4Ppt2gOhTQ0gNJpxqCYMCAAQMGDJi9MN2RNuD+63e8HzBgwIABAwbMGpjpSA8ETQtN6byX6wIDBgwYMGDArIFJA9Kpwlb3vdXAGRfEwIABAwYMGDDrYLoHf7oNuNMfotrQ634QMGDAgAEDBswemHTh0wLWqwJj9f52BQ8MGDBgwIABczuYbiDqTtxeWHHj3fvK+wEDBgwYMGDArIWZNrKqENVCU1xwal4HAwYMGDBgwOyDSYNYOqYbmh5AajfcwIABAwYMGDC3hzndKEsbaun72kHuqlAFBgwYMGDAgLk9TLcB9qqC0vTAULcxVz44BAYMGDBgwIC5Lcw0uKWNrrTgND0wdPk+MGDAgAEDBsxamFMFq+kGpgeSqvOXAx4YMGDAgAED5nYw00DXve/U/WmD7nIfYMCAAQMGDJh1MKc2Nm2MnS5ctfcFBgwYMGDAgFkDkx4USu9PC13ddcSFLjBgwIABAwbMGpjqBClk9bnTDbfuvGDAgAEDBgyY/TBpYKqOU4WxtOEWBzwwYMCAAQMGzDqY0wGrG8S6B4DS/8GAAQMGDBgw+2FOFZCmATENct0xbriBAQMGDBgwYN4GMx3pgZ3u9eoH6K4PDBgwYMCAAbMX5lQw6ja+yoWj4YEiMGDAgAEDBsznw5wKdOn/0wLU9D1gwIABAwYMmP0waYDqLjC9Lw2A5QYeGDBgwIABA+brYdLgdfX89P+3BzwwYMCAAQMGzO1g0oA2vd4NdJfvBwMGDBgwYMCshek23NKDQ1Xo7gfpBkkwYMCAAQMGzH6YtHHVbmgdKkidCqJgwIABAwYMmL0wBhgwYMCAAQNm2fgFiFvlDpVO+7AAAAAASUVORK5CYII=">
+          </div>
+        </div>
+      
     
-  
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://brynhild.online/HYAsstSTM32Progress/&title=HYAsstSTM32 dev progress - Next Dream...&summary=
+HongYanAsst项目硬件部分
+HongYanAsstArduino及HongYanAsstSTM32
+Dev log
+"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://brynhild.online/HYAsstSTM32Progress/&title=HYAsstSTM32 dev progress - Next Dream...&summary=
+HongYanAsst项目硬件部分
+HongYanAsstArduino及HongYanAsstSTM32
+Dev log
+"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://brynhild.online/HYAsstSTM32Progress/&title=HYAsstSTM32 dev progress - Next Dream...&summary=
+HongYanAsst项目硬件部分
+HongYanAsstArduino及HongYanAsstSTM32
+Dev log
+"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
+          
+            target="_blank" href="https://t.me/share/url?url=https://brynhild.online/HYAsstSTM32Progress/&text=HYAsstSTM32 dev progress - Next Dream..."
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png">
+          
+        </a>
+      
+    
+  </div>
+</div>
 
 
-    
+
+        
+      
+    </div>
+  </div>
+
+
   
+  
+
+  
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/DSaAi/'>
+          <p class='title'>数据结构与算法导论 C++描述<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>
+北京邮电大学信息与通信工程学院
+2020年数据结构与算法导论课实验题目C++描述
+
+
+
+
+实验六 排序实验目的通过选择下面五个题目之一进行实现，掌握如下内容：
+
+掌握各种排序算法的实现方法和算...</p>
+        </a>
+      
+    </div>
+  
+</article>
+
+
+  
+
+  <article class="post white-box reveal shadow" id="comments">
+    <p ct><i class='fas fa-comments'></i> Comments</p>
+    
+      <p cst>Please contact the Administrator directly for emergency.</p>
+    
+    <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
+</div>
+
+  </article>
+
+
+
+
+
+  <script>
+  // https://github.com/theme-next/hexo-theme-next/blob/master/layout/_third-party/math/mathjax.swig
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3.0/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    // 文章章节标题不能为 “MathJax” ，否则会报错。
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+
+
 </div>
 <aside class='l_side'>
   
@@ -771,56 +1103,41 @@
     
     
 
-<section class="widget blogger shadow blur desktop mobile">
+
+
+  <section class="widget toc-wrapper shadow blur desktop mobile" id="toc-div" >
+    
+  <header>
+    
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>INDEX</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#HYAsstArduino%E5%BC%80%E5%8F%91%E6%AD%A3%E5%BC%8F%E5%BC%80%E5%A7%8B"><span class="toc-text">HYAsstArduino开发正式开始</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%98%B3%E5%8F%B0GPS%E8%B0%83%E8%AF%95"><span class="toc-text">阳台GPS调试</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#HYAsstArduino-THE-ORIGIN-de-pre-release"><span class="toc-text">HYAsstArduino THE ORIGIN de pre-release</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B1%85%E5%BA%B8%E5%85%B3%E9%95%BF%E8%B7%9D%E7%A6%BB%E5%AE%9E%E6%99%AF%E6%B5%8B%E8%AF%95"><span class="toc-text">居庸关长距离实景测试</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%9F%92%E5%B1%B1-%E6%88%B7%E5%A4%96%E8%B0%83%E8%AF%95"><span class="toc-text">蟒山 户外调试</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#HYAsstArduino-THE-ORIGIN"><span class="toc-text">HYAsstArduino THE ORIGIN</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0%E5%91%8A%E8%AD%A6%E5%8A%9F%E8%83%BD"><span class="toc-text">实现告警功能</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#ASKR-YGGDRASILLS-pre-release%E7%BB%AD%E8%88%AA%E6%B5%8B%E8%AF%95"><span class="toc-text">ASKR YGGDRASILLS pre-release续航测试</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#ASKR-YGGDRASILLS"><span class="toc-text">ASKR YGGDRASILLS</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9F%BA%E4%BA%8EASKR-YGGDRASILLS%E7%9A%84%E6%88%B7%E5%A4%96%E8%B0%83%E8%AF%95"><span class="toc-text">基于ASKR YGGDRASILLS的户外调试</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#SORYU-KYOKO-ZEPPELIN"><span class="toc-text">SORYU KYOKO ZEPPELIN</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#SORYU-ASUKA-RANGURE"><span class="toc-text">SORYU ASUKA RANGURE</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#RAMIEL-OCTAHEDRON"><span class="toc-text">RAMIEL OCTAHEDRON</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#RAMIEL-FINAL"><span class="toc-text">RAMIEL FINAL</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%81%AF%E6%9D%BF%E7%89%B9%E5%86%99"><span class="toc-text">灯板特写</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#HYAsstSTM32%E5%BC%80%E5%8F%91%E5%87%86%E5%A4%87%E5%BC%80%E5%A7%8B"><span class="toc-text">HYAsstSTM32开发准备开始</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#HYAsstHybrid"><span class="toc-text">HYAsstHybrid</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#HYAsstSTM32-THE-ORIGIN"><span class="toc-text">HYAsstSTM32 THE ORIGIN</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#HYAsstSTM32-THE-ORIGIN%E7%BB%AD%E8%88%AA%E6%B5%8B%E8%AF%95"><span class="toc-text">HYAsstSTM32 THE ORIGIN续航测试</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#HYAsstSTM32-ADV"><span class="toc-text">HYAsstSTM32 ADV</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#HYAsstSTM32-ADV%E7%BB%AD%E8%88%AA%E6%B5%8B%E8%AF%95"><span class="toc-text">HYAsstSTM32 ADV续航测试</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BC%80%E5%A7%8B%E7%BB%98%E5%88%B6%E5%8E%9F%E7%90%86%E5%9B%BE%E4%B8%8EPCB%E6%9D%BF"><span class="toc-text">开始绘制原理图与PCB板</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8E%9F%E7%90%86%E5%9B%BE%E7%BB%98%E5%88%B6%E5%AE%8C%E6%88%90"><span class="toc-text">原理图绘制完成</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#HYAsstSTM32-PCB-A-Series-Rev-1"><span class="toc-text">HYAsstSTM32 PCB A Series Rev.1</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Axium-Crisis-Rev-2"><span class="toc-text">Axium Crisis Rev.2</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Axium-Crisis-Rev-7"><span class="toc-text">Axium Crisis Rev.7</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#To-be-continued"><span class="toc-text">To be continued..</span></a></li></ol>
+    </div>
+  </section>
+
+
+  
+
+  
+    
+    
+
+<section class="widget text shadow blur desktop mobile">
+  
+  <header>
+    
+      <a href='www.hitokoto.cn'><i class="fas fa-comment-alt fa-fw" aria-hidden="true"></i><span class='name'>ヒトコト</span></a>
+    
+  </header>
+
+
   <div class='content'>
     
-      
-        <a class='avatar flat-box rectangle' href='/about/'>
-          <img no-lazy src='https://cdn.jsdelivr.net/gh/novaELLIAS/CDN_for_ND/img/fracture_ray.jpg'/>
-        </a>
-      
-    
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="/atom.xml"
-              class="social fas fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="mailto:eternalkiri@outlook.com"
-              class="social fas fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/novaELLIAS"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://wpa.qq.com/msgrd?v=3&amp;uin=3218673140&amp;site=qq&amp;menu=yes"
-              class="social fab fa-qq flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
+      <p id="hitokoto">正在加载一言...</p><script src="https://v1.hitokoto.cn/?c=a&c=b&c=c&encode=js&select=%23hitokoto" defer></script>
     
   </div>
 </section>
@@ -857,28 +1174,6 @@
   
   <header>
     
-      <a href='www.hitokoto.cn'><i class="fas fa-comment-alt fa-fw" aria-hidden="true"></i><span class='name'>ヒトコト</span></a>
-    
-  </header>
-
-
-  <div class='content'>
-    
-      <p id="hitokoto">正在加载一言...</p><script src="https://v1.hitokoto.cn/?c=a&c=b&c=c&encode=js&select=%23hitokoto" defer></script>
-    
-  </div>
-</section>
-
-  
-
-  
-    
-    
-
-<section class="widget text shadow blur desktop mobile">
-  
-  <header>
-    
       <i class="fas fa-bullhorn fa-fw" aria-hidden="true"></i><span class='name'>Announcement</span>
     
   </header>
@@ -889,120 +1184,6 @@
       <p>The rightmouse menu has been customized in all pages. For origional menu, please press CTRL simultaneously.</p>
 
     
-  </div>
-</section>
-
-  
-
-  
-    
-    
-
-<section class="widget shadow blur desktop mobile">
-  
-  <header>
-    
-      <i class="fas fa-award fa-fw" aria-hidden="true"></i><span class='name'>Info.</span>
-    
-  </header>
-
-
-  <div class='content'>
-    <div class="webinfo">
-      
-        <div class="webinfo-item">
-          <div>文章数目：</div>
-          <div>30 篇</div>
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>Runtime：</div>
-          <div id="webinfo-runtime-count" publish_date="03/24/2020 21:34:09"></div>
-        </div>
-        <script>
-          var BirthDay = new Date(new Date('2017/10/13'));
-          var today = new Date();
-          var timeold = (today.getTime() - BirthDay.getTime());
-          var daysold = Math.floor(timeold / (24 * 60 * 60 * 1000));
-          document.getElementById('webinfo-runtime-count').innerHTML = daysold + ' 天';
-        </script>
-      
-
-
-      
-        <div class="webinfo-item">
-          <div>本站总字数：</div>
-          <div>37.9k 字</div>
-        </div>
-      
-
-      
-
-      
-
-      
-        <div class="webinfo-item">
-          <div>最后活动时间：</div>
-          
-            <div id="last-update" style="display: none;">Thu Feb 04 2021 22:41:00 GMT+0800 (中国标准时间)</div>
-            <div id="last-update-show">2021-02-04 日</div>
-          
-        </div>
-        
-        <script>
-          function timeago(dateTimeStamp) {
-              var minute = 1000 * 60; //把分，时，天，周，半个月，一个月用毫秒表示
-              var hour = minute * 60;
-              var day = hour * 24;
-              var week = day * 7;
-              var month = day * 30;
-              var now = new Date().getTime(); //获取当前时间毫秒
-              var diffValue = now - dateTimeStamp; //时间差
-              if (diffValue < 0) {
-                  return;
-              }
-              var minC = diffValue / minute; //计算时间差的分，时，天，周，月
-              var hourC = diffValue / hour;
-              var dayC = diffValue / day;
-              var weekC = diffValue / week;
-              var monthC = diffValue / month;
-              if (monthC >= 1 && monthC <= 3) {
-                  result = " " + parseInt(monthC) + " 月前"
-              } else if (weekC >= 1 && weekC <= 3) {
-                  result = " " + parseInt(weekC) + " 周前"
-              } else if (dayC >= 1 && dayC <= 6) {
-                  result = " " + parseInt(dayC) + " 天前"
-              } else if (hourC >= 1 && hourC <= 23) {
-                  result = " " + parseInt(hourC) + " 小时前"
-              } else if (minC >= 1 && minC <= 59) {
-                  result = " " + parseInt(minC) + " 分钟前"
-              } else if (diffValue >= 0 && diffValue <= minute) {
-                  result = "刚刚"
-              } else {
-                  var datetime = new Date();
-                  datetime.setTime(dateTimeStamp);
-                  var Nyear = datetime.getFullYear();
-                  var Nmonth = datetime.getMonth() + 1 < 10 ? "0" + (datetime.getMonth() + 1) : datetime.getMonth() + 1;
-                  var Ndate = datetime.getDate() < 10 ? "0" + datetime.getDate() : datetime.getDate();
-                  var Nhour = datetime.getHours() < 10 ? "0" + datetime.getHours() : datetime.getHours();
-                  var Nminute = datetime.getMinutes() < 10 ? "0" + datetime.getMinutes() : datetime.getMinutes();
-                  var Nsecond = datetime.getSeconds() < 10 ? "0" + datetime.getSeconds() : datetime.getSeconds();
-                  result = Nyear + "-" + Nmonth + "-" + Ndate
-              }
-              return result;
-          }
-          var lastUpDate = document.getElementById('last-update').innerHTML;
-          try {
-            document.getElementById('last-update-show').innerHTML = timeago(new Date(lastUpDate));
-          } catch (error) {
-            document.getElementById('last-update-show').innerHTML = '2021-02-04 日';
-          }
-        </script>
-        
-      
-    </div>
   </div>
 </section>
 
@@ -1027,82 +1208,6 @@
     
   </div>
 </section>
-
-  
-
-  
-    
-    
-  
-
-  <section class="widget category shadow blur desktop">
-    
-  <header>
-    
-      <a href='/blog/categories/'><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>Categories</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/HEXO/" href="/categories/HEXO/"
-            id="categoriesHEXO"
-            ><div class='name'>HEXO</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/Olympiad-in-Informatics/" href="/categories/Olympiad-in-Informatics/"
-            id="categoriesOlympiad-in-Informatics"
-            ><div class='name'>Olympiad in Informatics</div><div class='badge'>(20)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/Trick/" href="/categories/Trick/"
-            id="categoriesTrick"
-            ><div class='name'>Trick</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/VPN/" href="/categories/VPN/"
-            id="categoriesVPN"
-            ><div class='name'>VPN</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/buzzer/" href="/categories/buzzer/"
-            id="categoriesbuzzer"
-            ><div class='name'>buzzer</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/memory/" href="/categories/memory/"
-            id="categoriesmemory"
-            ><div class='name'>memory</div><div class='badge'>(2)</div></a></li>
-        
-      </ul>
-    </div>
-  </section>
-
-
-  
-
-  
-    
-    
-  
-
-  <section class="widget tagcloud shadow blur desktop mobile">
-    
-  <header>
-    
-      <a href='/blog/tags/'><i class="fas fa-tags fa-fw" aria-hidden="true"></i><span class='name'>Tags</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/DP/" style="font-size: 14px; color: #999">DP</a> <a href="/tags/GSS/" style="font-size: 17.33px; color: #828282">GSS</a> <a href="/tags/HEXO/" style="font-size: 14px; color: #999">HEXO</a> <a href="/tags/OBS/" style="font-size: 14px; color: #999">OBS</a> <a href="/tags/STL/" style="font-size: 14px; color: #999">STL</a> <a href="/tags/Template/" style="font-size: 24px; color: #555">Template</a> <a href="/tags/Trick/" style="font-size: 14px; color: #999">Trick</a> <a href="/tags/VPN/" style="font-size: 14px; color: #999">VPN</a> <a href="/tags/VPS/" style="font-size: 14px; color: #999">VPS</a> <a href="/tags/buzzer/" style="font-size: 14px; color: #999">buzzer</a> <a href="/tags/contest/" style="font-size: 14px; color: #999">contest</a> <a href="/tags/segment-tree/" style="font-size: 20.67px; color: #6c6c6c">segment tree</a> <a href="/tags/%E5%80%8D%E5%A2%9E/" style="font-size: 14px; color: #999">倍增</a> <a href="/tags/%E5%B9%B6%E6%9F%A5%E9%9B%86/" style="font-size: 14px; color: #999">并查集</a> <a href="/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF/" style="font-size: 14px; color: #999">最短路</a> <a href="/tags/%E7%94%9F%E6%88%90%E6%A0%91/" style="font-size: 14px; color: #999">生成树</a> <a href="/tags/%E8%B4%AA%E5%BF%83/" style="font-size: 14px; color: #999">贪心</a>
-    </div>
-  </section>
-
 
   
 
@@ -1149,6 +1254,7 @@
 
 
 </aside>
+
 
 
       </div>
