@@ -515,14 +515,14 @@
   </url>
   
   <url>
-    <loc>https://brynhild.online/tags/HEXO/</loc>
+    <loc>https://brynhild.online/tags/STL/</loc>
     <lastmod>2021-02-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://brynhild.online/tags/STL/</loc>
+    <loc>https://brynhild.online/tags/HEXO/</loc>
     <lastmod>2021-02-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -564,13 +564,6 @@
   </url>
   
   <url>
-    <loc>https://brynhild.online/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF/</loc>
-    <lastmod>2021-02-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://brynhild.online/tags/VPN/</loc>
     <lastmod>2021-02-04</lastmod>
     <changefreq>daily</changefreq>
@@ -579,6 +572,13 @@
   
   <url>
     <loc>https://brynhild.online/tags/VPS/</loc>
+    <lastmod>2021-02-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://brynhild.online/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF/</loc>
     <lastmod>2021-02-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
