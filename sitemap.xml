@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://brynhild.online/aboutme/index.html</loc>
+    
+    <lastmod>2021-02-16</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://brynhild.online/HYAsstSTM32Progress/</loc>
     
     <lastmod>2021-02-04</lastmod>
@@ -38,13 +45,6 @@
   
   <url>
     <loc>https://brynhild.online/bloghistory/index.html</loc>
-    
-    <lastmod>2020-09-07</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://brynhild.online/aboutme/index.html</loc>
     
     <lastmod>2020-09-07</lastmod>
     
