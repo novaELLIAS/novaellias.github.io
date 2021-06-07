@@ -17,7 +17,7 @@
 
   <!-- 页面元数据 -->
   
-  <title>数据结构与算法导论 C++描述 - Next Dream...</title>
+  <title>数据结构与算法导论 排序算法 C++描述 - Next Dream...</title>
   
 
   
@@ -668,7 +668,7 @@
  
 <div id="pjax-data" style="display: none"> 
   <div id="pjax-ispage">true</div> 
-  <div id="pjax-pageTitle">数据结构与算法导论 C++描述</div> 
+  <div id="pjax-pageTitle">数据结构与算法导论 排序算法 C++描述</div> 
   <div id="pjax-enable-cover">true</div> 
   <div id="pjax-comment-path"></div> 
   <div id="pjax-comment-placeholder"></div> 
@@ -708,7 +708,7 @@
     
     
       <h1 class="title">
-        数据结构与算法导论 C++描述
+        数据结构与算法导论 排序算法 C++描述
       </h1>
       <div class='new-meta-box'>
         
@@ -743,7 +743,7 @@
   <div class="new-meta-item browse leancloud">
     <a class='notlink'>
       
-      <div id="lc-pv" data-title="数据结构与算法导论 C++描述" data-path="/DSaAi/">
+      <div id="lc-pv" data-title="数据结构与算法导论 排序算法 C++描述" data-path="/DSaAi/">
         <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
         <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
         views
@@ -826,7 +826,10 @@
 <p>非递归:</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">signed</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">register</span> <span class="keyword">int</span> n=readu();</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">register</span> <span class="keyword">int</span> i=<span class="number">0</span>; i^n; ++ i) data[i]=read();</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">register</span> <span class="keyword">int</span> l, r, mid;</span><br><span class="line">	<span class="built_in">pair</span>&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt; stp;</span><br><span class="line">	<span class="built_in">stack</span>&lt;<span class="built_in">pair</span>&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt; &gt; s;</span><br><span class="line">	s.push(<span class="built_in">make_pair</span>(<span class="number">0</span>, n<span class="number">-1</span>));</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">while</span> (!s.empty()) &#123;</span><br><span class="line">		stp = s.top (); s.pop ();</span><br><span class="line">		l=stp.first, r=stp.second, mid=data[(l+r)&gt;&gt;<span class="number">1</span>];</span><br><span class="line">		<span class="keyword">while</span> (l &lt; r) &#123;</span><br><span class="line">			<span class="keyword">while</span> (data[l] &lt; mid) ++ l;</span><br><span class="line">			<span class="keyword">while</span> (data[r] &gt; mid) -- r;</span><br><span class="line">			<span class="keyword">if</span> (l &lt;= r) swap(data[l ++], data[r --]);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> (l &lt; stp.second) s.push (<span class="built_in">make_pair</span>(l, stp.second));</span><br><span class="line">		<span class="keyword">if</span> (r &gt; stp.first ) s.push (<span class="built_in">make_pair</span>(stp.first , r));</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">register</span> <span class="keyword">int</span> i=<span class="number">0</span>; i^n; ++ i) write(data[i]), pt(<span class="string">&#x27; &#x27;</span>);</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">return</span> fwrite (but, <span class="number">1</span>, _p3-but, <span class="built_in">stdout</span>), <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h4 id="堆排序"><a href="#堆排序" class="headerlink" title="堆排序"></a>堆排序</h4><p>懒得手写了(其实是不会), 遂用<code>STL</code>实现</p>
+<h4 id="堆排序"><a href="#堆排序" class="headerlink" title="堆排序"></a>堆排序</h4><p>手写版:</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> data[maxn];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">swift</span><span class="params">(<span class="keyword">int</span> rt, <span class="keyword">int</span> len)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">register</span> <span class="keyword">int</span> pos=rt&lt;&lt;<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">while</span> (pos&lt;=len) &#123;</span><br><span class="line">		<span class="keyword">if</span>(pos&lt;len &amp;&amp; data[pos|<span class="number">1</span>]&lt;data[pos]) pos |= <span class="number">1</span>;</span><br><span class="line">		<span class="keyword">if</span> (data[rt]&lt;data[pos]) <span class="keyword">return</span>;</span><br><span class="line">		swapp(data[rt], data[pos]);</span><br><span class="line">		rt = pos, pos=rt&lt;&lt;<span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">signed</span> <span class="title">main</span> <span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">register</span> <span class="keyword">int</span> n = read();</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">register</span> <span class="keyword">int</span> i=<span class="number">1</span>; i&lt;=n; ++ i) data[i]=read();</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">register</span> <span class="keyword">int</span> i=n&gt;&gt;<span class="number">1</span>; i; -- i) swift(i, n);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">register</span> <span class="keyword">int</span> i=n; i; -- i) &#123;</span><br><span class="line">		write(data[<span class="number">1</span>]); pt(<span class="string">&#x27; &#x27;</span>); swapp(data[<span class="number">1</span>], data[i]); swift(<span class="number">1</span>, i<span class="number">-1</span>);</span><br><span class="line">	&#125; <span class="keyword">return</span> fwrite (but, <span class="number">1</span>, _p3-but, <span class="built_in">stdout</span>), <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>用<code>STL</code>实现:</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">signed</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">register</span> <span class="keyword">int</span> n=readu();</span><br><span class="line">	<span class="keyword">register</span> <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; vac;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">register</span> <span class="keyword">int</span> i=<span class="number">0</span>; i^n; ++ i) vac.push_back(read ());</span><br><span class="line">	make_heap (vac.begin(), vac.end());</span><br><span class="line">	sort_heap (vac.begin(), vac.end(), cmp);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">register</span> <span class="keyword">auto</span> at=vac.begin(); at!=vac.end(); ++ at) &#123;</span><br><span class="line">		write(*at), pt(<span class="string">&#x27; &#x27;</span>);</span><br><span class="line">	&#125; <span class="keyword">return</span> fwrite (but, <span class="number">1</span>, _p3-but, <span class="built_in">stdout</span>), <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h4 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h4><p>分治.</p>
@@ -915,10 +918,10 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-03-01T10:35:44+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-06-07T16:31:53+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>Updated at Mar 1, 2021</p>
+    <p>Updated at Jun 7, 2021</p>
   </a>
 </div>
 
@@ -947,7 +950,7 @@
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://brynhild.online/DSaAi/&title=数据结构与算法导论 C++描述 - Next Dream...&summary=
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://brynhild.online/DSaAi/&title=数据结构与算法导论 排序算法 C++描述 - Next Dream...&summary=
 北京邮电大学信息与通信工程学院
 2020年数据结构与算法导论课实验题目C++描述
 "
@@ -962,7 +965,7 @@
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://brynhild.online/DSaAi/&title=数据结构与算法导论 C++描述 - Next Dream...&summary=
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://brynhild.online/DSaAi/&title=数据结构与算法导论 排序算法 C++描述 - Next Dream...&summary=
 北京邮电大学信息与通信工程学院
 2020年数据结构与算法导论课实验题目C++描述
 "
@@ -977,7 +980,7 @@
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=https://brynhild.online/DSaAi/&title=数据结构与算法导论 C++描述 - Next Dream...&summary=
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://brynhild.online/DSaAi/&title=数据结构与算法导论 排序算法 C++描述 - Next Dream...&summary=
 北京邮电大学信息与通信工程学院
 2020年数据结构与算法导论课实验题目C++描述
 "
@@ -992,7 +995,7 @@
       
         <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
           
-            target="_blank" href="https://t.me/share/url?url=https://brynhild.online/DSaAi/&text=数据结构与算法导论 C++描述 - Next Dream..."
+            target="_blank" href="https://t.me/share/url?url=https://brynhild.online/DSaAi/&text=数据结构与算法导论 排序算法 C++描述 - Next Dream..."
           
           >
           
