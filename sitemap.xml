@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://brynhild.online/HYAsstSTM32Progress/</loc>
+    
+    <lastmod>2021-09-12</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://brynhild.online/DSaAi/</loc>
     
     <lastmod>2021-06-07</lastmod>
@@ -19,13 +26,6 @@
     <loc>https://brynhild.online/BeijingBikestores/brand/index.html</loc>
     
     <lastmod>2021-05-03</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://brynhild.online/HYAsstSTM32Progress/</loc>
-    
-    <lastmod>2021-04-28</lastmod>
     
   </url>
   
@@ -473,7 +473,7 @@
 
   <url>
     <loc>https://brynhild.online/</loc>
-    <lastmod>2021-06-07</lastmod>
+    <lastmod>2021-09-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -481,119 +481,119 @@
   
   <url>
     <loc>https://brynhild.online/tags/GSS/</loc>
-    <lastmod>2021-06-07</lastmod>
+    <lastmod>2021-09-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://brynhild.online/tags/segment-tree/</loc>
-    <lastmod>2021-06-07</lastmod>
+    <lastmod>2021-09-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://brynhild.online/tags/%E8%B4%AA%E5%BF%83/</loc>
-    <lastmod>2021-06-07</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://brynhild.online/tags/contest/</loc>
-    <lastmod>2021-06-07</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://brynhild.online/tags/DP/</loc>
-    <lastmod>2021-06-07</lastmod>
+    <lastmod>2021-09-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://brynhild.online/tags/Template/</loc>
-    <lastmod>2021-06-07</lastmod>
+    <lastmod>2021-09-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://brynhild.online/tags/contest/</loc>
+    <lastmod>2021-09-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://brynhild.online/tags/DP/</loc>
+    <lastmod>2021-09-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://brynhild.online/tags/buzzer/</loc>
-    <lastmod>2021-06-07</lastmod>
+    <lastmod>2021-09-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://brynhild.online/tags/HEXO/</loc>
-    <lastmod>2021-06-07</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://brynhild.online/tags/%E5%80%8D%E5%A2%9E/</loc>
-    <lastmod>2021-06-07</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://brynhild.online/tags/%E7%94%9F%E6%88%90%E6%A0%91/</loc>
-    <lastmod>2021-06-07</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://brynhild.online/tags/%E5%B9%B6%E6%9F%A5%E9%9B%86/</loc>
-    <lastmod>2021-06-07</lastmod>
+    <lastmod>2021-09-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://brynhild.online/tags/STL/</loc>
-    <lastmod>2021-06-07</lastmod>
+    <lastmod>2021-09-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://brynhild.online/tags/%E5%80%8D%E5%A2%9E/</loc>
+    <lastmod>2021-09-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://brynhild.online/tags/%E7%94%9F%E6%88%90%E6%A0%91/</loc>
+    <lastmod>2021-09-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://brynhild.online/tags/%E5%B9%B6%E6%9F%A5%E9%9B%86/</loc>
+    <lastmod>2021-09-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://brynhild.online/tags/Trick/</loc>
-    <lastmod>2021-06-07</lastmod>
+    <lastmod>2021-09-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://brynhild.online/tags/OBS/</loc>
-    <lastmod>2021-06-07</lastmod>
+    <lastmod>2021-09-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://brynhild.online/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF/</loc>
-    <lastmod>2021-06-07</lastmod>
+    <lastmod>2021-09-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://brynhild.online/tags/VPN/</loc>
-    <lastmod>2021-06-07</lastmod>
+    <lastmod>2021-09-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://brynhild.online/tags/VPS/</loc>
-    <lastmod>2021-06-07</lastmod>
+    <lastmod>2021-09-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -602,42 +602,42 @@
   
   <url>
     <loc>https://brynhild.online/categories/Olympiad-in-Informatics/</loc>
-    <lastmod>2021-06-07</lastmod>
+    <lastmod>2021-09-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://brynhild.online/categories/buzzer/</loc>
-    <lastmod>2021-06-07</lastmod>
+    <lastmod>2021-09-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://brynhild.online/categories/HEXO/</loc>
-    <lastmod>2021-06-07</lastmod>
+    <lastmod>2021-09-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://brynhild.online/categories/Trick/</loc>
-    <lastmod>2021-06-07</lastmod>
+    <lastmod>2021-09-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://brynhild.online/categories/memory/</loc>
-    <lastmod>2021-06-07</lastmod>
+    <lastmod>2021-09-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://brynhild.online/categories/VPN/</loc>
-    <lastmod>2021-06-07</lastmod>
+    <lastmod>2021-09-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
